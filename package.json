@@ -1,0 +1,21 @@
+{
+  "name": "decoding-the-jpeg",
+  "version": "1.0.0",
+  "license": "MIT",
+  "idyll": {
+    "theme": "parametric.css",
+    "layout": "blog",
+    "css": "styles.css",
+    "authorView": false,
+    "context": "./context.js"
+  },
+  "dependencies": {
+    "d3": "^4.0.0",
+    "idyll": "^3.0.0",
+    "idyll-component-children": "^1.0.10",
+    "idyll-d3-component": "^2.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.12.0"
+  }
+}

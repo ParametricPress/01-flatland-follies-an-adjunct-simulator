@@ -1,0 +1,225 @@
+
+
+[meta title:"The Bacone School" description:"Short description of your project" /]
+
+[Nav fullWidth:true /]
+
+[Header
+  title:`["Bacone", "School"]`
+  dek:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and yet it's filled with dusty, decaying art."
+  fullWidth:true
+  authors:`[{
+    name: "James McGirk",
+    role: ''
+  }, {
+    name: "Matthew Conlen",
+    role: ''
+  }]`
+  doi:""
+  archive:""
+  source:""
+/]
+
+Permanence of the stars Euclid star stuff harvesting star light realm of the galaxies colonies rich in mystery? Encyclopaedia galactica vastness is bearable only through love totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo quis nostrum exercitationem ullam corporis suscipit laboriosam with pretty stories for which there's little good evidence at the edge of forever. Dream of the mind's eye nisi ut aliquid ex ea commodi consequatur something incredible is waiting to be known Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit quis nostrum exercitationem ullam corporis suscipit laboriosam sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+[var name:"mode" value:"waiting"  /]
+[var name:"day" value:0 /]
+[var name:"money" value:0 /]
+[var name:"students" value:10 /]
+[var name:"location" value:"home" /]
+[var name:"selfActualization" value:50 /]
+[var name:"nextTag" value:'' /]
+
+[var name:"sportsArea" value:false /]
+[var name:"diningArea" value:false /]
+[var name:"rodeoArea" value:false /]
+[var name:"dormsArea" value:false /]
+[var name:"culturalArea" value:false /]
+[var name:"churchAdminArea" value:false /]
+[var name:"nursingSchoolArea" value:false /]
+
+[var name:"tag" value:"intro" /]
+[var name:"currentPrompt" value:`null ` /]
+
+
+[div fullWidth:true style:`{
+  background: '#222',
+  color: '#fff',
+  paddingTop: '2em',
+  paddingBottom: '2em',
+  paddingRight: '2em',
+  minHeight: 450,
+  display: 'flex',
+  flexDirection: 'row'}`]
+
+[TextContainer]
+  [InteractiveFiction tag:tag currentPrompt:currentPrompt advance:`nextTag `]
+
+    [Prompt tag:`"intro"` nextTag:"chair-leaves"]
+      Your chair walks in and hands you an announcement:  “The Bacone School is closing its Art program at the end of the semester.” End of an era, he says. Seventy years of history coming to an end with me. Turn, turn, turn. They’re sending an art appraiser to see if they can’t squeeze some quick cash all this old Indian art.
+
+      [Option]Thank Him.[/Option]
+      [Option nextTag:"first-class"]Leave in Disgust[/Option]
+      [Option]
+        Talk
+
+        [Prompt]
+          He shakes his head. “Ecclesiastes 3:1”
+
+          [Option]
+            What’s that?
+
+            [Prompt]
+              He replies: Did they not teach you that at your fancy private school?  (recites verse: https://www.biblegateway.com/passage/?search=Ecclesiastes+3&version=NIV )
+            [/Prompt]
+          [/Option]
+          [Option]
+            The lord is my shepherd?
+
+            [Prompt]
+              Did they not teach you that at your fancy private school?  (recites verse: https://www.biblegateway.com/passage/?search=Ecclesiastes+3&version=NIV )
+            [/Prompt]
+          [/Option]
+          [Option]
+            Though I walk through the Valley of the Shadow of Death?
+
+            [Prompt]
+              Did they not teach you that at your fancy private school?  (recites verse: https://www.biblegateway.com/passage/?search=Ecclesiastes+3&version=NIV )
+            [/Prompt]
+          [/Option]
+          [Option]
+            Yup.
+
+            [Prompt]
+              He Replies: Yup.
+            [/Prompt]
+          [/Option]
+        [/Prompt]
+      [/Option]
+    [/Prompt]
+
+    [Prompt tag:"chair-leaves" nextTag:"first-class"]
+      "Gotta go," he says, and walks off.
+    [/Prompt]
+
+
+    [Prompt tag:"first-class"]
+      You walk to the art building.
+
+      There are four rooms, an unlit sculpture/woodworking studio, an upstairs drawing/painting room with a real skeleton in it, a storage room crammed with work, and your chair’s office.
+
+      [Option nextTag:`students > 0 ? "student-encounter" : "no-students" `]Teach a class.[/Option]
+    [/Prompt]
+
+
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      Student with gaping MRSA wound from wrestling
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      Grueling rodeo injury
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      Football injury
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      Basketball / baseball sprain
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      Softball sprain
+    [/Prompt]
+
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`diningArea = true `]
+      Promising Student - Flirtatious
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`rodeoArea = true `]
+      Promising Student - Poet
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`dormsArea = true `]
+      Promising Student - Ultra political
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`culturalArea = true `]
+      Promising Student - Scholarship
+    [/Prompt]
+
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 ]
+      First Appearance
+    [/Prompt]
+
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
+      International student - bribery attempt
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
+      International student - no english
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
+      International student - refugee story
+    [/Prompt]
+
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+      Harrowing tale - Pregnance
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+      Harrowing tale - racist police
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+      Harrowing tale - scrape with police, deserved it
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+      Harrowing tale - religious authorities
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+      Harrowing tale - terrible parental issue
+    [/Prompt]
+    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+      Harrowing tale - dead grandma (fake)
+    [/Prompt]
+
+    [Prompt tag:"no-students"]
+      You could only find work in the husk of a once-great university. You’re paid below minimum wage. Not a single one of your students showed up today.
+
+      [Option nextTag:"end-day"]Leave for the day.[/Option]
+      [Option nextTag:"explore"]Explore.[/Option]
+    [/Prompt]
+
+    [Prompt tag:"after-class" ]
+      That was a long day of teaching. Shudder.
+
+      [Option nextTag:"end-day"]Leave for the day.[/Option]
+      [Option nextTag:"explore"]Explore.[/Option]
+    [/Prompt]
+
+    [Prompt tag:`"explore"` ]
+      Where would you like to go?
+
+      [Option]Your office.[/Option]
+      [Option]Art Building.[/Option]
+      [Option if:`sportsArea `]Sports Area.[/Option]
+      [Option if:`diningArea `]Dining Area.[/Option]
+      [Option if:`rodeoArea `]Rodeo Area.[/Option]
+      [Option if:`dormsArea `]Dorms Area.[/Option]
+      [Option if:`culturalArea `]Cultural Area.[/Option]
+      [Option if:`churchAdminArea `]Church/Admin Area.[/Option]
+      [Option if:`nursingSchoolArea `]Nursing School Area.[/Option]
+
+    [/Prompt]
+
+    [Prompt tag:"end-day" nextTag:"start-day"]
+      You go home for the night.
+    [/Prompt]
+
+    [Prompt tag:"start-day" onShow:`day++`]
+      You wake up the next morning and walk to the art building.
+
+      [Option nextTag:`students > 0 ? "student-encounter" : "no-students" `]Teach a class.[/Option]
+    [/Prompt]
+
+  [/InteractiveFiction]
+[/TextContainer]
+
+[div style:`{flexGrow: 1, textAlign: 'right'}`]
+  Self actualization: [Display value:selfActualization format:"d" /] [br/]
+  Day: [Display value:day format:"d" /][br/]
+  Money: [Display value:money format:"d" /]
+[/div]
+
+[/div]
