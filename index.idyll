@@ -20,7 +20,7 @@
   source:""
 /]
 
-Terrible colleges are sprinkled all over the United States. Some of the worst are a toxic slurry of student loans, college athletics, hardline religious faith, and idle corruption. Given low pay and terrible standards, these schools need a constant flow of adjunct instructors. You play a freshly minted Fine Art adjunct from an upper middle class background who's just accepted a position at an Oklahoma in Bad Decline. Can you scrabble a living teaching and hoist yourself out of one of the poorest states in the country?   
+Terrible colleges are sprinkled all over the United States. Some of the worst are a toxic slurry of student loans, college athletics, hardline religious faith, and idle corruption. Given low pay and terrible standards, these schools need a constant flow of adjunct instructors. You play a freshly minted Fine Art adjunct from an upper middle class background who's just accepted a position at an Oklahoma college in bad decline. Can you scrabble a living teaching and hoist yourself out of one of the poorest states in the country?   
 
 [var name:"mode" value:"waiting"  /]
 [var name:"day" value:0 /]
@@ -132,13 +132,13 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       Promising Student - Flirtatious
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`rodeoArea = true `]
-      Promising Student - Poet
+      Promising Student - Inspired
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`dormsArea = true `]
-      Promising Student - Ultra political
+      Promising Student - Political
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`culturalArea = true `]
-      Promising Student - Scholarship
+      Promising Student - Scholar
     [/Prompt]
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 ]
