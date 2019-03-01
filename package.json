@@ -1,5 +1,5 @@
 {
-  "name": "decoding-the-jpeg",
+  "name": "bacone-school",
   "version": "1.0.0",
   "license": "MIT",
   "idyll": {
@@ -17,5 +17,8 @@
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"
+  },
+  "scripts": {
+    "now-build": "idyll build"
   }
 }
