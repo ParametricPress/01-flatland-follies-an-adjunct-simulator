@@ -146,6 +146,15 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       Grueling rodeo injury
     [/Prompt]
     
+    “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session. “What happened to your neck?”  
+
+Johnny’s from Anadarko. He’s a little older than everyone else, has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring. 
+
+Today there’s a brace around his neck and he’s limping.
+
+[Option]Ask what happened.[/Option]  
+
+    
     
     
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
@@ -260,7 +269,7 @@ Oh man. I remember my required art classes. Porn in the morn and scribbling nude
       
       
       [Option if:`diningArea `]Dining Area.[/Option]
-      [Option if:`rodeoArea `]Rodeo Area.[/Option]
+      [Option if:`rodeoArea `]Rodeo Area.[/Option] SportsArea?
       [Option if:`dormsArea `]Dorms Area.[/Option]
       [Option if:`culturalArea `]Cultural Area.[/Option]
       [Option if:`churchAdminArea `]Church/Admin Area.[/Option]
