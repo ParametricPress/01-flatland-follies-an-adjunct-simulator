@@ -114,10 +114,40 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Student with gaping MRSA wound from wrestling
+      
+      There’s a gleeful commotion. “Eeeeeeeeew!” Class grinds to a halt. Attention is focused on Deshawn, a young, friendly Houstoner, who is raising his wrestling shirt. 
+      
+      [Option] Ask what's going on.
+      
+      Deshawn, is that a new tattoo?
+      
+   [Prompt]
+      Check it out! Okie Baptist is finna be too scared to grapple! He pulls aside his singlet to reveal a shallow pit in his skin the size of a fist. Was a scrape. It got infected. Sometimes it heals. They never clean the wrestling mats here, he says.
+        [/Prompt]
+        [Option] Express Concern
+
+        Have you been to a doctor?
+        [/Option]
+        [Prompt]Yeah, a few times they gave me antibiotics. That shit don't work now.[/Prompt]
+         
+        [Option] Make a Joke
+        
+        Be sure to use the Purell before you hand in your assignment.
+        [/Option]
+          The class begins snickering. ((gain selfactualization))
+        [Option] Offer to drive him to a clinic in town.
+        [/Option]
+          Nah, that's okay. I've got practice after.
+      [Option] Cut Class Early
+      The class cheers! ((lose selfactualization))
+      
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Grueling rodeo injury
     [/Prompt]
+    
+    
+    
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Football injury
     [/Prompt]
@@ -194,6 +224,41 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       [Option]Your office.[/Option]
       [Option]Art Building.[/Option]
       [Option if:`sportsArea `]Sports Area.[/Option]
+      
+      Sports Area
+
+Fresh asphalt parking lot. Lusty cries ringing out from teams of men and women playing sports. Not quite as run-down as the rest of the place.
+
+A coach jogs up. He’s your age. Roughly. Wearing red shorts and a Bacone t-shirt. "Hey, you’re one of the professors. I appreciate you keeping those GPAs up with those easy As. Jeez. You must think this place is a shithole, don’t you?" 
+
+[Option]What do you think of this place?[/Option]
+
+Makes me feel gross. These kids can barely read. This is a sports college. They take out big loans to tell people they've played college ball. No worse than a grad school though haha? My sister is a Ph.D
+
+[Option]Confront him about the injuries.[/Option]
+
+Look way too many of my kids are getting badly hurt. 
+
+[Prompt]I’ve been in their shoes, have you? Got Tommy John surgery. They come here to play college sports... Some kid made it into the NFL Ravens last year. It’s a longshot. I get one of ‘em in, then maybe I can come with him as a junior coach, okay? I'm just trying to get out. I'm sure you are too.
+
+I have a request, he says. Can you guarantee my guys and gals an A?
+[/Prompt]
+
+[Option]Why should I?[/Option]
+
+[Prompt]Some of these kids have a real shot at the pros or transferring to OU or something. You know most of these kids can’t barely read. Look I appreciate the easy As. This school is dying man, and college sports this is the only way to keep people coming here.[/Prompt] 
+
+[Option]Okay fine.[/Option]
+
+((Postpones furlough)) 
+
+[Option]No.[/Option]
+
+Oh man. I remember my required art classes. Porn in the morn and scribbling nudes. Jeez. You're a piece of shit. 
+
+((Two weeks without pay))((Selfactualization increases))
+      
+      
       [Option if:`diningArea `]Dining Area.[/Option]
       [Option if:`rodeoArea `]Rodeo Area.[/Option]
       [Option if:`dormsArea `]Dorms Area.[/Option]
