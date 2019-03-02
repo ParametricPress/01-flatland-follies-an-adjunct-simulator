@@ -122,13 +122,13 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       Deshawn, is that a new tattoo?
       
    [Prompt]
-      Check it out! Okie Baptist is finna be too scared to grapple! He pulls aside his singlet to reveal a shallow pit in his skin the size of a fist. Was a scrape. It got infected. Sometimes it heals. They never clean the wrestling mats here, he says.
+      "Check it out, Professor! Okie Baptist is gonna be scared to grapple!" He pulls aside his singlet to reveal a shallow pit in his skin the size of a fist. "Was a scrape. It got infected. Sometimes it heals. They never clean the wrestling mats here," he says.
         [/Prompt]
         [Option] Express Concern
 
-        Have you been to a doctor?
+        Have you been to a doctor, DeShawn?
         [/Option]
-        [Prompt]Yeah, a few times they gave me antibiotics. That shit don't work now.[/Prompt]
+        [Prompt]Yeah, a few times the sports guys gave me antibiotics. That shit don't work now.[/Prompt]
          
         [Option] Make a Joke
         
@@ -137,7 +137,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           The class begins snickering. ((gain selfactualization))
         [Option] Offer to drive him to a clinic in town.
         [/Option]
-          Nah, that's okay. I've got practice after.
+          Nah, that's okay. I've got practice after. If I don't go, I'm cut.
       [Option] Cut Class Early
       The class cheers! ((lose selfactualization))
       
