@@ -154,15 +154,29 @@ Today there’s a brace around his neck and he’s limping.
 
 [Option]Ask what happened.[/Option]  
 
-    
-    
+  [Prompt]I got bucked! Flung me clean off and a calf stepped on my back. It’s nothing. You should come to our next rodeo! Take some zoom pictures![/Prompt]
+
+((You get an idea for a photo essay. Receive selfactualization))
+
+  [Option]Let him go for the day.[/Option]
+
+    [Prompt]That’s great professor, thank you. You don’t see him for the rest of the semester.[/Prompt]
+
+((lose selfactualization))
     
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Football injury
     [/Prompt]
+    
+    
+    
+    
+    
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Basketball / baseball sprain
     [/Prompt]
+    
+    
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Softball sprain
     [/Prompt]
@@ -232,6 +246,43 @@ Today there’s a brace around his neck and he’s limping.
 
       [Option]Your office.[/Option]
       [Option]Art Building.[/Option]
+      
+      [Prompt]There are three other art rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysterously none of the silver or copperwork remains. Could people be taking it?   
+      
+      (Storage)
+
+[Option]Rummage in the closet[/Option]
+Encounter Table.
+- flat style ($$$)
+ - portrait, native ($)
+ - horse ($$)
+ - landscape ($)
+ - portrait, celebrity ($0)
+ - portrait, young governor ($)
+
+[Option] examine the second room[/Option]
+
+ [Prompt]The second room used to the resident artist's living quarters (this boon is no longer offered to promising junior arts faculty). A colleague uses it for a drawing class. There are student drawings on the walls of varying quality and completeness and a rather yellowed skeleton hanging from a hook.
+ [/Prompt]
+[Option]Examine the Skeleton[/Option]
+
+[Prompt]Must be a child's size from height. The bones are surprisingly light, and well rendered. There's a small stamp on it that says from Calcutta. How strange to see the old spelling. You could probably use it for a class.[/Prompt]
+
+[Option]Take it and sell it[/Option]
+
+((Ends day.)) Jesus, it's real, and valuable. ($$$$) 
+
+[Option]Use it in class as a postcolonial prompt [/Option] (Your students create some surprisingly interesting work, receive self-actualization and inspiration)
+
+[Prompt]Sculpture class is downstairs in the Basement, it's been closed off for years but peering down the stairs you can make out the dim outline of old machinery.[/Prompt} 
+
+[Optiom]Go down into the basement[/Option]
+
+[Prompt]You fall down the stairs...all of a sudden your leg is in serious pain[/Prompt]
+
+You're forced to call an ambulance (furlough, no pay for three weeks)
+
+      
       [Option if:`sportsArea `]Sports Area.[/Option]
       
       Sports Area
