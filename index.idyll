@@ -234,7 +234,15 @@ Elya eventually stops looking over at you. One day she stops showing up.
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`diningArea = true `]
       Promising Student - Flirtatious
-    [/Prompt]
+    [/Prompt]    
+   [Prompt] Claire is your best student. She’s talented painter who’s gone to the sources you’ve recommended and attempted to incorporate it into her work. She usually shows up to class. Ater class she approaches you. Professor, I want to go outside with my easel and do a real plein air painting of the prairie. Would it be okay if you dropped by and just checked up on me? I want to make sure I’m doing it the way Monet did. I’ll be by the dining halls. Her gaze seems to linger.[/Prompt]
+[Option]Yes, of course.[/Option]
+ [Prompt]A broad beautiful smile stretches across her face. “I can’t wait to see you,” she says. You feel light and giddy and… happy. ((Self actualization boost))[/Prompt]
+[Option]I’m so sorry, Claire. I’ll be busy.[/Option]
+ [Prompt]Oh. She looks down at the floor. If you’re busy, maybe you can text me some advice. She writes her cellphone number down and slides it over.[/Prompt]
+[Option]Sorry Claire, you know I can’t talk to students outside of class.[/Option]
+ [Prompt]Oh, okay. She doesn’t show up to class next week. Nor doe she ever appear in your class again. ((Lose self-actualization.[/Prompt]
+ 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`rodeoArea = true `]
       Promising Student - Inspired
     [/Prompt]
