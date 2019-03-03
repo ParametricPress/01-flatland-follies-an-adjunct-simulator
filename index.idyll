@@ -220,8 +220,17 @@ Elya eventually stops looking over at you. One day she stops showing up.
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Softball sprain
     [/Prompt]
-
-
+[Prompt]Kandy is untalented but enthusiastic, she likes bright colors and sunshiny subject matter: she brings the class together, except when she’s cooing over Johnny’s twins. Today she can barely move her wrist. It was torn in a softball match. After class she’s sobbing. I really wish we didn’t have to do this, she says.[/Prompt]
+[Option]Ask her what’s going on[/Option]
+ [Prompt]I’m on a partial softball scholarship. I’m in so much debt, If I lose it I’m done.[/Prompt]
+	[Option]Offer to buy her a snack[/Option]
+	 [Prompt]She gratefully accepts. ((Lose $))
+	[Option]Offer to talk to the coach[/Option]
+	 [Prompt]She smiles and thanks you. ((Gain self-actualization))
+[Option]Excuse her from class[/Option]
+ [Prompt]She never shows up again. ((Lose self-actualization))
+[Option]Ignore her[/Option]
+ [Prompt]She slowly walks away. You feel like maybe you should have done something((Lose self actualization))[/Prompt]
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`diningArea = true `]
       Promising Student - Flirtatious
