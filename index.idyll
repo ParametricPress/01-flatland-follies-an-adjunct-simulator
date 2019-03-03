@@ -144,12 +144,9 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Grueling rodeo injury
-    [/Prompt]
-    
+    [/Prompt]    
     “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session. “What happened to your neck?”  
-
-Johnny’s from Anadarko. He’s a little older than everyone else, has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring. 
-
+Johnny’s from Anadarko. He’s a older than everyone else, and has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring. 
 Today there’s a brace around his neck and he’s limping.
 
 [Option]Ask what happened.[/Option]  
@@ -167,19 +164,64 @@ Today there’s a brace around his neck and he’s limping.
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Football injury
     [/Prompt]
+      The class laughs when Kelton can’t remember what happened last week. He growls back. Weird stuff: pushing his thumb in eye goo, spilling blood, aggressive sexual stuff. He’s been having trouble concentrating or even holding his paintbrush. Strange. Because he’s normally a smart kid-- he is QB of the football team after all.
+ He starts trying to say something when Johnny (Rodeo, older student, Chickasaw) says K, hey, hey, hey, siddown mush fuck.
     
+    [Option]Tell Johnny and Kelton to take off[/Option]
     
+    [Prompt]The entire class follows them. There’s a fight outside. Afterwards, the kids seem to hate you. ((lose self-actualization))[/Prompt] 
     
+    [Option]Ask Kelton what happened[/Option]
+      
+      [Prompt]I got hit in the game again. I’m dizzy as fuck though. He hands you a midterm grade report sheet. That’s what I was trying to say. Please don’t fail me. I gotta play.[/Prompt]
     
+    [Option]Flunk him to keep him from playing.[/Option]
+      
+      ((gain selfactualization, lose a week of pay))
+    
+    [Option]Give him an A on his midterm report[/Option]
+
+    ((lose self-actualization, bonus $))
+      
+     [Option]Ask Johnny what happened to K[/Option]
+
+[Prompt] Don’t mind him, Johnny says. Those football kids get torn up. He nailed his head. I think he wants you to sign his midterm grade report sheet. [/Option] 
+
+        [Option] Flunk him to keep him from playing.[/Option]
+
+    ((gain selfactualization, lose a week of pay))
+
+        [Option] Give him an A on his midterm report[/Option]
+
+    ((lose self-actualization, bonus $))
+
+[Option]Ignore it and continue the lesson[/Options]
+
+      [Ends day]
     
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Basketball / baseball sprain
     [/Prompt]
-    
+
+[Prompt]Elya is a devout Eastern European basketball playing Estonian. She’s normally happy to be in class and is one of your better students.. She’s clearly in pain as she lopes into the classroom. She’s sad. But keeps glancing at you with watery, insistent pale blue eyes.[/Prompt]
+
+[Option]Comfort her.[/Option]
+
+[Prompt]If I don’t go back to the game they’ll send me home. But I’m hurt. I love this art class and the opportunity to come here. She grabs your palm. I don’t even like this game so much. I want to become an actuary. Could you please talk to them for me?[/Prompt]
+
+(gain self-actualization)
+
+[Option]Ignore her.[/Option]
+
+Elya eventually stops looking over at you. One day she stops showing up.
+
+(lose self-actualization)
     
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
       Softball sprain
     [/Prompt]
+
+
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`diningArea = true `]
       Promising Student - Flirtatious
@@ -320,11 +362,25 @@ Oh man. I remember my required art classes. Porn in the morn and scribbling nude
       
       
       [Option if:`diningArea `]Dining Area.[/Option]
+      
+((flirtatious student, encounter corruption))
+      
       [Option if:`rodeoArea `]Rodeo Area.[/Option] SportsArea?
       [Option if:`dormsArea `]Dorms Area.[/Option]
+      
+((you try to organize your brighter students into creatng a shaming tumblr to draw attention to their plight)) 
+      
       [Option if:`culturalArea `]Cultural Area.[/Option]
+
+((encounter something about the eradication of Native American culture and the recreation of it))
+
       [Option if:`churchAdminArea `]Church/Admin Area.[/Option]
+      
+((refugee descriptions -- this should be an unambigiously good thing that they're helping the Burmese into the US))
+      
       [Option if:`nursingSchoolArea `]Nursing School Area.[/Option]
+
+((history about what the school used to be an lost opportunities to plunder))
 
     [/Prompt]
 
