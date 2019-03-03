@@ -380,7 +380,21 @@ Oh man. I remember my required art classes. Porn in the morn and scribbling nude
       
       [Option if:`diningArea `]Dining Area.[/Option]
       
-((flirtatious student, encounter corruption))
+[Prompt]The clatter and steam of a dining hall: You recognize a few of the faces. The dining hall is spartan, rickety card tables, plastic chairs and vending machines, decoration is little more than public service announcements and ads for Sodesu, the goliath catering company.
+“Professor!” It’s Claire. “You’ve come.” She has her drawings tucked under her elbow. “I’m so embarrassed for you to see.” She sits down and opens her sketchbook. Her giddy happiness is contagious. You’re so tempted to open up and let your feelings flow.[/Prompt]
+ [Option]Keep things professional.[/Option]
+	[Prompt]You give her a gentle critique on her work, which is indeed promising. She’s pleased but seems to want more from you. ((self actualization increases))[/Prompt]
+ [Option]Relax and Open Up[/Option]
+	[Prompt]You tell her about yourself and your worries and dreams. She tells you about hers: they sync, her dad is the school’s pastor, she dreams of escaping to Berlin or London or New York or anywhere really… “I know this amazing spot I’ve always wanted to draw, do you wanna come with me?”[/Prompt]
+  [Option]Respond: It’s getting late, Claire. I’ll see you in class tomorrow.[/Option]
+	[Prompt]She’s disappointed but seems to understand.((Self actualization score increases))
+[Option]Respond: Sure![/Prompt]
+	[Prompt]You follow her to bridge a short distance from the school. “They say it’s haunted,” she says. “But by good ghosts. The Native girls and guys would escape from their boarding schools and meet up here.[/Prompt]
+[Option]Ask about boarding schools[/Option]
+	[Prompt]She tells you about boarding schools, awful places where Indian kids were ripped from their families and reeducated. “They basically killed off all of culture, everything you see if basically fake.” This gives you an idea for a photo essay. ((Self-actualization increases considerably))[/Prompt]
+[Option]Kiss her[/Option]
+	[Prompt]She kisses you back, it feels incredible, but at the end of the day, is this really what you should be doing with your most promising student? ((Lose self-actualization))[/Prompt]
+
       
       [Option if:`rodeoArea `]Rodeo Area.[/Option] SportsArea?
       [Option if:`dormsArea `]Dorms Area.[/Option]
