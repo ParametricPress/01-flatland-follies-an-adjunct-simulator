@@ -245,10 +245,26 @@ Elya eventually stops looking over at you. One day she stops showing up.
  
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`rodeoArea = true `]
       Promising Student - Inspired
+      
+      Inspiring
+
+[Prompt]Some of these kids have real talent. It’s been a good day. ((Self actualization increases))[/Prompt]
+      
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`dormsArea = true `]
       Promising Student - Political
-    [/Prompt]
+
+[Prompt]Cal isn’t a particularly gifted painter but he’s really enjoyed discussing the work, particularly when it veers into social commentary. He’s waiting for you after class one day. “I want to make work about some of the problems at the school.” ((Opens cultural center))
+	[Option]Reply: Art really shouldn’t be about propaganda[/Option]
+	 [Prompt]He nods his head and goes quietly. You don’t see him in class again. Still, you’ve taught him something about art.((Self actualization increases))[/Prompt]
+	[Option]Reply: You should! What’s the biggest problem facing the school?[/Option]
+	 [Prompt]It’s messed up that there’s so much money going to the cultural centers here at the school when there’s nothing being spent on fixing up the dorms.[/Prompt]
+[Option]Tell him: You should do a photo series on the problems in the dorms.[/Option]
+ [Prompt]I don’t even know where to start, he says. Can you swing by the dorms? And maybe point out some stuff for me to take pictures of?((opens DORMS))[/Prompt]
+[Option]Reply: You should look at where the money is coming from.[/Prompt]
+ [Prompt]Oh, that’s easy, the money comes from the casinos, he says. Then why don’t you do a project about that? ((Self-actualization increases)) [/Prompt]
+
+[/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`culturalArea = true `]
       Promising Student - Scholar
     [/Prompt]
