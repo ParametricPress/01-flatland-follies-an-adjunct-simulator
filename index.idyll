@@ -275,9 +275,19 @@ Elya eventually stops looking over at you. One day she stops showing up.
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
       International student - bribery attempt
     [/Prompt]
+    
+    [Prompt]You haven't seen this student before. "In my country, the custom is to give your professor a gift mid-semester." Given that most of the grade is participation, he seems to know he's trouble. Perhaps that's why he's brought you a rather large and very conspicious wrapped gift. Will you take it?[/Prompt] 
+    [Option]Accept it.[/Option]
+    	[Prompt]It's a brass tea set. You can sell it on eBay.((receive $$$))[/Prompt]
+    [Option]Reject it.[/Option]
+    	[Prompt]Probably for the best. Though you feel a bit foolish. After all the school seems to use these guys as cash cows. Why shouldn't you?[/Prompt]
+        
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
-      International student - no english
+  
+  [Prompt] Neither of you can communicate. What's the point? What's the point of any of this? ((Lose self-actualization))[/Propmt]
     [/Prompt]
+  
+    
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
       International student - refugee story
     [/Prompt]
@@ -292,12 +302,19 @@ Elya eventually stops looking over at you. One day she stops showing up.
     	[Prompt]She's upset. You never see her again.[/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - racist police
+      
+      ((you go to the ADMIN building))
+    
+      
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - scrape with police, deserved it
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - religious authorities
+    
+    ((Religious center))
+    
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - terrible parental issue
