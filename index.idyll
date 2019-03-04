@@ -245,8 +245,6 @@ Elya eventually stops looking over at you. One day she stops showing up.
  
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`rodeoArea = true `]
       Promising Student - Inspired
-      
-      Inspiring
 
 [Prompt]Some of these kids have real talent. It’s been a good day. ((Self actualization increases))[/Prompt]
       
@@ -272,6 +270,7 @@ Elya eventually stops looking over at you. One day she stops showing up.
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 ]
       First Appearance
     [/Prompt]
+    [Prompt]A student you've never seen before shows up. You roll your eyes.[/Prompt]
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
       International student - bribery attempt
@@ -286,6 +285,11 @@ Elya eventually stops looking over at you. One day she stops showing up.
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - Pregnance
     [/Prompt]
+    [Prompt]Kelli comes up to you after class. She's missed a few classes. Today she tells you why: she thinks she's pregnant and because of the school's mission statement she can't get tested. She asks if you can pick up a pregnancy test from Walmart.[/Prompt]
+     [Option]Of course[/Option]
+     	[Prompt]She's relieved when she finds out she isn't. She makes no mention of paying you back.[/Prompt]
+    [Option]Sorry, I can't[/Option]
+    	[Prompt]She's upset. You never see her again.[/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - racist police
     [/Prompt]
@@ -319,7 +323,7 @@ Elya eventually stops looking over at you. One day she stops showing up.
     [Prompt tag:`"explore"` ]
       Where would you like to go?
 
-      [Option]Your office.[/Option]
+      [Option]Your Office.[/Option]
       [Option]Art Building.[/Option]
       
       [Prompt]There are three other art rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysterously none of the silver or copperwork remains. Could people be taking it?   
@@ -389,7 +393,7 @@ I have a request, he says. Can you guarantee my guys and gals an A?
 
 [Option]No.[/Option]
 
-Oh man. I remember my required art classes. Porn in the morn and scribbling nudes. Jeez. You're a piece of shit. 
+Oh man. I remember my required art classes. Porn in the morn and scribbling nudes. Jeez. You're scum. 
 
 ((Two weeks without pay))((Selfactualization increases))
       
