@@ -289,7 +289,13 @@ Elya eventually stops looking over at you. One day she stops showing up.
   
     
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
-      International student - refugee story
+[Prompt]
+	Myat is from Burma (he’ll never call it Myanmar). He’s a bright kid, knows what’s he’s doing. He’s surprised you’ve heard of Myanmar, let alone the dreaded State Law and Order Restoration Council (which has been oppressing Christians like Myat for generations).After a positive critique, he lingers after class and seems to want to talk. Do you want here his story?[/Prompt] 
+	[Option]Yes, please.[/Option]
+	 [Prompt]It’s a pretty disturbing story. Weirdly it leaves you feeling better about the school you’re working at. Myat tells you he was smuggled out of the country by missionaries, taken across the border with Thailand in a car trunk. The church organized the paper work and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay though,((gain self-actualization))((Opens CHURCH))[/Prompt]
+	[Option]No, thanks. [/Option]
+	[Prompt]Surely you ought to have listened to him :( ((lose self-actualization))[/Prompt]
+
     [/Prompt]
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
@@ -308,7 +314,7 @@ Elya eventually stops looking over at you. One day she stops showing up.
       
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
-      Harrowing tale - scrape with police, deserved it
+      Stan, one of your less attentive yet more vocal students describes why he's been absent for the last three weeks: he was caught driving 105MPH and couldn't affoard bail. Who knew a 1999 Camero could go that fast? You excuse him.
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - religious authorities
@@ -320,7 +326,7 @@ Elya eventually stops looking over at you. One day she stops showing up.
       Harrowing tale - terrible parental issue
     [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
-      Harrowing tale - dead grandma (fake)
+      Yet another dead grandmother excuse. Hope whatever is killing them off isn't contagious.
     [/Prompt]
 
     [Prompt tag:"no-students"]
