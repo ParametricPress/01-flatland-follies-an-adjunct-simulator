@@ -446,7 +446,28 @@ Oh man. I remember my required art classes. Porn in the morn and scribbling nude
       
       [Option if:`culturalArea `]Cultural Area.[/Option]
 
-((encounter something about the eradication of Native American culture and the recreation of it))
+CULTURAL CENTER
+
+The cultural center is a lodge, made of log and retrofitted with silvered mirrors and bristling with antennae. It has its own parking lot. There are late model cars and trucks parked in there. 
+
+[Option]Examine a placard[/Option]
+
+[Prompt]Donated by a local tribe’s casino operations wing. It’s only a couple of years old.[/Prompt]
+
+[Option]Go in?[/Option]
+
+You find yourself in a nicely appointed lodge. An attractive woman in her twenties sits at a reception desk. “Osiyo! How can I help you today? Would you like to make a donation?”
+[Option]Ask about donations[/Options]
+[Prompt]We’re fundraising for a couple of different initiatives. There are scholarships for our tribe members, there’s an art preservation project, where we bring in a bunch of artists and scholars, and you can see how run down the rest of campus is--we want to bring this place back to its former glory?
+  [Option]Ask what happened to the school[/Option]
+	[Prompt]It’s kind of sad, she said. The tribe couldn’t afford to maintain the school, plus there was a bunch of bad press after Wounded Knee in the 1970s, so they sold off to the Sodesko family.[/Prompt] 
+	[Option]What did the Sodeskos do?[/Option]
+		[Prompt]Well, they weren’t quite crooks but pretty close, they eventually turned it into a Baptist school, they closed down the nursing school -- they couldn’t afford to keep it modern -- the only way they could maintain it was to bring in as many student athletes as they could and then standards fell. Now we’re trying to get the student athletes out and then buy back for the tribe.[/Prompt] 
+			[Option]How are they going to do that?[/Option]
+				[Prompt]It’s kind of mean. They don’t maintain the dorms. Hire the crappiest teachers. They’re just starving them out basically.[/Prompt]
+[Option]Ask why there are so many cars outside[/Option]
+	[Prompt]Oh, the tribal council is meeting with Sodeskos about selling the school to them. Is there anything else I can help you with? We’re very busy[/Prompt]
+
 
       [Option if:`churchAdminArea `]Church/Admin Area.[/Option]
       
