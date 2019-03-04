@@ -264,7 +264,7 @@ Elya eventually stops looking over at you. One day she stops showing up.
 
 [/Prompt]
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`culturalArea = true `]
-      Promising Student - Scholar
+      Sam's father and grandfather went to the school. His grandfather became a deputy chief and they've given thousands of dollars to the school, according to Sam. His father became a nurse. You should check out the old nursing school. His dad tells him it's kind of sad.
     [/Prompt]
 
     [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 ]
