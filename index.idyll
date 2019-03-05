@@ -438,12 +438,19 @@ Oh man. I remember my required art classes. Porn in the morn and scribbling nude
 [Option]Kiss her[/Option]
 	[Prompt]She kisses you back, it feels incredible, but at the end of the day, is this really what you should be doing with your most promising student? ((Lose self-actualization))[/Prompt]
 
-      
-      [Option if:`rodeoArea `]Rodeo Area.[/Option] SportsArea?
-      [Option if:`dormsArea `]Dorms Area.[/Option]
-      
-((you try to organize your brighter students into creatng a shaming tumblr to draw attention to their plight)) 
-      
+           
+     [Option if:`dormsArea `]Dorms Area.[/Option]
+     [Prompt] The Bacone School apparently expanded its boundries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
+     
+     Your student calls out. He's been waiting for you. Do you follow him in?
+     [Option]Do it.[/Option]
+     	[Prompt]You follow him into the motel. It's appalling. Roaches cruise by in insectoid superhighways. Moist stains blossom klaidiscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"[/Prompt]
+    	[Option]Focus on the Race Issue[/Option]
+		[Prompt]You tell him to start looking into the disparities between the living situations and give him some suggestions for places to reach out to. You take some pictures as well and give him some walking around money. ((Receive self-actualization))((Lose some $$$))[/Prompt] 
+	[Option]Focus on Conditions[/Option]
+		[Prompt]You tell him to start documenting conditions in the building and getting the entire student body involved.((Receive self-actualization))You can't help but give him some food for snacks. ((Lose sme $$))[/Prompt]
+     [/Prompt] 
+  
       [Option if:`culturalArea `]Cultural Area.[/Option]
 
 CULTURAL CENTER
@@ -473,20 +480,9 @@ You find yourself in a nicely appointed lodge. An attractive woman in her twenti
       
 ((refugee descriptions -- this should be an unambigiously good thing that they're helping the Burmese into the US))
       
-      DORMS
-Converted strip mall
-Disrepair
-Encourage Students to Start the tumblr about conditions 
-
-ADMIN
-Reach out about racism
-Town/Gown Issues
-
-      
       [Option if:`nursingSchoolArea `]Nursing School Area.[/Option]
 
-You slip into the Nursing Building. Most of the rooms are locked. By peering into the windows you can just make out CPR dummies and medical equipment a generation old. It’s locked. No way in without smashing a window. In the distance you hear the sounds of the playing fields.
-
+You slip into the Nursing Building. Most of the rooms are locked. By peering into the windows you can just make out CPR dummies and medical equipment a generation old. It’s locked. No way in without smashing a window. In the distance you hear the sounds of the playing fields. There's nothing here, just the remains of something that looks like it once was important.
 
     [/Prompt]
 
