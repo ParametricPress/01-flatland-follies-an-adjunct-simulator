@@ -476,9 +476,19 @@ You find yourself in a nicely appointed lodge. An attractive woman in her twenti
 	[Prompt]Oh, the tribal council is meeting with Sodeskos about selling the school to them. Is there anything else I can help you with? We’re very busy[/Prompt]
 
 
-      [Option if:`churchAdminArea `]Church/Admin Area.[/Option]
+      [Option if:`churchAdminArea `]Church Area[/Option]
       
-((refugee descriptions -- this should be an unambigiously good thing that they're helping the Burmese into the US))
+[Prompt]The Church is the oldest, grandest building on campus; the steeple, the tallest thing for a hundred miles (the cell tower tucked inside likely brings them considerable revenue). The muffled hum of massed voices hangs in the air. Are you compelled to go toward it?  [/Prompt]
+	[Option]Walk up the stairs into the church[/option]
+	 [Prompt]You push the doors open and are hit with a wave of music--the entire school (minus a few cantankerous itinerant professors) is standing, singing together.[/Prompt]
+	[Option]Take a seat and watch[/Option]
+		[Prompt]The singing eventually stops. You feel refreshed, people are smiling at you and bobbing their heads. Claire, your best student, walks on stage and introduces her father, the senior pastor. Will you keep listening?[/Prompt]
+			[Option]Keep listening[/Option]
+			 [Prompt]You expect fire and brimstone but watch as your Burmese students get on stage with him and instead of a sermon hear a detailed description of how the church was smuggling Burmese students out of Myanmar and into the states. You leave feeling strangely energized and much more ambivalent about the school.((Receive self-actualization)) You leave some money in the collection plate ((lose $)) [/Prompt] 
+			[Option]Head out[/Option]
+			  [Prompt]You head for the door, feeling strangely energized and much more ambivalent about the church.[/Prompt]
+[Option]Leave[/Option]
+
       
       [Option if:`nursingSchoolArea `]Nursing School Area.[/Option]
 
