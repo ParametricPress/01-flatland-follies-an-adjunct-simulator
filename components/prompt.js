@@ -54,7 +54,7 @@ class Prompt extends React.Component {
         return [c.props.children[0], React.createElement('br'), React.createElement('br'), ];
       }
 
-      return c;
+      return [c, React.createElement('br'), React.createElement('br'), ];
     };
     const ret = mapChildren(filterChildren(this.props.children, (c) => {
       return !(c && c.type && c.type.name && c.type.name.toLowerCase() === 'option');

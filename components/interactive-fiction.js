@@ -50,7 +50,10 @@ class InteractiveFiction extends React.Component {
   }
 
   render() {
-    const { hasError, idyll, updateProps, children, tag, currentPrompt, advance, ...props } = this.props;
+    const { hasError, idyll, updateProps, children, tag, currentPrompt, advance, started, ...props } = this.props;
+    if (!started) {
+      return null;
+    }
     return (
       <div {...props}>
         {
