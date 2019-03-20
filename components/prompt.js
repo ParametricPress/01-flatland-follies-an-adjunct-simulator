@@ -1,12 +1,28 @@
 const React = require('react');
+import Typist from 'react-typist';
 const Option = require('./option');
 const { filterChildren, mapChildren } = require('idyll-component-children');
 
 class Prompt extends React.Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showOptions: false
+    }
+    this.doneTyping = this.doneTyping.bind(this);
+  }
+
+  doneTyping() {
+    this.setState({
+      showOptions: true
+    })
+  }
 
   componentDidMount() {
     if (this.props.onShow) {
+      console.log('triggering onshow callback');
       this.props.onShow();
     }
   }
@@ -24,23 +40,39 @@ class Prompt extends React.Component {
       return React.cloneElement(c, {
         setCurrentPrompt: this.props.setCurrentPrompt,
         advance: this.props.advance,
-        nextTag: c.props.nextTag || this.props.nextTag
+        nextTag: c.props.nextTag || this.props.nextTag,
+        heading: c.props.heading || this.props.heading
       })
     });
   }
 
   getContent() {
-    return filterChildren(this.props.children, (c) => {
+    const handleChild = (c) => {
+      if (typeof c === 'string') {
+        return c;
+      } else if (c && c.type && c.type.toLowerCase() === 'p' && c.props.children.length === 1) {
+        return [c.props.children[0], React.createElement('br'), React.createElement('br'), ];
+      }
+
+      return c;
+    };
+    const ret = mapChildren(filterChildren(this.props.children, (c) => {
       return !(c && c.type && c.type.name && c.type.name.toLowerCase() === 'option');
-    });
+    }), handleChild);
+    return ret;
   }
 
   render() {
-    const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, ...props } = this.props;
+    const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, nextTag, onShow, heading, ...props } = this.props;
+    const { showOptions } = this.state;
     return (
       <div {...props}>
-        {this.getContent()}
-        {this.getOptions()}
+        { heading ? <div className="parametric-if-heading">{heading}</div> : null}
+        <Typist avgTypingDelay={40} stdTypingDelay={5} onTypingDone={this.doneTyping}>{this.getContent()}</Typist>
+        <br/>
+        <div className="parametric-if-options" style={{opacity: showOptions ? 1 : 0}}>
+          {this.getOptions()}
+        </div>
       </div>
     );
   }

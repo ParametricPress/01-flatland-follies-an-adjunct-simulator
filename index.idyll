@@ -6,6 +6,7 @@
 
 [Header
   title:`["Bacone", "School"]`
+  longTitle:`["Bacone", "School"]`
   dek:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and yet it's filled with dusty, decaying art."
   fullWidth:true
   authors:`[{
@@ -20,10 +21,10 @@
   source:""
 /]
 
-Terrible colleges are sprinkled all over the United States. Some of the worst are a toxic slurry of student loans, college athletics, hardline religious faith, and idle corruption. Given low pay and terrible standards, these schools need a constant flow of adjunct instructors. You play a freshly minted Fine Art adjunct from an upper middle class background who's just accepted a position at an Oklahoma college in bad decline. Can you scrabble a living teaching and hoist yourself out of one of the poorest states in the country?   
+Terrible colleges are sprinkled all over the United States. Some of the worst are a toxic slurry of student loans, college athletics, hardline religious faith, and idle corruption. Given low pay and terrible standards, these schools need a constant flow of adjunct instructors. You play a freshly minted Fine Art adjunct from an upper middle class background who's just accepted a position at an Oklahoma college in bad decline. Can you scrabble a living teaching and hoist yourself out of one of the poorest states in the country?
 
 [var name:"mode" value:"waiting"  /]
-[var name:"day" value:0 /]
+[var name:"day" value:1 /]
 [var name:"money" value:0 /]
 [var name:"students" value:10 /]
 [var name:"location" value:"home" /]
@@ -48,7 +49,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
   paddingTop: '2em',
   paddingBottom: '2em',
   paddingRight: '2em',
-  minHeight: 450,
+  minHeight: 550,
   display: 'flex',
   flexDirection: 'row'}`]
 
@@ -112,220 +113,362 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
     [/Prompt]
 
 
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
-      Student with gaping MRSA wound from wrestling
-      
-      There’s a gleeful commotion. “Eeeeeeeeew!” Class grinds to a halt. Attention is focused on Deshawn, a young, friendly Houstoner, who is raising his wrestling shirt. 
-      
+    [Prompt heading:"Student Encounter: Wrestling Wound" tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      There’s a gleeful commotion. “Eeeeeeeeew!” Class grinds to a halt. Attention is focused on Deshawn, a young, friendly Houstoner, who is raising his wrestling shirt.
+
       [Option] Ask what's going on.
-      
-      Deshawn, is that a new tattoo?
-      
-   [Prompt]
-      "Check it out, Professor! Okie Baptist is gonna be scared to grapple!" He pulls aside his singlet to reveal a shallow pit in his skin the size of a fist. "Was a scrape. It got infected. Sometimes it heals. They never clean the wrestling mats here," he says.
+
+        [Prompt]
+          *Deshawn, is that a new tattoo?*
+
+          "Check it out, Professor! Okie Baptist is gonna be scared to grapple!" He pulls aside his singlet to reveal a shallow pit in his skin the size of a fist. "Was a scrape. It got infected. Sometimes it heals. They never clean the wrestling mats here," he says.
         [/Prompt]
-        [Option] Express Concern
+      [/Option]
 
-        Have you been to a doctor, DeShawn?
-        [/Option]
-        [Prompt]Yeah, a few times the sports guys gave me antibiotics. That shit don't work now.[/Prompt]
-         
-        [Option] Make a Joke
-        
-        Be sure to use the Purell before you hand in your assignment.
-        [/Option]
-          The class begins snickering. ((gain selfactualization))
-        [Option] Offer to drive him to a clinic in town.
-        [/Option]
+      [Option] Express Concern
+
+        [Prompt]
+          *Have you been to a doctor, DeShawn?*
+
+          Yeah, a few times the sports guys gave me antibiotics. That shit don't work now.
+        [/Prompt]
+      [/Option]
+
+      [Option] Make a Joke
+
+        [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
+          *Be sure to use the Purell before you hand in your assignment.*
+
+          The class begins snickering.
+          // ((gain selfactualization))
+        [/Prompt]
+
+      [/Option]
+
+
+      [Option] Offer to drive him to a clinic in town.
+
+        [Prompt]
           Nah, that's okay. I've got practice after. If I don't go, I'm cut.
+        [/Prompt]
+      [/Option]
+
       [Option] Cut Class Early
-      The class cheers! ((lose selfactualization))
-      
+
+        [Prompt onShow:`set('selfActualization', selfActualization - 10)`]
+          The class cheers!
+          // ((lose selfactualization))
+        [/Prompt]
+      [/Option]
+
     [/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
-      Grueling rodeo injury
-    [/Prompt]    
-    “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session. “What happened to your neck?”  
-Johnny’s from Anadarko. He’s a older than everyone else, and has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring. 
-Today there’s a brace around his neck and he’s limping.
 
-[Option]Ask what happened.[/Option]  
+    [Prompt heading:"Student Encounter: Grueling rodeo injury" tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
 
-  [Prompt]I got bucked! Flung me clean off and a calf stepped on my back. It’s nothing. You should come to our next rodeo! Take some zoom pictures![/Prompt]
+      “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session. “What happened to your neck?”
+      Johnny’s from Anadarko. He’s a older than everyone else, and has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring.
+      Today there’s a brace around his neck and he’s limping.
 
-((You get an idea for a photo essay. Receive selfactualization))
+      [Option]Ask what happened.
 
-  [Option]Let him go for the day.[/Option]
+        [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
+          I got bucked! Flung me clean off and a calf stepped on my back. It’s nothing. You should come to our next rodeo! Take some zoom pictures!
 
-    [Prompt]That’s great professor, thank you. You don’t see him for the rest of the semester.[/Prompt]
+          You get an idea for a photo essay.
+        [/Prompt]
+      [/Option]
 
-((lose selfactualization))
-    
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
-      Football injury
+      [Option]
+        Let him go for the day.
+
+        [Prompt onShow:`set('selfActualization', selfActualization - 10)`]
+          That’s great professor, thank you. You don’t see him for the rest of the semester.
+
+          // ((lose selfactualization))
+        [/Prompt]
+      [/Option]
     [/Prompt]
+
+
+
+    [Prompt heading:"Student Encounter: Football injury" tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      // Football injury
+
       The class laughs when Kelton can’t remember what happened last week. He growls back. Weird stuff: pushing his thumb in eye goo, spilling blood, aggressive sexual stuff. He’s been having trouble concentrating or even holding his paintbrush. Strange. Because he’s normally a smart kid-- he is QB of the football team after all.
- He starts trying to say something when Johnny (Rodeo, older student, Chickasaw) says K, hey, hey, hey, siddown mush fuck.
-    
-    [Option]Tell Johnny and Kelton to take off[/Option]
-    
-    [Prompt]The entire class follows them. There’s a fight outside. Afterwards, the kids seem to hate you. ((lose self-actualization))[/Prompt] 
-    
-    [Option]Ask Kelton what happened[/Option]
-      
-      [Prompt]I got hit in the game again. I’m dizzy as fuck though. He hands you a midterm grade report sheet. That’s what I was trying to say. Please don’t fail me. I gotta play.[/Prompt]
-    
-    [Option]Flunk him to keep him from playing.[/Option]
-      
-      ((gain selfactualization, lose a week of pay))
-    
-    [Option]Give him an A on his midterm report[/Option]
 
-    ((lose self-actualization, bonus $))
-      
-     [Option]Ask Johnny what happened to K[/Option]
+      He starts trying to say something when Johnny (Rodeo, older student, Chickasaw) says K, hey, hey, hey, siddown mush fuck.
 
-[Prompt] Don’t mind him, Johnny says. Those football kids get torn up. He nailed his head. I think he wants you to sign his midterm grade report sheet. [/Option] 
+      [Option]
+        Tell Johnny and Kelton to take off
 
-        [Option] Flunk him to keep him from playing.[/Option]
+        [Prompt]The entire class follows them. There’s a fight outside. Afterwards, the kids seem to hate you. ((lose self-actualization))[/Prompt]
+      [/Option]
 
-    ((gain selfactualization, lose a week of pay))
+      [Option]
+        Ask Kelton what happened
 
-        [Option] Give him an A on his midterm report[/Option]
+        [Prompt]
+          I got hit in the game again. I’m dizzy as fuck though. He hands you a midterm grade report sheet. That’s what I was trying to say. Please don’t fail me. I gotta play.
 
-    ((lose self-actualization, bonus $))
+          [Option onSelect:`set('selfActualization', selfActualization + 10); set('money', money - 10);`]
+            Flunk him to keep him from playing.
+            // ((gain selfactualization, lose a week of pay))
+          [/Option]
 
-[Option]Ignore it and continue the lesson[/Options]
 
-      [Ends day]
-    
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
-      Basketball / baseball sprain
+          [Option onSelect:`set('selfActualization', selfActualization - 10); set('money', money + 10);`]
+            Give him an A on his midterm report
+            // ((lose self-actualization, bonus $))
+          [/Option]
+
+          [Option]
+            Ask Johnny what happened to K
+
+            [Prompt] Don’t mind him, Johnny says. Those football kids get torn up. He nailed his head. I think he wants you to sign his midterm grade report sheet.
+
+                // ((gain selfactualization, lose a week of pay))
+              [Option onSelect:`set('selfActualization', selfActualization + 10); set('money', money - 10);`] Flunk him to keep him from playing.[/Option]
+
+
+              // ((lose self-actualization, bonus $))
+              [Option onSelect:`set('selfActualization', selfActualization - 10); set('money', money + 10);`] Give him an A on his midterm report[/Option]
+
+            [/Prompt]
+          [/Option]
+          [Option]
+            Ignore it and continue the lesson
+            // [Ends day]
+          [/Option]
+        [/Prompt]
+      [/Option]
+
     [/Prompt]
 
-[Prompt]Elya is a devout Eastern European basketball playing Estonian. She’s normally happy to be in class and is one of your better students.. She’s clearly in pain as she lopes into the classroom. She’s sad. But keeps glancing at you with watery, insistent pale blue eyes.[/Prompt]
 
-[Option]Comfort her.[/Option]
 
-[Prompt]If I don’t go back to the game they’ll send me home. But I’m hurt. I love this art class and the opportunity to come here. She grabs your palm. I don’t even like this game so much. I want to become an actuary. Could you please talk to them for me?[/Prompt]
+    [Prompt heading:"Student Encounter: Basketball sprain" tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
 
-(gain self-actualization)
+      Elya is a devout Eastern European basketball playing Estonian. She’s normally happy to be in class and is one of your better students.. She’s clearly in pain as she lopes into the classroom. She’s sad. But keeps glancing at you with watery, insistent pale blue eyes.
 
-[Option]Ignore her.[/Option]
+      [Option]Comfort her.
 
-Elya eventually stops looking over at you. One day she stops showing up.
+        [Prompt onShow:`set('selfActualization', selfActualization + 10);`]
+          If I don’t go back to the game they’ll send me home. But I’m hurt. I love this art class and the opportunity to come here. She grabs your palm. I don’t even like this game so much. I want to become an actuary. Could you please talk to them for me?
+        [/Prompt]
+      [/Option]
 
-(lose self-actualization)
-    
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
-      Softball sprain
+      [Option]Ignore her.
+
+        [Prompt]Elya eventually stops looking over at you. One day she stops showing up.
+        // (lose self-actualization)
+        [/Prompt]
+      [/Option]
+
     [/Prompt]
-[Prompt]Kandy is untalented but enthusiastic, she likes bright colors and sunshiny subject matter: she brings the class together, except when she’s cooing over Johnny’s twins. Today she can barely move her wrist. It was torn in a softball match. After class she’s sobbing. I really wish we didn’t have to do this, she says.[/Prompt]
-[Option]Ask her what’s going on[/Option]
- [Prompt]I’m on a partial softball scholarship. I’m in so much debt, If I lose it I’m done.[/Prompt]
-	[Option]Offer to buy her a snack[/Option]
-	 [Prompt]She gratefully accepts. ((Lose $))
-	[Option]Offer to talk to the coach[/Option]
-	 [Prompt]She smiles and thanks you. ((Gain self-actualization))
-[Option]Excuse her from class[/Option]
- [Prompt]She never shows up again. ((Lose self-actualization))
-[Option]Ignore her[/Option]
- [Prompt]She slowly walks away. You feel like maybe you should have done something((Lose self actualization))[/Prompt]
 
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`diningArea = true `]
-      Promising Student - Flirtatious
-    [/Prompt]    
-   [Prompt] Claire is your best student. She’s talented painter who’s gone to the sources you’ve recommended and attempted to incorporate it into her work. She usually shows up to class. Ater class she approaches you. Professor, I want to go outside with my easel and do a real plein air painting of the prairie. Would it be okay if you dropped by and just checked up on me? I want to make sure I’m doing it the way Monet did. I’ll be by the dining halls. Her gaze seems to linger.[/Prompt]
-[Option]Yes, of course.[/Option]
- [Prompt]A broad beautiful smile stretches across her face. “I can’t wait to see you,” she says. You feel light and giddy and… happy. ((Self actualization boost))[/Prompt]
-[Option]I’m so sorry, Claire. I’ll be busy.[/Option]
- [Prompt]Oh. She looks down at the floor. If you’re busy, maybe you can text me some advice. She writes her cellphone number down and slides it over.[/Prompt]
-[Option]Sorry Claire, you know I can’t talk to students outside of class.[/Option]
- [Prompt]Oh, okay. She doesn’t show up to class next week. Nor doe she ever appear in your class again. ((Lose self-actualization.[/Prompt]
- 
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`rodeoArea = true `]
-      Promising Student - Inspired
 
-[Prompt]Some of these kids have real talent. It’s been a good day. ((Self actualization increases))[/Prompt]
-      
+    [Prompt heading:"Student Encounter: Softball sprain" tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+
+      Kandy is untalented but enthusiastic, she likes bright colors and sunshiny subject matter: she brings the class together, except when she’s cooing over Johnny’s twins. Today she can barely move her wrist. It was torn in a softball match. After class she’s sobbing. I really wish we didn’t have to do this, she says.
+
+      [Option]Ask her what’s going on
+
+        [Prompt]I’m on a partial softball scholarship. I’m in so much debt, If I lose it I’m done.
+
+          [Option]Offer to buy her a snack
+
+            [Prompt]She gratefully accepts.
+            // ((Lose $))
+            [/Prompt]
+
+          [/Option]
+          [Option]
+            Offer to talk to the coach
+
+            [Prompt]She smiles and thanks you.
+              // ((Gain self-actualization))
+            [/Prompt]
+
+          [/Option]
+        [/Prompt]
+      [/Option]
+      [Option]
+        Excuse her from class
+
+        [Prompt]
+          She never shows up again.
+          // ((Lose self-actualization))
+        [/Prompt]
+      [/Option]
+      [Option]
+        Ignore her
+
+        [Prompt]
+          She slowly walks away. You feel like maybe you should have done something
+          // ((Lose self actualization))
+          [/Prompt]
+      [/Option]
     [/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`dormsArea = true `]
-      Promising Student - Political
 
-[Prompt]Cal isn’t a particularly gifted painter but he’s really enjoyed discussing the work, particularly when it veers into social commentary. He’s waiting for you after class one day. “I want to make work about some of the problems at the school.” ((Opens cultural center))
-	[Option]Reply: Art really shouldn’t be about propaganda[/Option]
-	 [Prompt]He nods his head and goes quietly. You don’t see him in class again. Still, you’ve taught him something about art.((Self actualization increases))[/Prompt]
-	[Option]Reply: You should! What’s the biggest problem facing the school?[/Option]
-	 [Prompt]It’s messed up that there’s so much money going to the cultural centers here at the school when there’s nothing being spent on fixing up the dorms.[/Prompt]
-[Option]Tell him: You should do a photo series on the problems in the dorms.[/Option]
- [Prompt]I don’t even know where to start, he says. Can you swing by the dorms? And maybe point out some stuff for me to take pictures of?((opens DORMS))[/Prompt]
-[Option]Reply: You should look at where the money is coming from.[/Prompt]
- [Prompt]Oh, that’s easy, the money comes from the casinos, he says. Then why don’t you do a project about that? ((Self-actualization increases)) [/Prompt]
 
-[/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`culturalArea = true `]
+    [Prompt heading:"Student Encounter: Flirtation" tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`diningArea = true `]
+
+      Claire is your best student. She’s talented painter who’s gone to the sources you’ve recommended and attempted to incorporate it into her work. She usually shows up to class. Ater class she approaches you. Professor, I want to go outside with my easel and do a real plein air painting of the prairie. Would it be okay if you dropped by and just checked up on me? I want to make sure I’m doing it the way Monet did. I’ll be by the dining halls. Her gaze seems to linger.
+
+      [Option]Yes, of course.
+
+        [Prompt]A broad beautiful smile stretches across her face. “I can’t wait to see you,” she says. You feel light and giddy and… happy. ((Self actualization boost))[/Prompt]
+      [/Option]
+      [Option]
+        I’m so sorry, Claire. I’ll be busy.
+
+        [Prompt]
+          Oh. She looks down at the floor. If you’re busy, maybe you can text me some advice. She writes her cellphone number down and slides it over.
+        [/Prompt]
+      [/Option]
+      [Option]
+        Sorry Claire, you know I can’t talk to students outside of class.
+
+        [Prompt]Oh, okay. She doesn’t show up to class next week. Nor doe she ever appear in your class again.
+
+          // ((Lose self-actualization.
+        [/Prompt]
+      [/Option]
+    [/Prompt]
+
+    [Prompt heading:"Student Encounter: Injury"  tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`rodeoArea = true `]
+
+      Some of these kids have real talent. It’s been a good day.
+
+      // ((Self actualization increases))
+
+    [/Prompt]
+    [Prompt heading:"Student Encounter: Politics" tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`dormsArea = true `]
+
+      Cal isn’t a particularly gifted painter but he’s really enjoyed discussing the work, particularly when it veers into social commentary. He’s waiting for you after class one day. “I want to make work about some of the problems at the school.”
+      // ((Opens cultural center))
+
+      [Option]
+        Reply: Art really shouldn’t be about propaganda
+
+        [Prompt]
+          He nods his head and goes quietly. You don’t see him in class again. Still, you’ve taught him something about art.
+          // ((Self actualization increases))
+        [/Prompt]
+      [/Option]
+      [Option]
+        Reply: You should! What’s the biggest problem facing the school?
+
+        [Prompt]It’s messed up that there’s so much money going to the cultural centers here at the school when there’s nothing being spent on fixing up the dorms.[/Prompt]
+      [/Option]
+      [Option]
+        Tell him: You should do a photo series on the problems in the dorms.
+
+        [Prompt]
+          I don’t even know where to start, he says. Can you swing by the dorms? And maybe point out some stuff for me to take pictures of?
+          // ((opens DORMS))
+        [/Prompt]
+      [/Option]
+      [Option]
+        Reply: You should look at where the money is coming from.
+
+        [Prompt]
+          Oh, that’s easy, the money comes from the casinos, he says.
+
+          Then why don’t you do a project about that?
+
+          // ((Self-actualization increases))
+        [/Prompt]
+      [/Option]
+
+    [/Prompt]
+
+    [Prompt heading:"Student Encounter: Sam" tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`culturalArea = true `]
       Sam's father and grandfather went to the school. His grandfather became a deputy chief and they've given thousands of dollars to the school, according to Sam. His father became a nurse. You should check out the old nursing school. His dad tells him it's kind of sad.
     [/Prompt]
 
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.05 ]
+    [Prompt heading:"Student Encounter: New Student" tag:"student-encounter" nextTag:"after-class" likelihood:0.05 ]
       First Appearance
-    [/Prompt]
-    [Prompt]A student you've never seen before shows up. You roll your eyes.[/Prompt]
 
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
-      International student - bribery attempt
-    [/Prompt]
-    
-    [Prompt]You haven't seen this student before. "In my country, the custom is to give your professor a gift mid-semester." Given that most of the grade is participation, he seems to know he's trouble. Perhaps that's why he's brought you a rather large and very conspicious wrapped gift. Will you take it?[/Prompt] 
-    [Option]Accept it.[/Option]
-    	[Prompt]It's a brass tea set. You can sell it on eBay.((receive $$$))[/Prompt]
-    [Option]Reject it.[/Option]
-    	[Prompt]Probably for the best. Though you feel a bit foolish. After all the school seems to use these guys as cash cows. Why shouldn't you?[/Prompt]
-        
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
-  
-  [Prompt] Neither of you can communicate. What's the point? What's the point of any of this? ((Lose self-actualization))[/Propmt]
-    [/Prompt]
-  
-    
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
-[Prompt]
-	Myat is from Burma (he’ll never call it Myanmar). He’s a bright kid, knows what’s he’s doing. He’s surprised you’ve heard of Myanmar, let alone the dreaded State Law and Order Restoration Council (which has been oppressing Christians like Myat for generations).After a positive critique, he lingers after class and seems to want to talk. Do you want here his story?[/Prompt] 
-	[Option]Yes, please.[/Option]
-	 [Prompt]It’s a pretty disturbing story. Weirdly it leaves you feeling better about the school you’re working at. Myat tells you he was smuggled out of the country by missionaries, taken across the border with Thailand in a car trunk. The church organized the paper work and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay though,((gain self-actualization))((Opens CHURCH))[/Prompt]
-	[Option]No, thanks. [/Option]
-	[Prompt]Surely you ought to have listened to him :( ((lose self-actualization))[/Prompt]
-
+      A student you've never seen before shows up. You roll your eyes.
     [/Prompt]
 
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
-      Harrowing tale - Pregnance
+    [Prompt heading:"Student Encounter: Bribery"  tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
+
+      You haven't seen this student before. "In my country, the custom is to give your professor a gift mid-semester." Given that most of the grade is participation, he seems to know he's trouble. Perhaps that's why he's brought you a rather large and very conspicious wrapped gift. Will you take it?
+
+      [Option]Accept it.
+
+        [Prompt]It's a brass tea set. You can sell it on eBay.
+          // ((receive $$$))
+        [/Prompt]
+      [/Option]
+      [Option]Reject it.
+
+        [Prompt]Probably for the best. Though you feel a bit foolish. After all the school seems to use these guys as cash cows. Why shouldn't you?
+        [/Prompt]
+      [/Option]
+
+  // [Prompt] Neither of you can communicate. What's the point? What's the point of any of this? ((Lose self-actualization))[/Propmt]
+  //   [/Prompt]
     [/Prompt]
-    [Prompt]Kelli comes up to you after class. She's missed a few classes. Today she tells you why: she thinks she's pregnant and because of the school's mission statement she can't get tested. She asks if you can pick up a pregnancy test from Walmart.[/Prompt]
-     [Option]Of course[/Option]
+
+
+    [Prompt heading:"Student Encounter" tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
+
+      Myat is from Burma (he’ll never call it Myanmar). He’s a bright kid, knows what’s he’s doing. He’s surprised you’ve heard of Myanmar, let alone the dreaded State Law and Order Restoration Council (which has been oppressing Christians like Myat for generations).After a positive critique, he lingers after class and seems to want to talk. Do you want here his story?
+
+      [Option]
+        Yes, please.
+
+        [Prompt]It’s a pretty disturbing story. Weirdly it leaves you feeling better about the school you’re working at. Myat tells you he was smuggled out of the country by missionaries, taken across the border with Thailand in a car trunk. The church organized the paper work and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay though,
+        // ((gain self-actualization))((Opens CHURCH))
+        [/Prompt]
+      [/Option]
+      [Option]No, thanks.
+
+        [Prompt]Surely you ought to have listened to him :(
+        // ((lose self-actualization))
+        [/Prompt]
+      [/Option]
+
+    [/Prompt]
+
+    [Prompt heading:"Student Encounter: Pregnancy" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+
+      Kelli comes up to you after class. She's missed a few classes. Today she tells you why: she thinks she's pregnant and because of the school's mission statement she can't get tested. She asks if you can pick up a pregnancy test from Walmart.
+
+     [Option]Of course
+
      	[Prompt]She's relieved when she finds out she isn't. She makes no mention of paying you back.[/Prompt]
-    [Option]Sorry, I can't[/Option]
+     [/Option]
+      [Option]Sorry, I can't
+
     	[Prompt]She's upset. You never see her again.[/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
-      Harrowing tale - racist police
-      
-      ((you go to the ADMIN building))
-    
-      
+      [/Option]
+
     [/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+
+    [Prompt heading:"Student Encounter: Police" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+
+      // ((you go to the ADMIN building))
+
       Stan, one of your less attentive yet more vocal students describes why he's been absent for the last three weeks: he was caught driving 105MPH and couldn't affoard bail. Who knew a 1999 Camero could go that fast? You excuse him.
+
     [/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+
+    [Prompt heading:"Student Encounter: Religion" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - religious authorities
-    
-    ((Religious center))
-    
+
+      // ((Religious center))
+
     [/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+
+    [Prompt heading:"Student Encounter: Parents" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Harrowing tale - terrible parental issue
     [/Prompt]
-    [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+
+    [Prompt heading:"Student Encounter: Family" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
       Yet another dead grandmother excuse. Hope whatever is killing them off isn't contagious.
     [/Prompt]
 
@@ -343,181 +486,471 @@ Elya eventually stops looking over at you. One day she stops showing up.
       [Option nextTag:"explore"]Explore.[/Option]
     [/Prompt]
 
-    [Prompt tag:`"explore"` ]
+    [Prompt tag:`"explore"` nextTag:"end-day"]
       Where would you like to go?
 
-      [Option]Your Office.[/Option]
-      [Option]Art Building.[/Option]
-      
-      [Prompt]There are three other art rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysterously none of the silver or copperwork remains. Could people be taking it?   
-      
-      (Storage)
+      [Option]
+        Your Office.
 
-[Option]Rummage in the closet[/Option]
-Encounter Table.
-- flat style ($$$)
- - portrait, native ($)
- - horse ($$)
- - landscape ($)
- - portrait, celebrity ($0)
- - portrait, young governor ($)
+        [Prompt]
+          Nothing to see here.
+        [/Prompt]
+      [/Option]
+      [Option]
+        Art Building.
 
-[Option] examine the second room[/Option]
+        [Prompt]
+          There are three other art rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysterously none of the silver or copperwork remains. Could people be taking it?
 
- [Prompt]The second room used to the resident artist's living quarters (this boon is no longer offered to promising junior arts faculty). A colleague uses it for a drawing class. There are student drawings on the walls of varying quality and completeness and a rather yellowed skeleton hanging from a hook.
- [/Prompt]
-[Option]Examine the Skeleton[/Option]
 
-[Prompt]Must be a child's size from height. The bones are surprisingly light, and well rendered. There's a small stamp on it that says from Calcutta. How strange to see the old spelling. You could probably use it for a class.[/Prompt]
+          [Option]
+            Rummage in the closet
 
-[Option]Take it and sell it[/Option]
+            [Prompt]
+              Encounter Table.
+              // - flat style ($$$)
+              // - portrait, native ($)
+              // - horse ($$)
+              // - landscape ($)
+              // - portrait, celebrity ($0)
+              // - portrait, young governor ($)
+            [/Prompt]
+          [/Option]
 
-((Ends day.)) Jesus, it's real, and valuable. ($$$$) 
+          [Option]
+            Examine the second room
 
-[Option]Use it in class as a postcolonial prompt [/Option] (Your students create some surprisingly interesting work, receive self-actualization and inspiration)
+            [Prompt]
+              The second room used to the resident artist's living quarters (this boon is no longer offered to promising junior arts faculty). A colleague uses it for a drawing class. There are student drawings on the walls of varying quality and completeness and a rather yellowed skeleton hanging from a hook.
 
-[Prompt]Sculpture class is downstairs in the Basement, it's been closed off for years but peering down the stairs you can make out the dim outline of old machinery.[/Prompt} 
+              [Option]
+                Examine the Skeleton
 
-[Optiom]Go down into the basement[/Option]
+                [Prompt]
+                  Must be a child's size from height. The bones are surprisingly light, and well rendered. There's a small stamp on it that says from Calcutta. How strange to see the old spelling. You could probably use it for a class.
 
-[Prompt]You fall down the stairs...all of a sudden your leg is in serious pain[/Prompt]
 
-You're forced to call an ambulance (furlough, no pay for three weeks)
+                  [Option]
+                    Take it and sell it
 
-      
-      [Option if:`sportsArea `]Sports Area.[/Option]
-      
-      Sports Area
+                    // ((Ends day.)) Jesus, it's real, and valuable. ($$$$)
+                  [/Option]
 
-Fresh asphalt parking lot. Lusty cries ringing out from teams of men and women playing sports. Not quite as run-down as the rest of the place.
 
-A coach jogs up. He’s your age. Roughly. Wearing red shorts and a Bacone t-shirt. "Hey, you’re one of the professors. I appreciate you keeping those GPAs up with those easy As. Jeez. You must think this place is a shithole, don’t you?" 
+                  [Option]
+                    Use it in class as a postcolonial prompt
 
-[Option]What do you think of this place?[/Option]
+                    [Prompt]
 
-Makes me feel gross. These kids can barely read. This is a sports college. They take out big loans to tell people they've played college ball. No worse than a grad school though haha? My sister is a Ph.D
+                      Your students create some surprisingly interesting work, receive self-actualization and inspiration
+                    [/Prompt]
 
-[Option]Confront him about the injuries.[/Option]
+                  [/Option]
 
-Look way too many of my kids are getting badly hurt. 
+                [/Prompt]
+              [/Option]
+            [/Prompt]
+          [/Option]
 
-[Prompt]I’ve been in their shoes, have you? Got Tommy John surgery. They come here to play college sports... Some kid made it into the NFL Ravens last year. It’s a longshot. I get one of ‘em in, then maybe I can come with him as a junior coach, okay? I'm just trying to get out. I'm sure you are too.
+          [Option]
+            Go down into the basement
 
-I have a request, he says. Can you guarantee my guys and gals an A?
-[/Prompt]
+            [Prompt]
+              Sculpture class is downstairs in the Basement, it's been closed off for years but peering down the stairs you can make out the dim outline of old machinery.
 
-[Option]Why should I?[/Option]
+              [Option]
+                Continue downstairs.
 
-[Prompt]Some of these kids have a real shot at the pros or transferring to OU or something. You know most of these kids can’t barely read. Look I appreciate the easy As. This school is dying man, and college sports this is the only way to keep people coming here.[/Prompt] 
+                [Prompt]
+                  You fall down the stairs...all of a sudden your leg is in serious pain
 
-[Option]Okay fine.[/Option]
+                  You're forced to call an ambulance (furlough, no pay for three weeks)
+                [/Prompt]
+              [/Option]
+            [/Prompt]
+          [/Option]
+        [/Prompt]
+      [/Option]
 
-((Postpones furlough)) 
+      [Option if:`sportsArea `]
+        Sports Area.
 
-[Option]No.[/Option]
+        [Prompt]
+          Fresh asphalt parking lot. Lusty cries ringing out from teams of men and women playing sports. Not quite as run-down as the rest of the place.
 
-Oh man. I remember my required art classes. Porn in the morn and scribbling nudes. Jeez. You're scum. 
+          A coach jogs up. He’s your age. Roughly. Wearing red shorts and a Bacone t-shirt. "Hey, you’re one of the professors. I appreciate you keeping those GPAs up with those easy As. Jeez. You must think this place is a shithole, don’t you?"
 
-((Two weeks without pay))((Selfactualization increases))
-      
-      
-      [Option if:`diningArea `]Dining Area.[/Option]
-      
-[Prompt]The clatter and steam of a dining hall: You recognize a few of the faces. The dining hall is spartan, rickety card tables, plastic chairs and vending machines, decoration is little more than public service announcements and ads for Sodesu, the goliath catering company.
-“Professor!” It’s Claire. “You’ve come.” She has her drawings tucked under her elbow. “I’m so embarrassed for you to see.” She sits down and opens her sketchbook. Her giddy happiness is contagious. You’re so tempted to open up and let your feelings flow.[/Prompt]
- [Option]Keep things professional.[/Option]
-	[Prompt]You give her a gentle critique on her work, which is indeed promising. She’s pleased but seems to want more from you. ((self actualization increases))[/Prompt]
- [Option]Relax and Open Up[/Option]
-	[Prompt]You tell her about yourself and your worries and dreams. She tells you about hers: they sync, her dad is the school’s pastor, she dreams of escaping to Berlin or London or New York or anywhere really… “I know this amazing spot I’ve always wanted to draw, do you wanna come with me?”[/Prompt]
-  [Option]Respond: It’s getting late, Claire. I’ll see you in class tomorrow.[/Option]
-	[Prompt]She’s disappointed but seems to understand.((Self actualization score increases))
-[Option]Respond: Sure![/Prompt]
-	[Prompt]You follow her to bridge a short distance from the school. “They say it’s haunted,” she says. “But by good ghosts. The Native girls and guys would escape from their boarding schools and meet up here.[/Prompt]
-[Option]Ask about boarding schools[/Option]
-	[Prompt]She tells you about boarding schools, awful places where Indian kids were ripped from their families and reeducated. “They basically killed off all of culture, everything you see if basically fake.” This gives you an idea for a photo essay. ((Self-actualization increases considerably))[/Prompt]
-[Option]Kiss her[/Option]
-	[Prompt]She kisses you back, it feels incredible, but at the end of the day, is this really what you should be doing with your most promising student? ((Lose self-actualization))[/Prompt]
 
-           
-     [Option if:`dormsArea `]Dorms Area.[/Option]
-     [Prompt] The Bacone School apparently expanded its boundries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
-     
-     Your student calls out. He's been waiting for you. Do you follow him in?
-     [Option]Do it.[/Option]
-     	[Prompt]You follow him into the motel. It's appalling. Roaches cruise by in insectoid superhighways. Moist stains blossom klaidiscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"[/Prompt]
-    	[Option]Focus on the Race Issue[/Option]
-		[Prompt]You tell him to start looking into the disparities between the living situations and give him some suggestions for places to reach out to. You take some pictures as well and give him some walking around money. ((Receive self-actualization))((Lose some $$$))[/Prompt] 
-	[Option]Focus on Conditions[/Option]
-		[Prompt]You tell him to start documenting conditions in the building and getting the entire student body involved.((Receive self-actualization))You can't help but give him some food for snacks. ((Lose sme $$))[/Prompt]
-     [/Prompt] 
-  
-      [Option if:`culturalArea `]Cultural Area.[/Option]
+          [Option]
+            What do you think of this place?
 
-CULTURAL CENTER
+            [Prompt]
+              Makes me feel gross. These kids can barely read. This is a sports college. They take out big loans to tell people they've played college ball. No worse than a grad school though haha? My sister is a Ph.D
+            [/Prompt]
+          [/Option]
 
-The cultural center is a lodge, made of log and retrofitted with silvered mirrors and bristling with antennae. It has its own parking lot. There are late model cars and trucks parked in there. 
+          [Option]Confront him about the injuries.
 
-[Option]Examine a placard[/Option]
+            [Prompt]
+              *Look way too many of my kids are getting badly hurt.*
 
-[Prompt]Donated by a local tribe’s casino operations wing. It’s only a couple of years old.[/Prompt]
+              I’ve been in their shoes, have you? Got Tommy John surgery. They come here to play college sports... Some kid made it into the NFL Ravens last year. It’s a longshot. I get one of ‘em in, then maybe I can come with him as a junior coach, okay? I'm just trying to get out. I'm sure you are too.
 
-[Option]Go in?[/Option]
+              I have a request, he says. Can you guarantee my guys and gals an A?
 
-You find yourself in a nicely appointed lodge. An attractive woman in her twenties sits at a reception desk. “Osiyo! How can I help you today? Would you like to make a donation?”
-[Option]Ask about donations[/Options]
-[Prompt]We’re fundraising for a couple of different initiatives. There are scholarships for our tribe members, there’s an art preservation project, where we bring in a bunch of artists and scholars, and you can see how run down the rest of campus is--we want to bring this place back to its former glory?
-  [Option]Ask what happened to the school[/Option]
-	[Prompt]It’s kind of sad, she said. The tribe couldn’t afford to maintain the school, plus there was a bunch of bad press after Wounded Knee in the 1970s, so they sold off to the Sodesko family.[/Prompt] 
-	[Option]What did the Sodeskos do?[/Option]
-		[Prompt]Well, they weren’t quite crooks but pretty close, they eventually turned it into a Baptist school, they closed down the nursing school -- they couldn’t afford to keep it modern -- the only way they could maintain it was to bring in as many student athletes as they could and then standards fell. Now we’re trying to get the student athletes out and then buy back for the tribe.[/Prompt] 
-			[Option]How are they going to do that?[/Option]
-				[Prompt]It’s kind of mean. They don’t maintain the dorms. Hire the crappiest teachers. They’re just starving them out basically.[/Prompt]
-[Option]Ask why there are so many cars outside[/Option]
-	[Prompt]Oh, the tribal council is meeting with Sodeskos about selling the school to them. Is there anything else I can help you with? We’re very busy[/Prompt]
-		[Option]Ask her what will happen to non-native students[/option]
-			[Prompt]She replies: I wonder if I ought to be telling you. They're starving them out, what else can I say?[/Prompt]
-[Option]Ask about the art[/Option]
-	[Prompt]Okay, sure. So this place was once the birthplace of a kind of style of Indian Art called flat style, check out some of the wall paintings, if you see one that looks like almost like a stylish cartoon--that's the flat style and there's a ton of really cool history about it. Some of it is kind of valuable which is why we're trying to prise it out of the school's hands.[/Prompt]
-[Option]Ask to speak with the Cultural Center Director[/Option]
-	[Prompt]She shrugs and lets you in. He's a short, well-dressed man in his fifties. 'I heard you guys talking. Who are you?'[/Prompt]
-		[Option]Identify yourself[/Option]
-			[Prompt]You tell him. He nods. It's a real shame that they're closing down the art program, it was the center of the school when it started, same with the nursing program but the school fell on hard times and the current admin stripped it bare.[/Prompt]
-				[Option]Ask what will happen to the athletes.[/Option]
-					[Prompt]It's not going to be pretty, he says. I'm not going to lie to you. They're caught in the middle of all of this. There are three big factions competing over this campus: there's us, there's the church and then there's the creeps admin. Those kids are being left in the lurch and sucked into debt. You and I know both know they aren't capable of doing well in school. Don't get all high and mighty. You're just as complicit. Now get out. ((lose self-actualization))[/Prompt]
-				[Option]Ask how you can help[/Option]
-					[Prompt]In the art department, I'd say do whatever you can to keep people away from the art that's stored there. We can't legally touch it until the tribes buy it and we think the teachers and admin are going to try to squirrel it away from us.[/Prompt]
-		
+              [Option]
+                Why should I?
 
-      [Option if:`churchAdminArea `]Church Admin Area[/Option]
-      
-[Prompt]The Church is the oldest, grandest building on campus; the steeple, the tallest thing for a hundred miles (the cell tower tucked inside likely brings them considerable revenue). The muffled hum of massed voices hangs in the air. Are you compelled to go toward it?  [/Prompt]
-	[Option]Walk up the stairs into the church[/option]
-	 [Prompt]You push the doors open and are hit with a wave of music--the entire school (minus a few cantankerous itinerant professors) is standing, singing together.[/Prompt]
-	[Option]Take a seat and watch[/Option]
-		[Prompt]The singing eventually stops. You feel refreshed, people are smiling at you and bobbing their heads. Claire, your best student, walks on stage and introduces her father, the senior pastor. Will you keep listening?[/Prompt]
-			[Option]Keep listening[/Option]
-			 [Prompt]You expect fire and brimstone but watch as your Burmese students get on stage with him and instead of a sermon hear a detailed description of how the church was smuggling Burmese students out of Myanmar and into the states. You leave feeling strangely energized and much more ambivalent about the school.((Receive self-actualization)) You leave some money in the collection plate ((lose $)) [/Prompt] 
-			[Option]Head out[/Option]
-			  [Prompt]You head for the door, feeling strangely energized and much more ambivalent about the church.[/Prompt]
-[Option]Go to the administrative offices in the back.[/Option]
-	[Prompt]The president's office is upstairs. The secretary must be watching the service because her desk is unattended. Suddenly the door opens and a dapper man with a mustache emerges. Johnson Sodesko, presidento of the Bacone School.[/Prompt]
-		[Option]Greet him[/Option]
-			[Prompt]What can I do yeah for? he replies[/Prompt]
-				[Option]Confront him about conditions at the school[/Option]
-					[Prompt]Well you're not the first person to bring this to my attention. It's miserable but we're proud of the work we've been able to do with what we have. Thank you for what you do, by the way, you're a good egg, taking an interest in your students. Best thing you can do is teach 'em good so they get rich and make big donations. You feel slightly nauseous. ((Lose some self-actualization))[/Prompt]
-				[Option]Confront him about the athletes[/Option]
-					[Prompt]Yeah, it's a shame; I don't like that these kids get hurt so often. But you being an artist is that really so much different? You went to a good school, you gave up opportunitues, took a big risk, how are you any different than those boys and girls out there on the field? Who are you to tell them how to be? ((Lose self-actualization)) [/Prompt]
-				[Option]Ask him about the differences in the way the African American students and the Natives are treated[/Option]
-					[Prompt]I don't like it either. There's only so much you can do for them. The Natives have mandate to look after their own, you know, and the church does what it can to help them but it's got to do it under the auspices of the church, they've got to be strict with them. So the ones who aren't native -- and you forget about the honor ranch kids -- they can fall through the cracks if they aren't following the light, if you have solution to it tell me.[/Prompt]
-				[Option]Confront him about the catering company.[/Option]
-					[Prompt]Now you're smart cookie. Hey, would you be quiet about that for me? Don't make a fuss about that and you'll get a little honey in your next check.((Receive $$))
-					[/Prompt]
-		[Option]Give him a shy wave and take off[/Option]
-			[Prompt]He calls you over. Come down with me and enjoy this glorious service. It's a strangely uplifting experiecne. You have a drink with him afterwards and he tells you he'll write you a recommendation to a fellowship committee. ((gain self-actualization))
-      
-      [Option if:`nursingSchoolArea `]Nursing School Area.[/Option]
+                [Prompt]Some of these kids have a real shot at the pros or transferring to OU or something. You know most of these kids can’t barely read. Look I appreciate the easy As. This school is dying man, and college sports this is the only way to keep people coming here.[/Prompt]
+              [/Option]
 
-You slip into the Nursing Building. Most of the rooms are locked. By peering into the windows you can just make out CPR dummies and medical equipment a generation old. It’s locked. No way in without smashing a window. In the distance you hear the sounds of the playing fields. There's nothing here, just the remains of something that looks like it once was important.
+              [Option]
+                Okay fine.
+                // ((Postpones furlough))
+              [/Option]
+
+
+              [Option]
+                No.
+
+                [Prompt]
+                  Oh man. I remember my required art classes. Porn in the morn and scribbling nudes. Jeez. You're scum.
+                  // ((Two weeks without pay))((Selfactualization increases))
+                [/Prompt]
+              [/Option]
+
+            [/Prompt]
+          [/Option]
+        [/Prompt]
+      [/Option]
+
+      [Option if:`diningArea `]
+        Dining Area.
+
+        [Prompt]
+          The clatter and steam of a dining hall: You recognize a few of the faces. The dining hall is spartan, rickety card tables, plastic chairs and vending machines, decoration is little more than public service announcements and ads for Sodesu, the goliath catering company.
+          “Professor!” It’s Claire. “You’ve come.” She has her drawings tucked under her elbow. “I’m so embarrassed for you to see.” She sits down and opens her sketchbook. Her giddy happiness is contagious. You’re so tempted to open up and let your feelings flow.
+
+          [Option]
+            Keep things professional.
+
+            [Prompt]You give her a gentle critique on her work, which is indeed promising. She’s pleased but seems to want more from you.
+              // ((self actualization increases))
+            [/Prompt]
+          [/Option]
+          [Option]
+            Relax and Open Up
+
+            [Prompt]
+              You tell her about yourself and your worries and dreams. She tells you about hers: they sync, her dad is the school’s pastor, she dreams of escaping to Berlin or London or New York or anywhere really… “I know this amazing spot I’ve always wanted to draw, do you wanna come with me?”
+
+              [Option]
+                Respond: It’s getting late, Claire. I’ll see you in class tomorrow.
+
+                [Prompt]
+                  She’s disappointed but seems to understand.
+                  //((Self actualization score increases))
+                [/Prompt]
+              [/Option]
+              [Option]
+                Respond: Sure!
+
+                [Prompt]
+                  You follow her to bridge a short distance from the school. “They say it’s haunted,” she says. “But by good ghosts. The Native girls and guys would escape from their boarding schools and meet up here.
+
+                  [Option]
+                    Ask about boarding schools
+
+                    [Prompt]
+                      She tells you about boarding schools, awful places where Indian kids were ripped from their families and reeducated. “They basically killed off all of culture, everything you see if basically fake.” This gives you an idea for a photo essay. (
+
+                      // (Self-actualization increases considerably))
+                    [/Prompt]
+                  [/Option]
+                  [Option]
+                    Kiss her
+
+                    [Prompt]
+                      She kisses you back, it feels incredible, but at the end of the day, is this really what you should be doing with your most promising student?
+                      // ((Lose self-actualization))
+                    [/Prompt]
+                  [/Option]
+
+                [/Prompt]
+              [/Option]
+
+            [/Prompt]
+          [/Option]
+        [/Prompt]
+      [/Option]
+
+
+
+
+      [Option if:`dormsArea `]
+        Dorms Area.
+
+        [Prompt]
+          The Bacone School apparently expanded its boundries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
+
+          Your student calls out. He's been waiting for you. Do you follow him in?
+
+          [Option]
+            Do it.
+
+            [Prompt]
+              You follow him into the motel. It's appalling. Roaches cruise by in insectoid superhighways. Moist stains blossom klaidiscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"
+
+              [Option]
+                Focus on the Race Issue
+
+                [Prompt]
+                  You tell him to start looking into the disparities between the living situations and give him some suggestions for places to reach out to. You take some pictures as well and give him some walking around money.
+
+                  // ((Receive self-actualization))((Lose some $$$))
+                [/Prompt]
+              [/Option]
+
+              [Option]
+                Focus on Conditions
+
+                [Prompt]
+                  You tell him to start documenting conditions in the building and getting the entire student body involved.
+                  // ((Receive self-actualization))
+
+                  You can't help but give him some food for snacks.
+
+                  // ((Lose sme $$))
+                [/Prompt]
+              [/Option]
+            [/Prompt]
+          [/Option]
+        [/Prompt]
+      [/Option]
+
+      [Option if:`culturalArea `]
+        Cultural Center
+
+        [Prompt]
+          The cultural center is a lodge, made of log and retrofitted with silvered mirrors and bristling with antennae. It has its own parking lot. There are late model cars and trucks parked in there.
+
+          [Option]
+            Examine a placard
+
+            [Prompt]Donated by a local tribe’s casino operations wing. It’s only a couple of years old.[/Prompt]
+          [/Option]
+
+          [Option]
+            Go in?
+
+            [Prompt]
+              You find yourself in a nicely appointed lodge. An attractive woman in her twenties sits at a reception desk. “Osiyo! How can I help you today? Would you like to make a donation?”
+
+              [Option]
+                Ask about donations
+
+                [Prompt]
+                  We’re fundraising for a couple of different initiatives. There are scholarships for our tribe members, there’s an art preservation project, where we bring in a bunch of artists and scholars, and you can see how run down the rest of campus is--we want to bring this place back to its former glory?
+
+                  [Option]
+                    Ask what happened to the school
+
+                    [Prompt]
+                      It’s kind of sad, she said. The tribe couldn’t afford to maintain the school, plus there was a bunch of bad press after Wounded Knee in the 1970s, so they sold off to the Sodesko family.
+
+                      [Option]
+                        What did the Sodeskos do?
+
+                        [Prompt]
+                          Well, they weren’t quite crooks but pretty close, they eventually turned it into a Baptist school, they closed down the nursing school -- they couldn’t afford to keep it modern -- the only way they could maintain it was to bring in as many student athletes as they could and then standards fell. Now we’re trying to get the student athletes out and then buy back for the tribe.
+
+                          [Option]
+                            How are they going to do that?
+
+                            [Prompt]
+                              It’s kind of mean. They don’t maintain the dorms. Hire the crappiest teachers. They’re just starving them out basically.
+                            [/Prompt]
+                          [/Option]
+                        [/Prompt]
+                      [/Option]
+                    [/Prompt]
+                  [/Option]
+
+
+                [/Prompt]
+              [/Option]
+
+              [Option]
+                Ask why there are so many cars outside
+
+                [Prompt]
+                  Oh, the tribal council is meeting with Sodeskos about selling the school to them. Is there anything else I can help you with? We’re very busy.
+
+                  [Option]
+                    Ask her what will happen to non-native students
+
+                    [Prompt]She replies: I wonder if I ought to be telling you. They're starving them out, what else can I say?[/Prompt]
+
+                  [/Option]
+                [/Prompt]
+
+              [/Option]
+              [Option]
+                Ask about the art
+
+                [Prompt]
+                  Okay, sure. So this place was once the birthplace of a kind of style of Indian Art called flat style, check out some of the wall paintings, if you see one that looks like almost like a stylish cartoon--that's the flat style and there's a ton of really cool history about it. Some of it is kind of valuable which is why we're trying to prise it out of the school's hands.
+                [/Prompt]
+              [/Option]
+              [Option]
+                Ask to speak with the Cultural Center Director
+
+                [Prompt]
+                  She shrugs and lets you in. He's a short, well-dressed man in his fifties. 'I heard you guys talking. Who are you?'
+
+                  [Option]
+                    Identify yourself
+
+                    [Prompt]
+                      You tell him. He nods. It's a real shame that they're closing down the art program, it was the center of the school when it started, same with the nursing program but the school fell on hard times and the current admin stripped it bare.
+
+                      [Option]
+                        Ask what will happen to the athletes.
+
+                        [Prompt]
+                          It's not going to be pretty, he says. I'm not going to lie to you. They're caught in the middle of all of this. There are three big factions competing over this campus: there's us, there's the church and then there's the creeps admin. Those kids are being left in the lurch and sucked into debt. You and I know both know they aren't capable of doing well in school. Don't get all high and mighty. You're just as complicit. Now get out.
+
+                          ((lose self-actualization))
+                        [/Prompt]
+                      [/Option]
+                      [Option]
+                        Ask how you can help
+
+                        [Prompt]
+                          In the art department, I'd say do whatever you can to keep people away from the art that's stored there. We can't legally touch it until the tribes buy it and we think the teachers and admin are going to try to squirrel it away from us.
+                        [/Prompt]
+                      [/Option]
+                    [/Prompt]
+                  [/Option]
+                [/Prompt]
+              [/Option]
+            [/Prompt]
+          [/Option]
+        [/Prompt]
+      [/Option]
+
+      [Option if:`churchAdminArea `]
+        Church Admin Area
+
+        [Prompt]
+          The Church is the oldest, grandest building on campus; the steeple, the tallest thing for a hundred miles (the cell tower tucked inside likely brings them considerable revenue). The muffled hum of massed voices hangs in the air. Are you compelled to go toward it?
+
+          [Option]
+            Walk up the stairs into the church
+
+            [Prompt]
+              You push the doors open and are hit with a wave of music--the entire school (minus a few cantankerous itinerant professors) is standing, singing together.
+
+              [Option]
+                Take a seat and watch
+
+                [Prompt]
+                  The singing eventually stops. You feel refreshed, people are smiling at you and bobbing their heads. Claire, your best student, walks on stage and introduces her father, the senior pastor. Will you keep listening?
+
+                  [Option]
+                    Keep listening
+
+                    [Prompt]
+                      You expect fire and brimstone but watch as your Burmese students get on stage with him and instead of a sermon hear a detailed description of how the church was smuggling Burmese students out of Myanmar and into the states. You leave feeling strangely energized and much more ambivalent about the school.
+                      // ((Receive self-actualization))
+
+                      You leave some money in the collection plate
+                      // ((lose $))
+                    [/Prompt]
+                  [/Option]
+
+                  [Option]
+                    Head out
+
+                    [Prompt]
+                      You head for the door, feeling strangely energized and much more ambivalent about the church.
+                    [/Prompt]
+                  [/Option]
+                [/Prompt]
+              [/Option]
+            [/Prompt]
+          [/Option]
+
+          [Option]
+            Go to the administrative offices in the back.
+
+            [Prompt]
+              The president's office is upstairs. The secretary must be watching the service because her desk is unattended. Suddenly the door opens and a dapper man with a mustache emerges. Johnson Sodesko, presidento of the Bacone School.
+
+              [Option]
+                Greet him
+
+                [Prompt]
+                  What can I do yeah for? he replies
+
+                  [Option]
+                    Confront him about conditions at the school
+
+                    [Prompt]
+                      Well you're not the first person to bring this to my attention. It's miserable but we're proud of the work we've been able to do with what we have. Thank you for what you do, by the way, you're a good egg, taking an interest in your students. Best thing you can do is teach 'em good so they get rich and make big donations. You feel slightly nauseous.
+                      // ((Lose some self-actualization))
+                    [/Prompt]
+                  [/Option]
+
+                  [Option]
+                    Confront him about the athletes
+
+                    [Prompt]
+                      Yeah, it's a shame; I don't like that these kids get hurt so often. But you being an artist is that really so much different? You went to a good school, you gave up opportunitues, took a big risk, how are you any different than those boys and girls out there on the field? Who are you to tell them how to be?
+                      // ((Lose self-actualization))
+                    [/Prompt]
+                  [/Option]
+
+                  [Option]
+                    Ask him about the differences in the way the African American students and the Natives are treated
+
+                    [Prompt]
+                      I don't like it either. There's only so much you can do for them. The Natives have mandate to look after their own, you know, and the church does what it can to help them but it's got to do it under the auspices of the church, they've got to be strict with them. So the ones who aren't native -- and you forget about the honor ranch kids -- they can fall through the cracks if they aren't following the light, if you have solution to it tell me.
+                    [/Prompt]
+                  [/Option]
+
+                  [Option]
+                    Confront him about the catering company.
+
+                    [Prompt]
+                      Now you're smart cookie. Hey, would you be quiet about that for me? Don't make a fuss about that and you'll get a little honey in your next check.
+                      // ((Receive $$))
+                    [/Prompt]
+                  [/Option]
+
+                [/Prompt]
+              [/Option]
+              [Option]
+                Give him a shy wave and take off
+
+                [Prompt]
+                  He calls you over. Come down with me and enjoy this glorious service. It's a strangely uplifting experiecne. You have a drink with him afterwards and he tells you he'll write you a recommendation to a fellowship committee.
+                  // ((gain self-actualization))
+                [/Prompt]
+              [/Option]
+            [/Prompt]
+          [/Option]
+        [/Prompt]
+      [/Option]
+
+
+      [Option if:`nursingSchoolArea `]
+        Nursing School Area.
+
+        [Prompt]
+          You slip into the Nursing Building. Most of the rooms are locked. By peering into the windows you can just make out CPR dummies and medical equipment a generation old. It’s locked. No way in without smashing a window. In the distance you hear the sounds of the playing fields. There's nothing here, just the remains of something that looks like it once was important.
+        [/Prompt]
+      [/Option]
 
     [/Prompt]
 

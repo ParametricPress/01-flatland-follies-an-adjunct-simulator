@@ -9,14 +9,24 @@ class Option extends React.Component {
   }
 
   getNestedPrompt() {
-    return  filterChildren(this.props.children, (c) => {
+    const propmts = filterChildren(this.props.children, (c) => {
       return (c && c.type && c.type.name && c.type.name.toLowerCase() === 'prompt');
-    })
+    });
+    return mapChildren(propmts, (c) => {
+      return React.cloneElement(c, {
+        setCurrentPrompt: this.props.setCurrentPrompt,
+        advance: this.props.advance,
+        nextTag: c.props.nextTag || this.props.nextTag,
+        heading: c.props.heading || this.props.heading
+      })
+    });
+
   }
 
   handleClick() {
     const nestedPrompt = this.getNestedPrompt();
     if (this.props.onSelect) {
+      console.log('triggering onselect callback');
       this.props.onSelect();
     }
     if (nestedPrompt.length) {
@@ -26,8 +36,27 @@ class Option extends React.Component {
     }
   }
 
+  getContent() {
+    const { children } = this.props;
+    const options = filterChildren(children, (c) => {
+      return !(c && c.type && c.type.name && c.type.name.toLowerCase() === 'prompt');
+    })
+
+    const handleChild = (c) => {
+      if (typeof c === 'string') {
+        return c;
+      } else if (c && c.type && c.type.toLowerCase() === 'p' && c.props.children.length === 1) {
+        return c.props.children[0];
+      }
+
+      return c;
+    };
+
+    return mapChildren(options, handleChild);
+  }
+
   render() {
-    const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, ...props } = this.props;
+    const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, nextTag, heading, ...props } = this.props;
 
     if (props.if !== undefined && props.if === false) {
       return null;
@@ -36,9 +65,7 @@ class Option extends React.Component {
       <div {...props}>
         <div onClick={this.handleClick} style={{color: '#D9CCFF', cursor: 'pointer'}}>
           {
-            filterChildren(children, (c) => {
-              return !(c && c.type && c.type.name && c.type.name.toLowerCase() === 'prompt');
-            })
+            this.getContent()
           }
         </div>
       </div>
