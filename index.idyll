@@ -26,7 +26,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 [var name:"mode" value:"waiting"  /]
 [var name:"startedGame" value:false  /]
 [var name:"day" value:1 /]
-[var name:"money" value:0 /]
+[var name:"money" value:50 /]
 [var name:"students" value:10 /]
 [var name:"location" value:"home" /]
 [var name:"selfActualization" value:50 /]
@@ -941,6 +941,71 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Option onSelect:`set('money', money + 10)` nextTag:`students > 0 ? "student-encounter" : "no-students" `]Teach a class.[/Option]
       [/Prompt]
 
+      [Ending if:`money >= 100` ]
+        [Prompt]
+          You've managed to accumulate quite a bit of cash for an adjunct professor at a bankrupt school.
+
+          That little tingle of anxiety you feel suddenly becomes an approaching siren. There's a firm knock on the door.
+          The police.
+
+          Sure there's a self-dealing administration at work here, but they were slow and calculating with their corruption while yours was crude and greedy.
+
+          And there's nothing a small town DA tired of the sad crimes of poverty finds more refreshing than some privileged twit who got his or her beak wet.
+
+          You my friend are fucked.
+        [/Prompt]
+
+      [/Ending]
+
+      [Ending if:`money <= 0`]
+       [Prompt]
+          Rent's due. And there's nothing at all in your account. Now what?
+//      [IfFirstTime:Option]Ask parents for money[/Option]
+//          ((Receive $-$$$$ randomly; penalty of 0-100 self-actualization))
+//        [Option]Take out a title loan on your car]
+//            [Prompt]
+//              The little local bank is delighted to hand over a wad of crisp bills in exchange for the title to your graduation present.
+//              * Not many Subarus out here. Pity we have to charge you 25% APR but them's the breaks, kid.
+//          ***Receive $-$$$$; bleed rate increases ***
+//          [/Option]
+//     [IfNo Other Options exist]
+//            You call your parents one last time. Your dad has had enough. They'll pay for you to come home but only on the condition that you go to law school. Better start prepping for your LSAT. Pity your students don't have an escape route like you do, huh?
+//            [/Option]
+          [/Prompt]
+
+      [/Ending]
+
+      [Ending if:`selfActualization >= 100`]
+        high self actualize
+      //    [Prompt]
+//      Somehow with all the rot and misery of rural Oklahoma eating away at you you've managed to work on your work and submit to juried competitions and -- oh my goodness it actually paid off, you get a call from a foundation in Berlin and they want you and they're gonna give you a ton of money to do an exhibit and you can leave all this behind.
+//      Good for you. You've effectively won the game but Bacone will remain in ruins. And so will your students. Oh well, at least you achieved escape velocity. Maybe one day you can pull one of them out.
+//        [/Prompt]
+//          [Option]
+//             Take the fellowship
+//             [/Option]
+//              [Prompt]
+//                  Smart choice. You live happily ever after.
+//                 [/Prompt]
+//            [Option]
+//               Stay at Bacone
+//               [/Option]
+//         Artists are supposed to be selfish, you know... You eventually become president of the school.
+//         [/Prompt]
+
+      [/Ending]
+
+      [Ending if:`selfActualization <= 0`]
+        low self actualize
+      //    [Prompt]
+//      It wasn't the money that wore you down, it was the mental stuff. You've stopped working on your work. It seems pointless anyway. The very idea of it seems outrageous against all this misery. Maybe you could have persisted but it's not to be. One afternoon you call your dad and stop it all.
+//        They don't gloat as much as you thought they would. They're concerned and nudge you toward taking the LSAT. You could go to law school in Austin or Houston, get into the oil industry, make something of yourself.
+//         Get a Rolex. Buy a Porsche 911. Yeah you're giving up on art, but you aren't giving up on life. Right? Right?
+//
+//      [/Prompt]
+
+      [/Ending]
+
     [/InteractiveFiction]
   [/Conditional]
 [/TextContainer]
@@ -954,7 +1019,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 [/div]
 
 
-//End States 
+//End States
 //[[[[IfCondition:Money = 100]]
 //[Prompt]
 //  You've managed to accumulate quite a bit of cash for an adjunct professor at a bankrupt school.
@@ -973,18 +1038,18 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 //          ((Receive $-$$$$ randomly; penalty of 0-100 self-actualization))
 //        [Option]Take out a title loan on your car]
 //            [Prompt]
-//              The little local bank is delighted to hand over a wad of crisp bills in exchange for the title to your graduation present. 
+//              The little local bank is delighted to hand over a wad of crisp bills in exchange for the title to your graduation present.
 //              * Not many Subarus out here. Pity we have to charge you 25% APR but them's the breaks, kid.
 //          ***Receive $-$$$$; bleed rate increases ***
 //          [/Option]
 //     [IfNo Other Options exist]
-//            You call your parents one last time. Your dad has had enough. They'll pay for you to come home but only on the condition that you go to law school. Better start prepping for your LSAT. Pity your students don't have an escape route like you do, huh? 
+//            You call your parents one last time. Your dad has had enough. They'll pay for you to come home but only on the condition that you go to law school. Better start prepping for your LSAT. Pity your students don't have an escape route like you do, huh?
 //            [/Option]
 //  [/Prompt]
 //
 //[[[[IfCondition:Self-Actualization = 100]]
 //    [Prompt]
-//      Somehow with all the rot and misery of rural Oklahoma eating away at you you've managed to work on your work and submit to juried competitions and -- oh my goodness it actually paid off, you get a call from a foundation in Berlin and they want you and they're gonna give you a ton of money to do an exhibit and you can leave all this behind. 
+//      Somehow with all the rot and misery of rural Oklahoma eating away at you you've managed to work on your work and submit to juried competitions and -- oh my goodness it actually paid off, you get a call from a foundation in Berlin and they want you and they're gonna give you a ton of money to do an exhibit and you can leave all this behind.
 //      Good for you. You've effectively won the game but Bacone will remain in ruins. And so will your students. Oh well, at least you achieved escape velocity. Maybe one day you can pull one of them out.
 //        [/Prompt]
 //          [Option]
@@ -1001,7 +1066,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 //[[[[IfCondition:Self-Actualization = 0]]
 //    [Prompt]
 //      It wasn't the money that wore you down, it was the mental stuff. You've stopped working on your work. It seems pointless anyway. The very idea of it seems outrageous against all this misery. Maybe you could have persisted but it's not to be. One afternoon you call your dad and stop it all.
-//        They don't gloat as much as you thought they would. They're concerned and nudge you toward taking the LSAT. You could go to law school in Austin or Houston, get into the oil industry, make something of yourself. 
+//        They don't gloat as much as you thought they would. They're concerned and nudge you toward taking the LSAT. You could go to law school in Austin or Houston, get into the oil industry, make something of yourself.
 //         Get a Rolex. Buy a Porsche 911. Yeah you're giving up on art, but you aren't giving up on life. Right? Right?
-//                
+//
 //      [/Prompt]

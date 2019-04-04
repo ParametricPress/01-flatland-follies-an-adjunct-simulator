@@ -64,7 +64,6 @@ class Prompt extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(this.getContent(prevProps), this.getContent(this.props))
     if (this.getContent(prevProps).join(' ') !== this.getContent(this.props).join(' ')) {
       this.setState({
         showOptions: false
