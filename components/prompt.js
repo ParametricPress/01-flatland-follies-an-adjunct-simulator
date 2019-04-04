@@ -21,6 +21,7 @@ class Prompt extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({ showOptions: false })
     if (this.props.onShow) {
       console.log('triggering onshow callback');
       this.props.onShow();
@@ -46,29 +47,38 @@ class Prompt extends React.Component {
     });
   }
 
-  getContent() {
+  getContent(props) {
     const handleChild = (c) => {
       if (typeof c === 'string') {
         return c;
-      } else if (c && c.type && c.type.toLowerCase() === 'p' && c.props.children.length === 1) {
+      } else if (c && c.type && typeof c.type === 'string' && c.type.toLowerCase() === 'p' && c.props.children.length === 1) {
         return [c.props.children[0], React.createElement('br'), React.createElement('br'), ];
       }
 
       return [c, React.createElement('br'), React.createElement('br'), ];
     };
-    const ret = mapChildren(filterChildren(this.props.children, (c) => {
+    const ret = mapChildren(filterChildren(props.children, (c) => {
       return !(c && c.type && c.type.name && c.type.name.toLowerCase() === 'option');
     }), handleChild);
     return ret;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(this.getContent(prevProps), this.getContent(this.props))
+    if (this.getContent(prevProps).join(' ') !== this.getContent(this.props).join(' ')) {
+      this.setState({
+        showOptions: false
+      })
+    }
   }
 
   render() {
     const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, nextTag, onShow, heading, ...props } = this.props;
     const { showOptions } = this.state;
     return (
-      <div {...props}>
+      <div {...props} key={this.getContent(this.props).join('-')}>
         { heading ? <div className="parametric-if-heading">{heading}</div> : null}
-        <Typist avgTypingDelay={40} stdTypingDelay={5} onTypingDone={this.doneTyping}>{this.getContent()}</Typist>
+        <Typist avgTypingDelay={40} stdTypingDelay={5} onTypingDone={this.doneTyping}>{this.getContent(this.props)}</Typist>
         <br/>
         <div className="parametric-if-options" style={{opacity: showOptions ? 1 : 0}}>
           {this.getOptions()}

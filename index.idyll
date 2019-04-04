@@ -66,7 +66,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
     [InteractiveFiction started:startedGame tag:tag currentPrompt:currentPrompt advance:`nextTag `]
 
       [Prompt tag:`"intro"` nextTag:"chair-leaves"]
-        Your chair walks in and hands you an announcement:  “The Bacone School is closing its Art program at the end of the semester.” End of an era, he says. Seventy years of history coming to an end with me. Turn, turn, turn. They’re sending an art appraiser to see if they can’t squeeze some quick cash all this old Indian art.
+        Your chair walks in and hands you an announcement: “The Bacone School is closing its Art program at the end of the semester.” End of an era, he says. Seventy years of history coming to an end with me. Turn, turn, turn. They’re sending an art appraiser to see if they can’t squeeze some quick cash all this old Indian art.
 
         [Option]Thank Him.[/Option]
         [Option nextTag:"first-class"]Leave in Disgust[/Option]

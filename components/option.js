@@ -10,6 +10,7 @@ class Option extends React.Component {
 
   getNestedPrompt() {
     const propmts = filterChildren(this.props.children, (c) => {
+      console.log('option children', c);
       return (c && c.type && c.type.name && c.type.name.toLowerCase() === 'prompt');
     });
     return mapChildren(propmts, (c) => {
@@ -25,13 +26,16 @@ class Option extends React.Component {
 
   handleClick() {
     const nestedPrompt = this.getNestedPrompt();
+    console.log('nested prompt: ', nestedPrompt);
     if (this.props.onSelect) {
       console.log('triggering onselect callback');
       this.props.onSelect();
     }
     if (nestedPrompt.length) {
+      console.log('Setting prompty!', nestedPrompt);
       this.props.setCurrentPrompt(nestedPrompt);
     } else {
+      console.log('no nested prompt');
       this.props.advance(this.props.nextTag);
     }
   }
@@ -45,7 +49,7 @@ class Option extends React.Component {
     const handleChild = (c) => {
       if (typeof c === 'string') {
         return c;
-      } else if (c && c.type && c.type.toLowerCase() === 'p' && c.props.children.length === 1) {
+      } else if (c && c.type && typeof c.type === 'string' && c.type.toLowerCase() === 'p' && c.props.children.length === 1) {
         return c.props.children[0];
       }
 
