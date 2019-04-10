@@ -60,14 +60,14 @@ class Option extends React.Component {
   }
 
   render() {
-    const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, nextTag, heading, ...props } = this.props;
+    const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, nextTag, heading, onSelect, if: _if, ...props } = this.props;
 
-    if (props.if !== undefined && props.if === false) {
+    if (_if !== undefined && _if === false) {
       return null;
     }
     return (
       <div {...props}>
-        <div onClick={this.handleClick} style={{color: '#D9CCFF', cursor: 'pointer'}}>
+        <div className="parametric-if-option" onClick={this.handleClick}>
           {
             this.getContent()
           }

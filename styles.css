@@ -25,3 +25,74 @@ button {
   padding: 1em 2em;
   cursor: pointer;
 }
+
+.parametric-if-option {
+  color: #D9CCFF;
+  cursor: pointer;
+}
+.parametric-if-option:hover {
+  text-decoration: underline;
+}
+
+
+@-webkit-keyframes parametric-value-increased {
+  0% {
+      color: #4BB543;
+  }
+  75% {
+    color: #4BB543;
+  }
+  100% {
+      color: #C5C5C5;
+  }
+}
+
+@-webkit-keyframes parametric-value-decreased {
+  0% {
+      color: red;
+  }
+  75% {
+      color: red;
+  }
+  100% {
+      color: #C5C5C5;
+  }
+}
+
+.parametric-value-increased > .dynamic {
+  -webkit-animation-name: parametric-value-increased;
+  -webkit-animation-duration: 900ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.parametric-value-decreased > .dynamic {
+  -webkit-animation-name: parametric-value-decreased;
+  -webkit-animation-duration: 900ms;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+.parametric-scoreboard {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: Silkscreen;
+  font-size: 16px;
+  margin-bottom: 2em;
+  padding-top: 2em;
+}
+
+.parametric-scoreboard-value {
+  /* width: 100%; */
+  /* border: solid 2px #c5c5c5; */
+  text-align: center;
+  padding-right: 2em;
+  color: #c5c5c5;
+}
+
+.start-button {
+  display: block;
+  text-align: left;
+  margin-left: 0;
+}

@@ -49,28 +49,15 @@ class InteractiveFiction extends React.Component {
     return [possibleChildren[Math.floor(Math.random() * possibleChildren.length)]];
   }
 
-  getSatisfiedEndings() {
-
-    const endings = filterChildren(this.props.children, (c) => {
-      return (c.type.name && c.type.name.toLowerCase() === 'ending');
-    })
-    const satisfiedEndings = filterChildren(endings, (c) => {
-      return c.props.if == true;
-    });
-
-    return satisfiedEndings;
-  }
-
   render() {
     const { hasError, idyll, updateProps, children, tag, currentPrompt, advance, started, ...props } = this.props;
     if (!started) {
       return null;
     }
-    const satisfiedEndings = this.getSatisfiedEndings();
     return (
       <div {...props}>
         {
-          satisfiedEndings.length ? satisfiedEndings : this.getCurrentPrompt()
+          this.getCurrentPrompt()
         }
       </div>
     );
