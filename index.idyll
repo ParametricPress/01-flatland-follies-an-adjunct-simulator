@@ -1,6 +1,6 @@
 
 
-[meta title:"The Bacone School" description:"Short description of your project" /]
+[meta title:"The Bacone School" description:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and yet it's filled with dusty, decaying art." /]
 
 [Nav fullWidth:true /]
 
@@ -358,7 +358,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [/Prompt]
 
         [Prompt tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`set('selfActualization', selfActualization + 10);`]
-          Some of these kids have real talent. It’s been a rare good day of class.
+          Some of these kids have real talent. It’s been a good day of class.
         [/Prompt]
 
         [Prompt heading:"Student Encounter: Politics" tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`culturalArea = true `]
@@ -460,7 +460,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
             [Prompt]She's relieved when she finds out she isn't. She makes no mention of paying you back.[/Prompt]
           [/Option]
-          [Option]Sorry, I can't
+          [Option]Sorry, I can't.
 
           [Prompt]She's upset. You never see her again.[/Prompt]
           [/Option]
@@ -1172,4 +1172,12 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 [/div]
 
 
-[NextArticle fullWidth:true /]
+[AuthorBio]
+**James McGirk** TK TK  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt nunc fringilla massa dignissim consectetur. Sed quis tristique tellus. Pellentesque quis erat placerat, varius quam id, auctor dolor. Sed ut elit efficitur, condimentum diam id, ullamcorper elit. Mauris turpis erat, volutpat ac lorem a, eleifend consectetur orci.
+
+Code by Matthew Conlen, edited by Victoria Uren.
+[/AuthorBio]
+
+[NextArticle /]
+
+[Footer fullWidth:true /]

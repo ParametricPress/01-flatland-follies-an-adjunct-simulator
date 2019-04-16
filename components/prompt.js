@@ -1,9 +1,9 @@
 const React = require('react');
-import Typist from 'react-typist';
+// import Typist from 'react-typist';
 const Option = require('./option');
 const { filterChildren, mapChildren } = require('idyll-component-children');
-const gaussian = require('gaussian');
-const distribution = gaussian(40, 5);
+// const gaussian = require('gaussian');
+// const distribution = gaussian(40, 5);
 
 class Prompt extends React.Component {
 
@@ -85,27 +85,27 @@ class Prompt extends React.Component {
     }
   }
 
-  delayGenerator(mean, std, {line, lineIdx, character, charIdx, defDelayGenerator}) {
-    let ret = 40;
-    if (character === '.') {
-      if (line.length > charIdx + 1 && line[charIdx + 1] !== " ") {
-        ret = 40;
-      } else {
-        ret = gaussian(750, 50).random(1)[0];
-      }
-    } else if (character === '”' && line[charIdx - 1] !== ",") {
-      ret = gaussian(750, 50).random(1)[0];
-    } else if ([';', ':'].indexOf(character) > -1) {
-      ret = gaussian(600, 25).random(1)[0];;
-    } else if (character === ',') {
-      return 40;
-    }
+  // delayGenerator(mean, std, {line, lineIdx, character, charIdx, defDelayGenerator}) {
+  //   let ret = 40;
+  //   if (character === '.') {
+  //     if (line.length > charIdx + 1 && line[charIdx + 1] !== " ") {
+  //       ret = 40;
+  //     } else {
+  //       ret = gaussian(750, 50).random(1)[0];
+  //     }
+  //   } else if (character === '”' && line[charIdx - 1] !== ",") {
+  //     ret = gaussian(750, 50).random(1)[0];
+  //   } else if ([';', ':'].indexOf(character) > -1) {
+  //     ret = gaussian(600, 25).random(1)[0];;
+  //   } else if (character === ',') {
+  //     return 40;
+  //   }
 
-    if (ret === 40) {
-      ret = gaussian(40, 5).random(1)[0];
-    }
-    return ret;
-  }
+  //   if (ret === 40) {
+  //     ret = gaussian(40, 5).random(1)[0];
+  //   }
+  //   return ret;
+  // }
 
   render() {
     const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, nextTag, onShow, heading, ...props } = this.props;
