@@ -525,28 +525,60 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               There are three other rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysterously none of the silver or copperwork remains. Could people be taking it?
 
 
+// ##TEXT FOR RUMMAGING AROUND IN THE CLOSET
+
+
+// ##Take a Flat-style painting
+//   ##The canvas is nicely made. The details are finely rendered and for all its cartoonishness there's a real grace to the work. You feel a bit like you're defiling something holy by taking it though. [[[[Lose self actualization]]]
+
+// ##Take a Native Portrait
+//   ##A closer look reveals it's been traced from a magazine -- in fact, it's a Darryl Hannah rendered as an Native American brunette. Not a classy choice. [[[Lose self-actualization]]]
+
+// ##Take a painting for a horse
+//   ##Yup. It's a horse. Someone will buy it.
+
+// ##Take portrait of a past state governor
+//   ##What an odd thing to take, given how unpopular she was.
+
               [Option]
                 Rummage in the closet.
 
                 [Prompt]
-                  You come across a table encumbered with several artworks. Do you take one?
+                  Plenty of paintings but few are salvagable; you remove one that seems as if its been flattened on the page -- it's sleek and modern looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
 
-                  [Option onSelect:`set('money', money + 30)`]
+                  There are others too: a portrait of what you can an only assume is a Cherokee princess, feathers, tall cheekbones and lipsticked pout. Then there's a horse galloping across the prairie and finally what looks like a picture of the governor herself. The dust is beginning to bite you. You'd better grab something...
+
+                  [Option onSelect:`set('money', money + 30); set('selfActualization', selfActualization - 20);`]
                    Take a flat style painting.
+                    [Prompt]
+                      The canvas is nicely made. The details are finely rendered and for all its cartoonishness there's a real grace to the work. You feel a bit like you're defiling something holy by taking it though.
+                    [/Prompt]
                   [/Option]
-                  [Option onSelect:`set('money', money + 10)`]
+                  [Option onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
                     Take a native portrait.
+                    [Prompt]
+                      A closer look reveals it's been traced from a magazine -- in fact, it's a Darryl Hannah rendered as an Native American brunette. Not a classy choice.
+                    [/Prompt]
                   [/Option]
-                  [Option onSelect:`set('money', money + 20)`]
+                  [Option onSelect:`set('money', money + 20); set('selfActualization', selfActualization - 20);`]
                     Take a painting of a horse.
+                    [Prompt]
+                      Yup. It's a horse. Someone will buy it.
+                    [/Prompt]
                   [/Option]
-                  [Option onSelect:`set('money', money + 10)`]
-                    Take a landscape.
+                  // [Option onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
+                  //   Take a landscape.
+                  //   [Prompt]
+                  //     It is nicely painted but otherwie
+                  //   [/Prompt]
+                  // [/Option]
+                  [Option onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
+                    Take a portrait of a past state governor.
+                    [Prompt]
+                      What an odd thing to take, given how unpopular she was.
+                    [/Prompt]
                   [/Option]
-                  [Option onSelect:`set('money', money + 10)`]
-                    Take a portrait of a past local governor.
-                  [/Option]
-                  [Option onSelect:`set('money', money + 10)`]
+                  [Option]
                     Leave them be.
                   [/Option]
                 [/Prompt]
@@ -1182,20 +1214,3 @@ Code by Matthew Conlen, edited by Victoria Uren.
 
 [Footer fullWidth:true /]
 
-
-// ##TEXT FOR RUMMAGING AROUND IN THE CLOSET
-
-// Plenty of paintings but few are salvagable; you remove one that seems as if its been flattened on the page -- it's sleek and modern looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
-// There are others too: a portrait of what you can an only assume is a Cherokee princess, feathers, tall cheekbones and lipsticked pout. Then there's a horse galloping across the prairie and finally what looks like a picture of the governor herself. The dust is beginning to bite you. You'd better grab something...
-
-// ##Take a Flat-style painting
-//   ##The canvas is nicely made. The details are finely rendered and for all its cartoonishness there's a real grace to the work. You feel a bit like you're defiling something holy by taking it though. [[[[Lose self actualization]]]
-
-// ##Take a Native Portrait
-//   ##A closer look reveals it's been traced from a magazine -- in fact, it's a Darryl Hannah rendered as an Native American brunette. Not a classy choice. [[[Lose self-actualization]]]
-
-// ##Take a painting for a horse
-//   ##Yup. It's a horse. Someone will buy it.
-
-// ##Take portrait of a past state governor
-//   ##What an odd thing to take, given how unpopular she was.
