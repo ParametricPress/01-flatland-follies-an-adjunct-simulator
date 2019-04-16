@@ -1155,7 +1155,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Prompt tag:"game-over"]
           Game Over.
 
-          [Option onSelect:`money = 50; selfActualization = 50; day = 1; students = 10; sportsArea = false; diningArea = false; rodeoArea = false; culturalArea = false; dormsArea = false; churchAdminArea = false; nursingSchoolArea = false; askedParentsForMoney = false; carLoan = false; ` nextTag:"intro"]
+          [Option onSelect:`money = 20; selfActualization = 20; day = 1; students = 10; sportsArea = false; diningArea = false; rodeoArea = false; culturalArea = false; dormsArea = false; churchAdminArea = false; nursingSchoolArea = false; askedParentsForMoney = false; carLoan = false; ` nextTag:"intro"]
             Play again.
           [/Option]
 
@@ -1181,3 +1181,21 @@ Code by Matthew Conlen, edited by Victoria Uren.
 [NextArticle /]
 
 [Footer fullWidth:true /]
+
+
+// ##TEXT FOR RUMMAGING AROUND IN THE CLOSET
+
+// Plenty of paintings but few are salvagable; you remove one that seems as if its been flattened on the page -- it's sleek and modern looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
+// There are others too: a portrait of what you can an only assume is a Cherokee princess, feathers, tall cheekbones and lipsticked pout. Then there's a horse galloping across the prairie and finally what looks like a picture of the governor herself. The dust is beginning to bite you. You'd better grab something...
+
+// ##Take a Flat-style painting
+//   ##The canvas is nicely made. The details are finely rendered and for all its cartoonishness there's a real grace to the work. You feel a bit like you're defiling something holy by taking it though. [[[[Lose self actualization]]]
+
+// ##Take a Native Portrait
+//   ##A closer look reveals it's been traced from a magazine -- in fact, it's a Darryl Hannah rendered as an Native American brunette. Not a classy choice. [[[Lose self-actualization]]]
+
+// ##Take a painting for a horse
+//   ##Yup. It's a horse. Someone will buy it.
+
+// ##Take portrait of a past state governor
+//   ##What an odd thing to take, given how unpopular she was.
