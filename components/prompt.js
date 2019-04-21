@@ -2,8 +2,11 @@ const React = require('react');
 // import Typist from 'react-typist';
 const Option = require('./option');
 const { filterChildren, mapChildren } = require('idyll-component-children');
+const ifUtils = require('./if-utils');
 // const gaussian = require('gaussian');
 // const distribution = gaussian(40, 5);
+
+const usedOptions = [];
 
 class Prompt extends React.Component {
 
@@ -22,17 +25,23 @@ class Prompt extends React.Component {
     })
   }
 
-  componentDidMount() {
-    this.setState({ showOptions: false })
+  show() {
+    if (this.props.once) {
+      ifUtils.setExpiredPrompt(this.props.id);
+    }
     if (this.props.onShow) {
-      console.log('triggering onshow callback');
       this.props.onShow();
     }
   }
 
+  componentDidMount() {
+    this.setState({ showOptions: false })
+    this.show();
+  }
+
   componentDidUpdate(prevProps) {
     if (this.getContent(this.props).join('-') !== this.getContent(prevProps).join('-')) {
-      this.props.onShow && this.props.onShow();
+      this.show();
     }
   }
 
@@ -102,7 +111,7 @@ class Prompt extends React.Component {
   //   }
 
   //   if (ret === 40) {
-  //     ret = gaussian(40, 5).random(1)[0];
+  //     ret = gaussian(40, 30).random(1)[0];
   //   }
   //   return ret;
   // }
@@ -113,12 +122,12 @@ class Prompt extends React.Component {
     showOptions = true;
     return (
       <div {...props} key={this.getContent(this.props).join('-')}>
-        { heading ? <div className="parametric-if-heading" style={{background: heading === 'Morning' ? 'rgb(255, 229, 51)' : undefined, color: heading === 'Morning' ? 'black' : undefined }}>{heading}</div> : null}
+        { heading ? <div className="parametric-if-heading" style={{color: heading === 'Morning' ? 'rgb(255, 229, 51)' : undefined }}>{heading === 'Morning' ? 'Good Morning.' : heading}</div> : null}
         <div>
-        {/* <Typist onTypingDone={this.doneTyping} delayGenerator={this.delayGenerator}> */}
-        {this.getContent(this.props)}
+          {/* <Typist onTypingDone={this.doneTyping} delayGenerator={this.delayGenerator}> */}
+            {this.getContent(this.props)}
+          {/* </Typist> */}
         </div>
-        {/* </Typist> */}
         <br/>
         <div className="parametric-if-options" style={{opacity: showOptions ? 1 : 0, pointerEvents: showOptions ? 'auto' : 'none'}}>
           {this.getOptions()}

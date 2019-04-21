@@ -1,5 +1,6 @@
 const React = require('react');
 const { filterChildren, mapChildren } = require('idyll-component-children');
+const ifUtils = require('./if-utils');
 
 class InteractiveFiction extends React.Component {
 
@@ -17,7 +18,6 @@ class InteractiveFiction extends React.Component {
   getCurrentPrompt() {
     const { currentPrompt, tag, children } = this.props;
     if (currentPrompt) {
-      console.log(this.props.nextTag);
       return mapChildren(currentPrompt, (c) => {
         return React.cloneElement(c, {
           setCurrentPrompt: this.setCurrentPrompt,
@@ -26,9 +26,15 @@ class InteractiveFiction extends React.Component {
       })
     }
 
-    console.log(this.props.advance);
     const possibleChildren = mapChildren(filterChildren(children, (c) => {
-      return (c.type.name && c.type.name.toLowerCase() === 'prompt') && c.props.tag === tag;
+      const isPrompt = (c.type.name && c.type.name.toLowerCase() === 'prompt') && c.props.tag === tag;
+      if (!isPrompt) {
+        return false;
+      }
+      if (c.props.once && ifUtils.getExpiredPrompts().indexOf(c.props.id) > -1) {
+        return false;
+      }
+      return true;
     }), (c) => {
       return React.cloneElement(c, {
         setCurrentPrompt: this.setCurrentPrompt,

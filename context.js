@@ -1,5 +1,7 @@
 import TWEEN from 'tween.js';
 
+const ifUtils = require('./components/if-utils');
+
 const getNextTag = (currentTag) => {
   switch(currentTag) {
     case 'intro':
@@ -15,6 +17,9 @@ module.exports = (ctx) => {
     // Inject the animation() function
     // for use in Idyll expressions
     ctx.update({
+      reset: () => {
+        ifUtils.reset();
+      },
       getNextDay: () => {
         const { money, selfActualization } = ctx.data();
         if (money >= 100) {

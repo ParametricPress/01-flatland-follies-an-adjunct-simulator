@@ -14,14 +14,14 @@ class Scoreboard extends React.Component {
 
     return (
       <div className="parametric-scoreboard">
-        <div className="parametric-scoreboard-value self-actualization">
-          Self actualization: <span className="dynamic">{this.format(props.selfActualization)}</span>
+        <div className="parametric-scoreboard-value day">
+          Day: <span className="dynamic">{this.format(props.day)}</span>
         </div>
         <div className="parametric-scoreboard-value money">
           Money: <span className="dynamic">${this.format(props.money)}</span>
         </div>
-        <div className="parametric-scoreboard-value day">
-          Day: <span className="dynamic">{this.format(props.day)}</span>
+        <div className="parametric-scoreboard-value self-actualization">
+          Self actualization: <span className="dynamic">{this.format(props.selfActualization)}</span>
         </div>
       </div>
     );

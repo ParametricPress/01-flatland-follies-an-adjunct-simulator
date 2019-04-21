@@ -1,5 +1,6 @@
 const React = require('react');
 const { filterChildren, mapChildren } = require('idyll-component-children');
+const ifUtils = require('./if-utils');
 
 class Option extends React.Component {
 
@@ -26,6 +27,10 @@ class Option extends React.Component {
 
   handleClick() {
     const nestedPrompt = this.getNestedPrompt();
+
+    if (this.props.once) {
+      ifUtils.setExpiredOption(this.getContent()[0]);
+    }
     console.log('nested prompt: ', nestedPrompt);
     if (this.props.onSelect) {
       console.log('triggering onselect callback');
@@ -38,6 +43,13 @@ class Option extends React.Component {
       console.log('no nested prompt');
       this.props.advance(this.props.nextTag);
     }
+  }
+
+  isExpired() {
+    if (ifUtils.getExpiredOptions().indexOf(this.getContent()[0]) > -1) {
+      return true;
+    }
+    return false;
   }
 
   getContent() {
@@ -62,7 +74,7 @@ class Option extends React.Component {
   render() {
     const { hasError, idyll, updateProps, children, setCurrentPrompt, advance, nextTag, heading, onSelect } = this.props;
 
-    if (this.props.if !== undefined && this.props.if === false) {
+    if ((this.props.if !== undefined && this.props.if === false) || this.isExpired()) {
       return null;
     }
     return (

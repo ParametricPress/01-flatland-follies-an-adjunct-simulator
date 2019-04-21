@@ -1,17 +1,25 @@
 
+
+.parametric-if-container {
+  font-family: 'Graphik Web';
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 75vh;
+  padding-bottom: 4em;
+}
 .parametric-if-options {
   transition: opacity 0.75s;
   transition-delay: 0.5s;
+  font-weight: 500;
 }
 
 .parametric-if-heading {
-  font-family: Silkscreen;
-  background: #4801FF;
-  color: white;
-  padding: 0.5em;
-  font-size: 14px;
+  font-family: 'Graphik Web';
+  color: #5DA391;
+  font-size: 18px;
   display: inline;
   margin-bottom: 1em;
+  font-weight: bold;
 }
 
 button {
@@ -37,28 +45,32 @@ button {
 
 @-webkit-keyframes parametric-value-increased {
   0% {
-      color: #4BB543;
+      color: #539987;
   }
   75% {
-    color: #4BB543;
+    color: #539987;
   }
   100% {
-      color: #C5C5C5;
+      color: #fff;
   }
 }
 
 @-webkit-keyframes parametric-value-decreased {
   0% {
-      color: red;
+      color: #B33A3A;
   }
   75% {
-      color: red;
+      color: #B33A3A;
   }
   100% {
-      color: #C5C5C5;
+      color: #fff;
   }
 }
 
+.parametric-scoreboard-value > .dynamic {
+  color: #ffffff;
+  margin-left: 1px;
+}
 .parametric-value-increased > .dynamic {
   -webkit-animation-name: parametric-value-increased;
   -webkit-animation-duration: 900ms;
@@ -77,10 +89,11 @@ button {
   width: 100%;
   display: flex;
   flex-direction: row;
-  font-family: Silkscreen;
+  font-family: 'Graphik Web';
   font-size: 16px;
   margin-bottom: 2em;
   padding-top: 2em;
+  font-weight: bold;
 }
 
 .parametric-scoreboard-value {
@@ -88,7 +101,7 @@ button {
   /* border: solid 2px #c5c5c5; */
   text-align: center;
   padding-right: 2em;
-  color: #c5c5c5;
+  color: #7E7E7E;
 }
 
 .start-button {
