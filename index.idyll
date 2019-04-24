@@ -1122,7 +1122,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             Ask parents for money.
 
             [Prompt]
-              Your parents give you $[Display value:`parentDonation ` format:"d" /].
+              Your parents give you [Display value:`" $" + parentDonation + "." ` /]
             [/Prompt]
           [/Option]
 
