@@ -528,22 +528,22 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
           [Prompt]
             Nothing to see here.
-            
-            //[Option if:`ART CLOSET `]
-            //You hear footsteps and excited voices.
-            
-            //An elegant, if dusty woman in her thirties bedecked in silver and turquoise jewelery enters the room. She must be the appraiser.
-            
-            //She buries her head in her hands. "I can't believe how much is lost."
-              //[Option]Soothe her[/Option]
-                //[Prompt onSelect:`set('selfActualization', selfActualization + 5)]
-               // "They never cataloged a thing! And it's all exposed to the elements. If you find a Flatstyle painting, grab it; it's the only thing worth saving." [/Prompt] 
-              //[Option]Tell her about the art closet[/Option]
-                 //[Prompt onSelect:`set('selfActualization', selfActualization + 10)]
-                  //You tell her about the paintings you found hoarded in the back. So trusting. [/Prompt]
-                //[Option] Talk about the weather [/Option]
-                //[Prompt onSelect:`set('selfActualization', selfActualization - 10)] Do you know what we use for a weather sock around here? A brick on a chain. hehe. She leaves. [/Prompt]
-                  
+
+            // [Option if:`ART CLOSET `]
+            // You hear footsteps and excited voices.
+
+            // An elegant, if dusty woman in her thirties bedecked in silver and turquoise jewelery enters the room. She must be the appraiser.
+
+            // She buries her head in her hands. "I can't believe how much is lost."
+            //   [Option]Soothe her[/Option]
+            //     [Prompt onSelect:`set('selfActualization', selfActualization + 5)]
+            //    "They never cataloged a thing! And it's all exposed to the elements. If you find a Flatstyle painting, grab it; it's the only thing worth saving." [/Prompt]
+            //   [Option]Tell her about the art closet[/Option]
+            //      [Prompt onSelect:`set('selfActualization', selfActualization + 10)]
+            //       You tell her about the paintings you found hoarded in the back. So trusting. [/Prompt]
+            //     [Option] Talk about the weather [/Option]
+            //     [Prompt onSelect:`set('selfActualization', selfActualization - 10)] Do you know what we use for a weather sock around here? A brick on a chain. hehe. She leaves. [/Prompt]
+
           [/Prompt]
         [/Option]
         [Option]
@@ -556,7 +556,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               Rummage in the closet.
 
               [Prompt]
-                
+
                 Someone has been hoarding. Plenty of paintings but few are salvagable; you remove one that seems as if its been flattened on the page—it's sleek and modern looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
 
                 There are others too: a portrait of what you can an only assume is a Cherokee princess, feathers, tall cheekbones and lipsticked pout. Then there's a horse galloping across the prairie and finally what looks like a picture of the governor herself. The dust is beginning to bite you. You'd better grab something...
