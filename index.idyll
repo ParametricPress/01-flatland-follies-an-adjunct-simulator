@@ -1,13 +1,13 @@
 
 
-[meta title:"The Bacone School" description:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and yet it's filled with dusty, decaying art." /]
+[meta title:"The Bacone School" description:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and it's filled with dusty, decaying art." /]
 
 [Nav fullWidth:true /]
 
 [Header
   title:`["Flatland", "Follies"]`
   longTitle:`["Flatland Follies:", "An Adjunct Simulator"]`
-  dek:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and yet it's filled with dusty, decaying art."
+  dek:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and it's filled with dusty, decaying art."
   date:"May 1, 2019"
   fullWidth:true
   authors:`[{
@@ -29,7 +29,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 [var name:"mode" value:"waiting"  /]
 [var name:"startedGame" value:true  /]
 [var name:"day" value:1 /]
-[var name:"money" value:50 /]
+[var name:"money" value:25 /]
 [var name:"students" value:5 /]
 [var name:"location" value:"home" /]
 [var name:"selfActualization" value:50 /]
@@ -100,7 +100,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               [/Prompt]
             [/Option]
             [Option]
-              "The lord is my shepherd?"
+              "The Lord is my shepherd?"
 
               [Prompt]
                 "Did they not teach you that at your fancy private school?" he asks and starts reciting the verse.
@@ -148,8 +148,6 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Option] Ask what's going on.
 
           [Prompt]
-            *"Deshawn, is that a new tattoo?"*
-
             "Check it out, Professor! Okie Baptist is gonna be scared to grapple!" He pulls aside his singlet to reveal a shallow pit in his skin the size of a fist. "Was a scrape. It got infected. Sometimes it heals. They never clean the wrestling mats here," he says.
           [/Prompt]
         [/Option]
@@ -157,16 +155,13 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Option] Express concern.
 
           [Prompt]
-            *"Have you been to a doctor, DeShawn?"*
-
-            Yeah, a few times the sports guys gave me antibiotics. It doesn't work now.
+            Thanks. A few times the sports guys gave me antibiotics. Anymore it doesn't work.
           [/Prompt]
         [/Option]
 
         [Option] Make a joke.
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
-            *"Be sure to use the Purell before you hand in your assignment."*
 
             The class begins snickering.
           [/Prompt]
@@ -192,14 +187,15 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [Prompt id:"johnny" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
 
-        “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session. “What happened to your neck?”
+        “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session. 
+        “What happened to your neck?”
         Johnny’s from Anadarko. He’s a older than everyone else, and has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring.
         Today there’s a brace around his neck and he’s limping.
 
         [Option]Ask what happened.
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
-            I got bucked! Flung me clean off and a calf stepped on my back. It’s nothing. You should come to our next rodeo! Take some zoom pictures!
+            I got bucked! Flung me clean off and a calf stepped on my back. It’s nothing. Come to our next rodeo! Take some pictures!
 
             You get an idea for a photo essay.
           [/Prompt]
@@ -209,7 +205,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Let him go for the day.
 
           [Prompt onShow:`set('selfActualization', selfActualization - 10); students -= 1; `]
-            That’s great professor, thank you. You don’t see him for the rest of the semester.
+            "That’s great professor, thank you." You don’t see him for the rest of the semester.
 
           [/Prompt]
         [/Option]
@@ -222,7 +218,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         The class laughs when Kelton can’t remember what happened last week. He growls some weird stuff back at them: pushing his thumb in eye goo, spilling blood, aggressive sexual stuff. He’s been having trouble concentrating or even holding his paintbrush. Strange because he’s normally a smart kid—he is QB of the football team after all.
 
         //  (Rodeo, older student, Chickasaw)
-        He starts trying to say something when Johnny, an older Chickasaw student, says "K, hey, hey, hey, siddown mush fuck."
+        He starts trying to say something when Johnny, an older Chickasaw student, says "K, hey, hey, hey, siddown mush for brains, don't scare everyone."
 
         [Option]
           Tell Johnny and Kelton to take off.
@@ -236,7 +232,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Ask Kelton what happened.
 
           [Prompt]
-            "I got hit in the game again. I’m dizzy as fuck though. He hands you a midterm grade report sheet. That’s what I was trying to say. Please don’t fail me. I gotta play."
+            "I got hit in the game again. I’m dizzy. He hands you a midterm grade report sheet. That’s what I was trying to say. Please don’t fail me. I gotta play."
 
             [Option onSelect:`set('selfActualization', selfActualization + 10); set('money', money - 10); students -= 1;`]
               Flunk him to keep him from playing.
@@ -326,7 +322,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Ignore her.
 
           [Prompt onShow:`set('selfActualization', selfActualization - 10);`]
-            She slowly walks away. You feel like maybe you should have done something
+            She slowly walks away. 
             [/Prompt]
         [/Option]
       [/Prompt]
@@ -342,8 +338,8 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         [Option]Yes, of course.
 
-          [Prompt onShow:`set('selfActualization', selfActualization - 10)`]
-            A broad beautiful smile stretches across her face. “I can’t wait to see you,” she says. You feel light and giddy and… happy.
+          [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
+            A broad beautiful smile stretches across her face. “I can’t wait to see you,” she says.
           [/Prompt]
         [/Option]
         [Option]
@@ -357,7 +353,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Sorry Claire, you know I can’t talk to students outside of class.
 
           [Prompt onShow:`set('selfActualization', selfActualization - 10); students -= 1; `]
-            "Oh, okay." She doesn’t show up to class next week. Nor doe she ever appear in your class again.
+            "Oh, okay." She doesn’t show up to class next week. Nor does she ever appear in your class again.
           [/Prompt]
         [/Option]
       [/Prompt]
@@ -395,7 +391,6 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [Prompt onShow:`set('selfActualization', selfActualization + 10);`]
             "Oh, that’s easy, the money comes from the casinos," he says.
 
-            *"Then why don’t you do a project about that?"*
           [/Prompt]
         [/Option]
 
@@ -449,7 +444,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Option]No, thanks.
 
           [Prompt onShow:`set('selfActualization', selfActualization - 10);`]
-            Surely you ought to have listened to him.
+            His face falls, and he slinks out of class.
 
             // [Display value:selfActualization/]
           [/Prompt]
@@ -480,20 +475,31 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [/Prompt]
 
-      // [Prompt heading:"Student Encounter: Religion" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
-      //   Harrowing tale - religious authorities
+      [Prompt heading:"Student Encounter: Religion" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+        [Prompt] Dylan has been increasingly unhinged, snapping at other students, breaking bits of charcoal, though to his credit he has been showing up. Today, he lingers after class. "You're from the East Coast? Something bad happened. Can I talk?"
+          
+          "I wrote a paper for English wondering whether I should become a freethinker. They're kicking me out of the dorms. I need money to go home."
+          
+              [Option onSelect:`set('money', money - 25); set('selfActualization', selfActualization + 10)`]Of course.
+                [Prompt]
+                
+                  You buy him a Greyhound Bus ticket with your credit card. 
+                [/Prompt]
+               [/Option]
+              [Option onSelect:`set('selfActualization', selfActualization - 10); students -= 1; `]Sorry, I can't.
+         
+                [Prompt]
+                
+                  He never comes back to class. Maybe he hitchiked home.
+                [/Prompt]
+               [/Option]
+          
+          [/Prompt]
 
-      //   // ((Religious center))
-
-      //   // TODO - remove this one?
-
-      // [/Prompt]
-
-      // [Prompt heading:"Student Encounter: Parents" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
-      //   Harrowing tale - terrible parental issue
-
-      //   // TODO - remove this one?
-      // [/Prompt]
+      [Prompt heading:"Student Encounter: Parents" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` onShow:`set('selfActualization', selfActualization - 15)`]
+        An agitated middle-aged couple arrive with your chair in tow. The Kara Walker cut-out video you assigned was apparently a little too edgy for these Okies.       
+     
+       [/Prompt]
 
       [Prompt heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` onShow:`set('selfActualization', selfActualization - 5)`]
         Yet another dead grandmother excuse. Hope whatever is killing them off isn't contagious.
@@ -507,7 +513,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       [/Prompt]
 
       [Prompt tag:"after-class" ]
-        That was a long day of teaching. Shudder.
+        That was a long day of teaching.
 
         [Option nextTag:"end-day"]Leave for the day.[/Option]
         [Option nextTag:"explore"]Explore.[/Option]
@@ -517,7 +523,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         Where would you like to go?
 
         [Option]
-          Your Office.
+          Chair's Office.
 
           [Prompt]
             Nothing to see here.
@@ -555,12 +561,12 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                     Yup. It's a horse. Someone will buy it.
                   [/Prompt]
                 [/Option]
-                // [Option onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
-                //   Take a landscape.
-                //   [Prompt]
-                //     It is nicely painted but otherwie
-                //   [/Prompt]
-                // [/Option]
+                [Option onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
+                   Take a landscape.
+                   [Prompt]
+                     It is nicely painted but otherwise kind of boring.
+                   [/Prompt]
+                 [/Option]
                 [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
                   Take a portrait of a past state governor.
                   [Prompt]
@@ -569,6 +575,9 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                 [/Option]
                 [Option]
                   Leave them be.
+                  Prompt]
+                    They won't be going anywhere. You can always come back. 
+                  [/Prompt]
                 [/Option]
               [/Prompt]
             [/Option]
@@ -647,7 +656,6 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             [Option]Confront him about the injuries.
 
               [Prompt]
-                *"Look way too many of my kids are getting badly hurt."*
 
                 "I’ve been in their shoes. Have you? Got Tommy John surgery. They come here to play college sports... Some kid made it into the NFL Ravens last year. It’s a longshot. I get one of ‘em in, then maybe I can come with him as a junior coach, okay? I'm just trying to get out. I'm sure you are too."
 
@@ -661,8 +669,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
                 [Option onSelect:`set('selfActualization', selfActualization - 15);`]
                   "Okay fine."
-                  // ((Postpones furlough))
-                [/Option]
+                                 [/Option]
 
 
                 [Option onSelect:`set('selfActualization', selfActualization + 10); set('money', money - 10)`]
@@ -752,7 +759,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               Do it.
 
               [Prompt]
-                You follow him into the motel. It's appalling. Roaches cruise by in insectoid superhighways. Moist stains blossom klaidiscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"
+                You follow him into the motel. It's appalling. Roaches surge by. Moist stains blossom klaidiscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"
 
                 [Option]
                   Focus on the race issue.
@@ -808,7 +815,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                         "It’s kind of sad," she says. "The tribe couldn’t afford to maintain the school, plus there was a bunch of bad press after Wounded Knee in the 1970s, so they sold off to the Sodesko family."
 
                         [Option]
-                          "What did the Sodeskos do?"
+                          Ask about the Sodescos
 
                           [Prompt]
                             "Well, they weren’t quite crooks but pretty close, they eventually turned it into a Baptist school, they closed down the nursing school—they couldn’t afford to keep it modern—the only way they could maintain it was to bring in as many student athletes as they could and then standards fell. Now we’re trying to get the student athletes out and then buy back for the tribe."
@@ -816,7 +823,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                             [Option]
                               "How are they going to do that?"
 
-                              [Prompt]
+                              [Prompt onShow:`set('selfActualization', selfActualization - 20); set('money', money - 10);`]
                                 "It’s kind of mean. They don’t maintain the dorms. Hire the crappiest teachers. They’re just starving them out basically."
                               [/Prompt]
                             [/Option]
@@ -967,7 +974,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       Confront him about the catering company.
 
                       [Prompt]
-                        "Now you're smart cookie. Hey, would you be quiet about that for me? Don't make a fuss about that and you'll get a little honey in your next check."
+                        "Now you're a smart one." A grin spreads across his face. "Don't make a fuss about that and you'll get a little honey in your next check."
                       [/Prompt]
                     [/Option]
 
@@ -1066,7 +1073,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Option nextTag:`students > 0 ? "student-encounter" : "no-students" `]Teach a class.[/Option]
       [/Prompt]
       [Prompt  heading:"Morning" tag:"start-day" onShow:`set('day', day + 1); set('money', money + dailyRate); `]
-        You literally have to wait for a chicken to cross the road this morning and yet you don't find it funny.
+        You literally have to wait for a chicken to cross the road this morning.
 
         [Option nextTag:`students > 0 ? "student-encounter" : "no-students" `]Teach a class.[/Option]
       [/Prompt]
@@ -1113,7 +1120,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             Ask parents for money.
 
             [Prompt]
-              Your parents give you $[Display value:`parentDonation ` format:"d" /]. Your self-actualization has decreased.
+              Your parents give you $[Display value:`parentDonation ` format:"d" /].
             [/Prompt]
           [/Option]
 
@@ -1125,7 +1132,6 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
               "Not many Subarus out here. Pity we have to charge you 25% APR but them's the breaks, kid."
 
-              // ***Receive $-$$$$; bleed rate increases ***
             [/Prompt]
           [/Option]
 
@@ -1155,7 +1161,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             Stay at Bacone.
 
             [Prompt]
-              Artists are supposed to be selfish, you know... You eventually become president of the school.
+              Artists are supposed to be selfish, you know... You eventually become president of the school. Claire marries you but you soon divorce,
             [/Prompt]
           [/Option]
         [/Prompt]
