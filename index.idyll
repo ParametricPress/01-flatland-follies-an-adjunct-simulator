@@ -187,7 +187,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [Prompt id:"johnny" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
 
-        “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session. 
+        “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session.
         “What happened to your neck?”
         Johnny’s from Anadarko. He’s a older than everyone else, and has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring.
         Today there’s a brace around his neck and he’s limping.
@@ -322,7 +322,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Ignore her.
 
           [Prompt onShow:`set('selfActualization', selfActualization - 10);`]
-            She slowly walks away. 
+            She slowly walks away.
             [/Prompt]
         [/Option]
       [/Prompt]
@@ -475,30 +475,32 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [/Prompt]
 
-      [Prompt heading:"Student Encounter: Religion" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
-        [Prompt] Dylan has been increasingly unhinged, snapping at other students, breaking bits of charcoal, though to his credit he has been showing up. Today, he lingers after class. "You're from the East Coast? Something bad happened. Can I talk?"
-          
-          "I wrote a paper for English wondering whether I should become a freethinker. They're kicking me out of the dorms. I need money to go home."
-          
-              [Option onSelect:`set('money', money - 25); set('selfActualization', selfActualization + 10)`]Of course.
-                [Prompt]
-                
-                  You buy him a Greyhound Bus ticket with your credit card. 
-                [/Prompt]
-               [/Option]
-              [Option onSelect:`set('selfActualization', selfActualization - 10); students -= 1; `]Sorry, I can't.
-         
-                [Prompt]
-                
-                  He never comes back to class. Maybe he hitchiked home.
-                [/Prompt]
-               [/Option]
-          
-          [/Prompt]
+      [Prompt id:"religion" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
+        Dylan has been increasingly unhinged, snapping at other students, breaking bits of charcoal, though to his credit he has been showing up. Today, he lingers after class. "You're from the East Coast? Something bad happened. Can I talk?"
 
-      [Prompt heading:"Student Encounter: Parents" tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` onShow:`set('selfActualization', selfActualization - 15)`]
-        An agitated middle-aged couple arrive with your chair in tow. The Kara Walker cut-out video you assigned was apparently a little too edgy for these Okies.       
-     
+        "I wrote a paper for English wondering whether I should become a freethinker. They're kicking me out of the dorms. I need money to go home."
+
+        [Option onSelect:`set('money', money - 25); set('selfActualization', selfActualization + 10)`]
+          Of course.
+
+          [Prompt]
+            You buy him a Greyhound Bus ticket with your credit card.
+          [/Prompt]
+          [/Option]
+
+        [Option onSelect:`set('selfActualization', selfActualization - 10); students -= 1; `]
+          Sorry, I can't.
+
+          [Prompt]
+            He never comes back to class. Maybe he hitchiked home.
+          [/Prompt]
+        [/Option]
+
+      [/Prompt]
+
+      [Prompt id:"parents" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` onShow:`set('selfActualization', selfActualization - 15)`]
+        An agitated middle-aged couple arrive with your chair in tow. The Kara Walker cut-out video you assigned was apparently a little too edgy for these Okies.
+
        [/Prompt]
 
       [Prompt heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` onShow:`set('selfActualization', selfActualization - 5)`]
@@ -561,7 +563,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                     Yup. It's a horse. Someone will buy it.
                   [/Prompt]
                 [/Option]
-                [Option onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
+                [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
                    Take a landscape.
                    [Prompt]
                      It is nicely painted but otherwise kind of boring.
@@ -575,14 +577,14 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                 [/Option]
                 [Option]
                   Leave them be.
-                  Prompt]
-                    They won't be going anywhere. You can always come back. 
+                  [Prompt]
+                    They won't be going anywhere. You can always come back.
                   [/Prompt]
                 [/Option]
               [/Prompt]
             [/Option]
 
-            [Option]
+            [Option once:true]
               Examine the second room.
 
               [Prompt]
@@ -653,7 +655,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               [/Prompt]
             [/Option]
 
-            [Option]Confront him about the injuries.
+            [Option once:true]Confront him about the injuries.
 
               [Prompt]
 
@@ -685,7 +687,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [/Prompt]
         [/Option]
 
-        [Option if:`diningArea `]
+        [Option once:true if:`diningArea `]
 
           Dining Hall.
 
@@ -746,7 +748,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
 
 
-        [Option if:`dormsArea `]
+        [Option once:true if:`dormsArea `]
 
           Dormatories.
 
@@ -761,18 +763,18 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               [Prompt]
                 You follow him into the motel. It's appalling. Roaches surge by. Moist stains blossom klaidiscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"
 
-                [Option]
+                [Option onSelect:`set('selfActualization', selfActualization + 10); set('money', money - 10);`]
                   Focus on the race issue.
 
-                  [Prompt onShow:`set('selfActualization', selfActualization + 10); set('money', money - 10);`]
+                  [Prompt]
                     You tell him to start looking into the disparities between the living situations and give him some suggestions for places to reach out to. You take some pictures as well and give him some walking around money.
                   [/Prompt]
                 [/Option]
 
-                [Option]
+                [Option onSelect:`set('selfActualization', selfActualization + 10); set('money', money - 10);`]
                   Focus on conditions.
 
-                  [Prompt onShow:`set('selfActualization', selfActualization + 10); set('money', money - 10);`]
+                  [Prompt]
                     You tell him to start documenting conditions in the building and getting the entire student body involved.
 
                     You can't help but give him some food for snacks.
@@ -802,7 +804,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               [Prompt]
                 You find yourself in a nicely appointed lodge. A woman in her twenties sits at a reception desk. “Osiyo! How can I help you today? Would you like to make a donation?”
 
-                [Option]
+                [Option once:true]
                   Ask about donations.
 
                   [Prompt]
@@ -820,10 +822,10 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                           [Prompt]
                             "Well, they weren’t quite crooks but pretty close, they eventually turned it into a Baptist school, they closed down the nursing school—they couldn’t afford to keep it modern—the only way they could maintain it was to bring in as many student athletes as they could and then standards fell. Now we’re trying to get the student athletes out and then buy back for the tribe."
 
-                            [Option]
+                            [Option onSelect:`set('selfActualization', selfActualization - 20); set('money', money - 10);`]
                               "How are they going to do that?"
 
-                              [Prompt onShow:`set('selfActualization', selfActualization - 20); set('money', money - 10);`]
+                              [Prompt]
                                 "It’s kind of mean. They don’t maintain the dorms. Hire the crappiest teachers. They’re just starving them out basically."
                               [/Prompt]
                             [/Option]
@@ -836,7 +838,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                   [/Prompt]
                 [/Option]
 
-                [Option]
+                [Option once:true]
                   Ask why there are so many cars outside.
 
                   [Prompt]
@@ -851,7 +853,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                   [/Prompt]
 
                 [/Option]
-                [Option]
+                [Option once:true]
                   Ask about the art.
 
                   [Prompt]
@@ -870,10 +872,10 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       [Prompt]
                         You tell him. He nods. "It's a real shame that they're closing down the art program, it was the center of the school when it started, same with the nursing program but the school fell on hard times and the current admin stripped it bare."
 
-                        [Option]
+                        [Option once:true onSelect:`set('selfActualization', selfActualization - 10);`]
                           Ask what will happen to the athletes.
 
-                          [Prompt onShow:`set('selfActualization', selfActualization - 10);`]
+                          [Prompt]
                             "It's not going to be pretty," he says. "I'm not going to lie to you. They're caught in the middle of all of this. There are three big factions competing over this campus: there's us, there's the church and then there's the creeps admin. Those kids are being left in the lurch and sucked into debt. You and I know both know they aren't capable of doing well in school. Don't get all high and mighty. You're just as complicit. Now get out."
                           [/Prompt]
                         [/Option]
@@ -900,7 +902,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [Prompt]
             The church is the oldest, grandest building on campus; the steeple is the tallest thing for a hundred miles and the cell tower tucked inside likely brings them considerable revenue. The muffled hum of massed voices hangs in the air. Are you compelled to go toward it?
 
-            [Option]
+            [Option once:true]
               Walk up the stairs into the church.
 
               [Prompt]
@@ -946,7 +948,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                   [Prompt]
                     "What can I do yeah for?" he replies.
 
-                    [Option onSelect:`set('selfActualization', selfActualization - 10);`]
+                    [Option once:true onSelect:`set('selfActualization', selfActualization - 10);`]
                       Confront him about conditions at the school.
 
                       [Prompt ]
@@ -954,7 +956,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       [/Prompt]
                     [/Option]
 
-                    [Option onSelect:`set('selfActualization', selfActualization - 10);`]
+                    [Option once:true onSelect:`set('selfActualization', selfActualization - 10);`]
                       Confront him about the athletes.
 
                       [Prompt]
@@ -962,7 +964,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       [/Prompt]
                     [/Option]
 
-                    [Option]
+                    [Option once:true]
                       Ask him about the differences in the way the African American students and the Natives are treated.
 
                       [Prompt]
@@ -970,7 +972,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       [/Prompt]
                     [/Option]
 
-                    [Option onSelect:`set('money', money + 20);`]
+                    [Option once:true onSelect:`set('money', money + 20);`]
                       Confront him about the catering company.
 
                       [Prompt]
@@ -1199,7 +1201,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
 
 [AuthorBio]
-**James McGirk** is the author of A GRAND THEORY OF EVERYTHING (2015). For more information please visit: jamesmcgirk.com.
+**James McGirk** is the author of A GRAND THEORY OF EVERYTHING (2015). For more information please visit [jamesmcgirk.com](http://jamesmcgirk.com).
 
 Code by Matthew Conlen, edited by Victoria Uren.
 [/AuthorBio]
