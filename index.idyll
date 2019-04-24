@@ -1184,7 +1184,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       [Prompt tag:"game-over"]
         Game Over.
 
-        [Option onSelect:`money = 50; selfActualization = 50; day = 1; students = 10; sportsArea = false; diningArea = false; rodeoArea = false; culturalArea = false; dormsArea = false; churchAdminArea = false; nursingSchoolArea = false; askedParentsForMoney = false; carLoan = false; visitedNursingArea = false; reset(); ` nextTag:"intro"]
+        [Option onSelect:`money = 25; selfActualization = 50; day = 1; students = 10; sportsArea = false; diningArea = false; rodeoArea = false; culturalArea = false; dormsArea = false; churchAdminArea = false; nursingSchoolArea = false; askedParentsForMoney = false; carLoan = false; visitedNursingArea = false; reset(); ` nextTag:"intro"]
           Play again.
         [/Option]
 
