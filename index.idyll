@@ -405,7 +405,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [Prompt id:"bribe" once:true heading:"Student Encounter."  tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
 
-        You haven't seen this student before. "In my country, the custom is to give your professor a gift mid-semester." Given that most of the grade is participation, he seems to know he's trouble. Perhaps that's why he's brought you a rather large and very conspicious wrapped gift. Will you take it?
+        You haven't seen this student before. "In my country, the custom is to give your professor a gift mid-semester." Given that most of the grade is participation, he seems to know he's trouble. Perhaps that's why he's brought you a rather large and very conspicuously wrapped gift. Will you take it?
 
         [Option]Accept it.
 
@@ -470,7 +470,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         // ((you go to the ADMIN building))
 
-        Stan, one of your less attentive yet more vocal students, describes why he's been absent for the last three weeks: he was caught driving 105MPH and couldn't affoard bail. Who knew a 1999 Camero could go that fast? You excuse him.
+        Stan, one of your less attentive yet more vocal students, describes why he's been absent for the last three weeks: he was caught driving 105MPH and couldn't afford bail. Who knew a 1999 Camero could go that fast? You excuse him.
 
       [/Prompt]
 
@@ -491,7 +491,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Sorry, I can't.
 
           [Prompt]
-            He never comes back to class. Maybe he hitchiked home.
+            He never comes back to class. Maybe he hitchhiked home.
           [/Prompt]
         [/Option]
 
@@ -550,14 +550,14 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Art Building.
 
           [Prompt]
-            There are three other rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysterously none of the silver or copperwork remains. Could people be taking it?
+            There are three other rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysteriously none of the silver or copperwork remains. Could people be taking it?
 
             [Option]
               Rummage in the closet.
 
               [Prompt]
 
-                Someone has been hoarding. Plenty of paintings but few are salvagable; you remove one that seems as if its been flattened on the page—it's sleek and modern looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
+                Someone has been hoarding. Plenty of paintings but few are salvageable; you remove one that seems as if it has been flattened on the page—it's sleek and modern looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
 
                 There are others too: a portrait of what you can an only assume is a Cherokee princess, feathers, tall cheekbones and lipsticked pout. Then there's a horse galloping across the prairie and finally what looks like a picture of the governor herself. The dust is beginning to bite you. You'd better grab something...
 
@@ -766,10 +766,10 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         [Option once:true if:`dormsArea `]
 
-          Dormatories.
+          Dormitories.
 
           [Prompt]
-            The Bacone School apparently expanded its boundries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
+            The Bacone School apparently expanded its boundaries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
 
             Your student calls out. He's been waiting for you. Do you follow him in?
 
@@ -777,7 +777,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               Do it.
 
               [Prompt]
-                You follow him into the motel. It's appalling. Roaches surge by. Moist stains blossom klaidiscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"
+                You follow him into the motel. It's appalling. Roaches surge by. Moist stains blossom kaleidoscopes of mold. Furniture has caved in. There's garbage everywhere. "They only keep the black kids and the hicks from the honor farm out here. Everyone else gets special housing from the cultural center. What do you think I should do?"
 
                 [Option onSelect:`set('selfActualization', selfActualization + 10); set('money', money - 10);`]
                   Focus on the race issue.
@@ -833,7 +833,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                         "It’s kind of sad," she says. "The tribe couldn’t afford to maintain the school, plus there was a bunch of bad press after Wounded Knee in the 1970s, so they sold off to the Sodesko family."
 
                         [Option]
-                          Ask about the Sodescos
+                          Ask about the Sodeskos.
 
                           [Prompt]
                             "Well, they weren’t quite crooks but pretty close, they eventually turned it into a Baptist school, they closed down the nursing school—they couldn’t afford to keep it modern—the only way they could maintain it was to bring in as many student athletes as they could and then standards fell. Now we’re trying to get the student athletes out and then buy back for the tribe."
@@ -976,7 +976,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       Confront him about the athletes.
 
                       [Prompt]
-                        "Yeah, it's a shame; I don't like that these kids get hurt so often. But you being an artist is that really so much different? You went to a good school, you gave up opportunitues, took a big risk, how are you any different than those boys and girls out there on the field? Who are you to tell them how to be?"
+                        "Yeah, it's a shame; I don't like that these kids get hurt so often. But you being an artist is that really so much different? You went to a good school, you gave up opportunities, took a big risk, how are you any different than those boys and girls out there on the field? Who are you to tell them how to be?"
                       [/Prompt]
                     [/Option]
 
@@ -1002,7 +1002,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                   Give him a shy wave and take off.
 
                   [Prompt]
-                    "He calls you over. Come down with me and enjoy this glorious service. It's a strangely uplifting experiecne. You have a drink with him afterwards and he tells you he'll write you a recommendation to a fellowship committee."
+                    "He calls you over. Come down with me and enjoy this glorious service. It's a strangely uplifting experience. You have a drink with him afterwards and he tells you he'll write you a recommendation to a fellowship committee."
                   [/Prompt]
                 [/Option]
               [/Prompt]

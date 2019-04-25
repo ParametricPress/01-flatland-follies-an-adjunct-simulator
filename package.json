@@ -11,7 +11,10 @@
     "components": [
       "./components",
       "./node_modules/parametric-components/dist/cjs/issue-01"
-    ]
+    ],
+    "compiler": {
+      "postProcessors": ["idyll-plugin-spellcheck"]
+    }
   },
   "dependencies": {
     "d3": "^4.0.0",
@@ -25,7 +28,8 @@
     "tween.js": "^16.6.0"
   },
   "devDependencies": {
-    "gh-pages": "^0.12.0"
+    "gh-pages": "^0.12.0",
+    "idyll-plugin-spellcheck": "^1.0.1"
   },
   "scripts": {
     "now-build": "idyll build"
