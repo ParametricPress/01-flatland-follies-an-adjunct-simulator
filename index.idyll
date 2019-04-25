@@ -1204,7 +1204,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Play again.
         [/Option]
 
-        [Option onSelect:`window.location = '/' `]
+        [Option onSelect:`window.location = '../articles/bias-in-ml' `]
           Read the next article.
         [/Option]
       [/Prompt]
@@ -1226,3 +1226,5 @@ Code by Matthew Conlen.
 
 [Footer fullWidth:true /]
 
+
+[Analytics google:"UA-139053456-1" tag:parametricSlug /]
