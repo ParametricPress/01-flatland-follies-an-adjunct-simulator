@@ -109,3 +109,13 @@ button {
   text-align: left;
   margin-left: 0;
 }
+
+
+@media all and (max-width: 1000px) {
+  .parametric-scoreboard {
+    font-size: 14px;
+  }
+  .parametric-scoreboard-value {
+    padding-right: 1em;
+  }
+}
