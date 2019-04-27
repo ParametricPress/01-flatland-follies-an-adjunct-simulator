@@ -20,8 +20,8 @@
     "idyll": "^4.0.7",
     "idyll-component-children": "^1.0.10",
     "idyll-d3-component": "^2.0.0",
-    "parametric-components": "^1.0.31",
-    "parametric-styles": "^1.0.19",
+    "parametric-components": "^1.0.32",
+    "parametric-styles": "^1.0.20",
     "react-typist": "^2.0.5",
     "tween.js": "^16.6.0"
   },
