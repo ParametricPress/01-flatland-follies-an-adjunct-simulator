@@ -329,6 +329,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         Claire is your best student. She’s talented painter who’s gone to the sources you’ve recommended and attempted to incorporate it into her work. She usually shows up to class. After class she approaches you.
 
         "Professor, I want to go outside with my easel and do a real plein air painting of the prairie. Would it be okay if you dropped by and just checked up on me? I want to make sure I’m doing it the way Monet did. I’ll be by the dining halls."
+
         [Option]Yes, of course.
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
