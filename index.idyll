@@ -23,8 +23,6 @@
 
 Terrible colleges are sprinkled all over the United States. Some of the worst are a toxic slurry of student loans, college athletics, hardline religious faith, and idle corruption. Given low pay and terrible standards, these schools need a constant flow of adjunct instructors. You play a freshly minted Fine Art adjunct from an upper middle class background who's just accepted a position at an Oklahoma college in bad decline. Can you scrabble a living teaching and hoist yourself out of one of the poorest states in the country?
 
-// TODO - add some explicit instructions. keep yourself afloat - if you run out of money the game will end, but be careful where that money comes from. if you take unscrupulous actions your morals get in the way, and a low self actualization score will end the game.
-
 [var name:"mode" value:"waiting"  /]
 [var name:"startedGame" value:true  /]
 [var name:"day" value:1 /]
@@ -216,7 +214,6 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         The class laughs when Kelton can’t remember what happened last week. He growls some weird stuff back at them: pushing his thumb in eye goo, spilling blood, aggressive sexual stuff. He’s been having trouble concentrating or even holding his paintbrush. Strange because he’s normally a smart kid—he is QB of the football team after all.
 
-        //  (Rodeo, older student, Chickasaw)
         He starts trying to say something when Johnny, an older Chickasaw student, says "K, hey, hey, hey, siddown mush for brains, don't scare everyone."
 
         [Option]
@@ -332,13 +329,10 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         Claire is your best student. She’s talented painter who’s gone to the sources you’ve recommended and attempted to incorporate it into her work. She usually shows up to class. After class she approaches you.
 
         "Professor, I want to go outside with my easel and do a real plein air painting of the prairie. Would it be okay if you dropped by and just checked up on me? I want to make sure I’m doing it the way Monet did. I’ll be by the dining halls."
-
-        // Her gaze seems to linger.
-
         [Option]Yes, of course.
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
-            A broad beautiful smile stretches across her face. “I can’t wait to see you,” she says.
+            A broad smile stretches across her face. “I can’t wait to see you,” she says.
           [/Prompt]
         [/Option]
         [Option]
@@ -419,11 +413,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             Probably for the best. Though you feel a bit foolish. After all the school seems to use these guys as cash cows. Why shouldn't you?
           [/Prompt]
         [/Option]
-
-    // [Prompt] Neither of you can communicate. What's the point? What's the point of any of this? ((Lose self-actualization))[/Propmt]
-    //   [/Prompt]
       [/Prompt]
-
 
       [Prompt id:"burma" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.05 / 3` ]
 
@@ -436,16 +426,12 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
           [Prompt onShow:`churchAdminArea = true; set('selfActualization', selfActualization + 10);` ]
             It’s a pretty disturbing story. Weirdly it leaves you feeling better about the school you’re working at. Myat tells you he was smuggled out of the country by missionaries, taken across the border with Thailand in a car trunk. The church organized the paper work and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay though.
-
-            // [Display value:selfActualization/]
           [/Prompt]
         [/Option]
         [Option]No, thanks.
 
           [Prompt onShow:`set('selfActualization', selfActualization - 10);`]
             His face falls, and he slinks out of class.
-
-            // [Display value:selfActualization/]
           [/Prompt]
         [/Option]
 
@@ -467,11 +453,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       [/Prompt]
 
       [Prompt id:"stan" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` onShow:`churchAdminArea = true `]
-
-        // ((you go to the ADMIN building))
-
         Stan, one of your less attentive yet more vocal students, describes why he's been absent for the last three weeks: he was caught driving 105MPH and couldn't afford bail. Who knew a 1999 Camero could go that fast? You excuse him.
-
       [/Prompt]
 
       [Prompt id:"religion" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
@@ -1179,7 +1161,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             Stay at Bacone.
 
             [Prompt]
-              Artists are supposed to be selfish, you know... You eventually become president of the school. Claire marries you but you soon divorce,
+              Artists are supposed to be selfish, you know... Maybe one day you'll become president of the school.
             [/Prompt]
           [/Option]
         [/Prompt]
