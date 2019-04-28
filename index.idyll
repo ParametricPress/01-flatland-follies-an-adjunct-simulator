@@ -186,13 +186,13 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session.
         “What happened to your neck?”
-        Johnny’s from Anadarko. He’s a older than everyone else, and has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring.
-        Today there’s a brace around his neck and he’s limping.
+        Johnny’s from Anadarko. He’s a older than everyone else, has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring.
+        Today there’s a brace around his neck.
 
         [Option]Ask what happened.
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
-            I got bucked! Flung me clean off and a calf stepped on my back. It’s nothing. Come to our next rodeo! Take some pictures!
+            I got bucked! Flung me off and a calf stepped on my back. It’s nothing. Come to our next rodeo! Take some pictures!
 
             You get an idea for a photo essay.
           [/Prompt]
@@ -262,7 +262,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [Prompt id:"elya" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
 
-        Elya is a devout Eastern European basketball playing Estonian. She’s normally happy to be in class and is one of your better students. She’s clearly in pain as she lopes into the classroom. She’s sad and keeps glancing at you with watery eyes.
+        Elya is a devout Estonian basketball player. She’s normally happy to be in class and is one of your better students. She’s clearly in pain as she lopes into the classroom. She’s sad and keeps glancing at you with watery eyes.
 
         [Option]Comfort her.
 
@@ -426,7 +426,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Yes, please.
 
           [Prompt onShow:`churchAdminArea = true; set('selfActualization', selfActualization + 10);` ]
-            It’s a pretty disturbing story. Weirdly it leaves you feeling better about the school you’re working at. Myat tells you he was smuggled out of the country by missionaries, taken across the border with Thailand in a car trunk. The church organized the paper work and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay though.
+            It’s a disturbing story. Yet you feel better about the school you’re working at. Myat tells you he was smuggled out of the country by missionaries, taken across the border with Thailand in a car trunk. The church organized the paper work and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay though.
           [/Prompt]
         [/Option]
         [Option]No, thanks.
@@ -474,7 +474,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Sorry, I can't.
 
           [Prompt]
-            He never comes back to class. Maybe he hitchhiked home.
+            He never comes back to class. Maybe he hitch-hiked home.
           [/Prompt]
         [/Option]
 
@@ -752,7 +752,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Dormitories.
 
           [Prompt]
-            The Bacone School apparently expanded its boundaries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
+            The Bacone School expanded its boundaries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
 
             Your student calls out. He's been waiting for you. Do you follow him in?
 
@@ -794,7 +794,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             [Option]
               Examine a placard.
 
-              [Prompt]Donated by a local tribe’s casino operations wing. It’s only a couple of years old.[/Prompt]
+              [Prompt]Donated by a local tribe’s casino operations wing. It’s only a couple of years old. Feels like you should get going.[/Prompt]
             [/Option]
 
             [Option]
@@ -875,7 +875,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                           Ask what will happen to the athletes.
 
                           [Prompt]
-                            "It's not going to be pretty," he says. "I'm not going to lie to you. They're caught in the middle of all of this. There are three big factions competing over this campus: there's us, there's the church and then there's the creeps admin. Those kids are being left in the lurch and sucked into debt. You and I know both know they aren't capable of doing well in school. Don't get all high and mighty. You're just as complicit. Now get out."
+                            "It's not going to be pretty," he says. "I'm not going to lie to you. They're caught in the middle of all of this. There are three big factions competing over this campus: there's us, there's the church and then there's the creeps in admin. Those kids are being left in the lurch and sucked into debt. You and I know both know they aren't capable of doing well in school. Don't get all high and mighty. You're just as complicit. Now get out."
                           [/Prompt]
                         [/Option]
                         [Option]
@@ -951,7 +951,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       Confront him about conditions at the school.
 
                       [Prompt ]
-                        "Well you're not the first person to bring this to my attention. It's miserable but we're proud of the work we've been able to do with what we have. Thank you for what you do, by the way, you're a good egg, taking an interest in your students. Best thing you can do is teach 'em good so they get rich and make big donations." You feel slightly nauseous.
+                        "Well you're not the first person to bring this to my attention. It's miserable but we're proud of the work we've been able to do with what we have. Thank you for what you do, by the way, you're a good egg, taking an interest in your students. Best thing you can do is teach 'em good so they get rich and make big donations."
                       [/Prompt]
                     [/Option]
 
@@ -967,7 +967,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       Ask him about the differences in the way the African American students and the Natives are treated.
 
                       [Prompt]
-                        "I don't like it either. There's only so much you can do for them. The Natives have mandate to look after their own, you know, and the church does what it can to help them but it's got to do it under the auspices of the church, they've got to be strict with them. So the ones who aren't native—and you forget about the honor ranch kids—they can fall through the cracks if they aren't following the light, if you have solution to it tell me."
+                        "I don't like it either. There's only so much you can do for them. The Native institute on campus has a mandate to look after their own, you know, and the church does what it can to help them but it's got to do it under the auspices of the church, they've got to be strict with them. So the ones who aren't native—and you forget about the honor ranch kids—they can fall through the cracks if they aren't following the light. Hey, if you have solution to it tell me."
                       [/Prompt]
                     [/Option]
 
