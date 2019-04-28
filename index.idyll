@@ -361,7 +361,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         Cal isn’t a particularly gifted painter but he’s really enjoyed discussing the work, particularly when it veers into social commentary. He’s waiting for you after class one day. “I want to make work about some of the problems at the school.”
 
         [Option]
-          "Art really shouldn’t be about propaganda."
+          "Art really shouldn’t be propaganda."
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10);`]
             He nods his head and goes quietly. You don’t see him in class again. Still, you’ve taught him something about art.
@@ -512,10 +512,10 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [Prompt]
             Nothing to see here.
 
-           [Prompt if:`culturalArea `] 
+           [Prompt once:true if:`culturalArea `] 
             You hear footsteps and excited voices.
 
-            An elegant, if dusty woman in her thirties bedecked in silver and turquoise jewelery enters the room. She must be the appraiser.
+            An elegant, if dust-coated woman in her late thirties bedecked in silver and turquoise enters the room. She must be the appraiser.
 
             She buries her head in her hands. "I can't believe how much is lost."
                [Option]Soothe her[/Option]
@@ -1000,9 +1000,24 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [Prompt]
             You slip into the Nursing Building. Most of the rooms are locked. By peering into the windows you can just make out CPR dummies and medical equipment a generation old. It’s locked. No way in without smashing a window. In the distance you hear the sounds of the playing fields.
 
-            There's nothing here, just the remains of something that looks like it once was important.
+            There's nothing here, just the remains of something that looks like it once was important. A glimpse at the art school's future.
           [/Prompt]
         [/Option]
+       
+       [Option if:`rodeoArea `]
+        [Prompt]
+          The largest, most intimidating trucks on campus are parked around a worn wooden gate. You push it open. There are shouts and whoops in the distance. You follow a deeply rutted mud path down to a central arena surrounded by smaller pens containing irritated, huffing creatures.
+         
+         [Option onSelect:`set('selfActualization', selfActualization + 20); set('money', money - 15);`]
+          Enter the central arena.
+            [Prompt]
+              Johnny is excited to see you. You watch a hair-raising show and buy a round of pizzas after.
+              [/Prompt]
+          [Option onSelect:`set('selfActualization', selfActualization - 10); set('money', money - 25);`]
+           Approach the animal pens.  
+             [Prompt]
+             It smells. A horse bites you. Prompt pricey medical attention is required. 
+               [/Prompt]
 
       [/Prompt]
 
