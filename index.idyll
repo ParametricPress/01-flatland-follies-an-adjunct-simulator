@@ -512,20 +512,20 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [Prompt]
             Nothing to see here.
 
-            // [Option if:`ART CLOSET `]
-            // You hear footsteps and excited voices.
+           [Prompt if:`culturalArea `] `
+            You hear footsteps and excited voices.
 
-            // An elegant, if dusty woman in her thirties bedecked in silver and turquoise jewelery enters the room. She must be the appraiser.
+            An elegant, if dusty woman in her thirties bedecked in silver and turquoise jewelery enters the room. She must be the appraiser.
 
-            // She buries her head in her hands. "I can't believe how much is lost."
-            //   [Option]Soothe her[/Option]
-            //     [Prompt onSelect:`set('selfActualization', selfActualization + 5)]
-            //    "They never cataloged a thing! And it's all exposed to the elements. If you find a Flatstyle painting, grab it; it's the only thing worth saving." [/Prompt]
-            //   [Option]Tell her about the art closet[/Option]
-            //      [Prompt onSelect:`set('selfActualization', selfActualization + 10)]
-            //       You tell her about the paintings you found hoarded in the back. So trusting. [/Prompt]
-            //     [Option] Talk about the weather [/Option]
-            //     [Prompt onSelect:`set('selfActualization', selfActualization - 10)] Do you know what we use for a weather sock around here? A brick on a chain. hehe. She leaves. [/Prompt]
+            She buries her head in her hands. "I can't believe how much is lost."
+               [Option]Soothe her[/Option]
+                 [Prompt onSelect:`set('selfActualization', selfActualization + 5)]
+                "They never cataloged a thing! And it's all exposed to the elements. If you find a Flatstyle painting, grab it; it's the only thing worth saving." [/Prompt]
+               [Option]Tell her about the art closet[/Option]
+                  [Prompt onSelect:`set('selfActualization', selfActualization + 10)]
+                   You tell her about the paintings you found hoarded in the back. So trusting. [/Prompt]
+                 [Option] Talk about the weather [/Option]
+                 [Prompt onSelect:`set('selfActualization', selfActualization - 10)] Do you know what we use for a weather sock around here? A brick on a chain. hehe. She leaves. [/Prompt]
 
           [/Prompt]
         [/Option]
