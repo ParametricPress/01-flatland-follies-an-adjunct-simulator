@@ -43,6 +43,8 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 [var name:"churchAdminArea" value:false /]
 [var name:"nursingSchoolArea" value:false /]
 
+[var name:"hasTakenArt" value:false /]
+
 [var name:"visitedNursingArea" value:false /]
 
 [var name:"parentDonation" value:`Math.round(75 * Math.random())` /]
@@ -182,7 +184,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [/Prompt]
 
-      [Prompt id:"johnny" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
+      [Prompt id:"johnny" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`rodeoArea = true `]
 
         “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session.
         “What happened to your neck?”
@@ -506,28 +508,47 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       [Prompt tag:`"explore"` nextTag:"end-day"]
         Where would you like to go?
 
-        [Option]
-          Chair's Office.
+        [Option if:` !hasTakenArt `]
+          Chair's office.
 
           [Prompt]
             Nothing to see here.
-
-           [Prompt once:true if:`culturalArea `] 
-            You hear footsteps and excited voices.
-
-            An elegant, if dust-coated woman in her late thirties bedecked in silver and turquoise enters the room. She must be the appraiser.
-
-            She buries her head in her hands. "I can't believe how much is lost."
-               [Option]Soothe her[/Option]
-                 [Prompt onSelect:`set('selfActualization', selfActualization + 5)]
-                "They never cataloged a thing! And it's all exposed to the elements. If you find a Flatstyle painting, grab it; it's the only thing worth saving." [/Prompt]
-               [Option]Tell her about the art closet[/Option]
-                  [Prompt onSelect:`set('selfActualization', selfActualization + 10)]
-                   You tell her about the paintings you found hoarded in the back. So trusting. [/Prompt]
-                 [Option] Talk about the weather [/Option]
-                 [Prompt onSelect:`set('selfActualization', selfActualization - 10)] Do you know what we use for a weather sock around here? A brick on a chain. hehe. She leaves. [/Prompt]
-
           [/Prompt]
+        [/Option]
+
+        [Option once:true if:` hasTakenArt `]
+            Chair's office.
+
+            [Prompt]
+              You hear footsteps and excited voices.
+
+              An elegant, if dust-coated woman in her late thirties bedecked in silver and turquoise enters the room. She must be the appraiser.
+
+              She buries her head in her hands. "I can't believe how much is lost."
+
+              [Option onSelect:`set('selfActualization', selfActualization + 5) `]
+                Soothe her
+
+                [Prompt]
+                  "They never cataloged a thing! And it's all exposed to the elements. If you find a Flatstyle painting, grab it; it's the only thing worth saving."
+                [/Prompt]
+              [/Option]
+              [Option onSelect:`set('selfActualization', selfActualization + 10)`]
+                Tell her about the art closet
+
+                [Prompt]
+                  You tell her about the paintings you found hoarded in the back. So trusting.
+                [/Prompt]
+              [/Option]
+              [Option onSelect:`set('selfActualization', selfActualization - 10) `]
+                Talk about the weather
+
+                [Prompt]
+                  Do you know what we use for a weather sock around here? A brick on a chain. hehe. She leaves.
+                [/Prompt]
+              [/Option]
+            [/Prompt]
+
         [/Option]
         [Option]
           Art Building.
@@ -544,31 +565,31 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
                 There are others too: a portrait of what you can an only assume is a Cherokee princess, feathers, tall cheekbones and lipsticked pout. Then there's a horse galloping across the prairie and finally what looks like a picture of the governor herself. The dust is beginning to bite you. You'd better grab something...
 
-                [Option once:true onSelect:`set('money', money + 30); set('selfActualization', selfActualization - 20);`]
+                [Option once:true onSelect:`set('money', money + 30); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
                   Take a flat style painting.
                   [Prompt]
                     The canvas is nicely made. The details are finely rendered and for all its cartoonishness there's a real grace to the work. You feel a bit like you're defiling something holy by taking it though.
                   [/Prompt]
                 [/Option]
-                [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
+                [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
                   Take a native portrait.
                   [Prompt]
                     A closer look reveals it's been traced from a magazine—in fact, it's a Darryl Hannah rendered as an Native American brunette. Not a classy choice.
                   [/Prompt]
                 [/Option]
-                [Option once:true onSelect:`set('money', money + 20); set('selfActualization', selfActualization - 20);`]
+                [Option once:true onSelect:`set('money', money + 20); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
                   Take a painting of a horse.
                   [Prompt]
                     Yup. It's a horse. Someone will buy it.
                   [/Prompt]
                 [/Option]
-                [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
+                [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
                    Take a landscape.
                    [Prompt]
                      It is nicely painted but otherwise kind of boring.
                    [/Prompt]
                  [/Option]
-                [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20);`]
+                [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
                   Take a portrait of a past state governor.
                   [Prompt]
                     What an odd thing to take, given how unpopular she was.
@@ -605,7 +626,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                     [/Option]
 
 
-                    [Option onSelect:`set('selfActualization', selfActualization + 20)`]
+                    [Option onSelect:`set('selfActualization', selfActualization + 20) `]
                       Use it in class as a postcolonial prompt.
 
                       [Prompt]
@@ -998,34 +1019,40 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Nursing School.
 
           [Prompt]
-            You slip into the Nursing Building. Most of the rooms are locked. By peering into the windows you can just make out CPR dummies and medical equipment a generation old. It’s locked. No way in without smashing a window. In the distance you hear the sounds of the playing fields.
+            You slip into the nursing building. Most of the rooms are locked. By peering into the windows you can just make out CPR dummies and medical equipment a generation old. It’s locked. No way in without smashing a window. In the distance you hear the sounds of the playing fields.
 
             There's nothing here, just the remains of something that looks like it once was important. A glimpse at the art school's future.
           [/Prompt]
         [/Option]
-       
+
        [Option if:`rodeoArea `]
-        [Prompt]
-          The largest, most intimidating trucks on campus are parked around a worn wooden gate. You push it open. There are shouts and whoops in the distance. You follow a deeply rutted mud path down to a central arena surrounded by smaller pens containing irritated, huffing creatures.
-         
-         [Option onSelect:`set('selfActualization', selfActualization + 20); set('money', money - 15);`]
-          Enter the central arena.
-            [Prompt]
-              Johnny is excited to see you. You watch a hair-raising show and buy a round of pizzas after.
+          Rodeo area.
+
+          [Prompt]
+            The largest, most intimidating trucks on campus are parked around a worn wooden gate. You push it open. There are shouts and whoops in the distance. You follow a deeply rutted mud path down to a central arena surrounded by smaller pens containing irritated, huffing creatures.
+
+            [Option onSelect:`set('selfActualization', selfActualization + 20); set('money', money - 15);`]
+              Enter the central arena.
+
+              [Prompt]
+                Johnny is excited to see you. You watch a hair-raising show and buy a round of pizzas after.
               [/Prompt]
-          [Option onSelect:`set('selfActualization', selfActualization - 10); set('money', money - 25);`]
-           Approach the animal pens.  
-             [Prompt]
-             It smells. A horse bites you. Prompt pricey medical attention is required. 
-               [/Prompt]
+            [/Option]
+            [Option onSelect:`set('selfActualization', selfActualization - 10); set('money', money - 25);`]
+              Approach the animal pens.
+              [Prompt]
+                It smells. A horse bites you. Prompt pricey medical attention is required.
+              [/Prompt]
+            [/Option]
+          [/Prompt]
+       [/Option]
+
 
       [/Prompt]
 
       [Prompt tag:"end-day" nextTag:`getNextDay()` ]
         You go home for the night.
       [/Prompt]
-
-
 
       [Prompt heading:"Morning" tag:"start-day" onShow:`set('day', day + 1); set('money', money + dailyRate); `]
         You wake up the next morning and walk to the art building.
@@ -1151,8 +1178,12 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
             [/Prompt]
           [/Option]
 
-          [Option if:`askedParentsForMoney && carLoan ` nextTag:"game-over"]
-              You call your parents one last time. Your dad has had enough. They'll pay for you to come home but only on the condition that you go to law school. Better start prepping for your LSAT. Pity your students don't have an escape route like you do, huh?
+          [Option if:`askedParentsForMoney && carLoan `]
+              Call your parents.
+
+              [Prompt nextTag:"game-over"]
+                You call your parents one last time. Your dad has had enough. They'll pay for you to come home but only on the condition that you go to law school. Better start prepping for your LSAT. Pity your students don't have an escape route like you do, huh?
+              [/Prompt]
           [/Option]
         [/Prompt]
       // [/Ending]
@@ -1198,7 +1229,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       [Prompt tag:"game-over"]
         Game Over.
 
-        [Option onSelect:`money = 25; selfActualization = 50; day = 1; students = 10; sportsArea = false; diningArea = false; rodeoArea = false; culturalArea = false; dormsArea = false; churchAdminArea = false; nursingSchoolArea = false; askedParentsForMoney = false; carLoan = false; visitedNursingArea = false; reset(); ` nextTag:"intro"]
+        [Option onSelect:`money = 25; selfActualization = 50; day = 1; students = 10; sportsArea = false; diningArea = false; rodeoArea = false; culturalArea = false; dormsArea = false; churchAdminArea = false; nursingSchoolArea = false; askedParentsForMoney = false; carLoan = false; visitedNursingArea = false; hasTakenArt = false; reset(); ` nextTag:"intro"]
           Play again.
         [/Option]
 
