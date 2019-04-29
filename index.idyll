@@ -33,7 +33,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 [var name:"nextTag" value:'' /]
 
 [var name:"bleedRate" value:5 /]
-[derived name:"dailyRate" value:` day % 5 === 4 ? 20 : -bleedRate ` /]
+[derived name:"dailyRate" value:` day % 6 === 5 ? 20 : -bleedRate ` /]
 
 [var name:"sportsArea" value:false /]
 [var name:"diningArea" value:false /]
@@ -72,7 +72,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [Prompt tag:"start-screen" nextTag:"chair-leaves"]
         Welcome to the Adjunct Simulator. Play your way through the daily struggles of teaching at a declining college in
-        Oklahoma. The choices you make affect your income and self actualization. You'll get a paycheck every five days.
+        Oklahoma. The choices you make affect your income and self actualization. You'll get a paycheck every six days.
 
         Can you make ends meet, and it all worthwhile?
 
@@ -551,7 +551,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         [/Option]
         [Option]
-          Art Building.
+          Art building.
 
           [Prompt]
             There are three other rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysteriously none of the silver or copperwork remains. Could people be taking it?
@@ -660,7 +660,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         [Option if:`sportsArea `]
 
-          Sports Area.
+          Sports area.
 
           [Prompt]
             Fresh asphalt parking lot. Lusty cries ringing out from teams of men and women playing sports. Not quite as run-down as the rest of the place.
@@ -714,7 +714,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [Prompt]
             The clatter and steam of a dining hall: You recognize a few of the faces. The dining hall is spartan, rickety card tables, plastic chairs and vending machines, decoration is little more than public service announcements and ads for Sodesu, the goliath catering company.
 
-            “Professor!” It’s Claire. “You’ve come.” She has her drawings tucked under her elbow. “I’m so embarrassed for you to see.” She sits down and opens her sketchbook. Her giddy happiness is contagious. You’re so tempted to open up and let your feelings flow.
+            “Professor!” It’s Claire. “You’ve come.” She has her drawings tucked under her elbow. “I’m so embarrassed for you to see.” She sits down and opens her sketchbook. Her giddy happiness is contagious. You’re tempted to open up and let your feelings flow.
 
             [Option onSelect:`set('selfActualization', selfActualization + 10)`]
               Keep things professional.
