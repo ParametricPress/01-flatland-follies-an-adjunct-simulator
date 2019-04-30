@@ -1,6 +1,9 @@
 
 
-[meta title:"Flatland Follies: An Adjunct Simulator" description:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and it's filled with dusty, decaying art." /]
+[meta title:"Flatland Follies: An Adjunct Simulator" description:"This college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and it's filled with dusty, decaying art."
+  shareImageUrl:"https://issue-01-preview.parametric.press/issue-01/flatland-follies-an-adjunct-simulator/static/images/share.png"
+  shareImageWidth:"880"
+  shareImageHeight:"440" /]
 
 [var name:"parametricSlug" value:"flatland-follies-an-adjunct-simulator" /]
 
@@ -9,7 +12,7 @@
 [Header
   title:`["Flatland", "Follies"]`
   longTitle:`["Flatland Follies:", "An Adjunct Simulator"]`
-  dek:"This Native American college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and it's filled with dusty, decaying art."
+  dek:"This college used to be one of the best in the country. Fifty years later the campus is destitute, they can't pay professors, and it's filled with dusty, decaying art."
   date:"May 1, 2019"
   fullWidth:true
   authors:`[{
@@ -74,7 +77,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         Welcome to the Adjunct Simulator. Play your way through the daily struggles of teaching at a declining college in
         Oklahoma. The choices you make affect your income and self actualization. You'll get a paycheck every six days.
 
-        Can you make ends meet, and it all worthwhile?
+        Can you make ends meet, and make it all worthwhile?
 
         [Option nextTag:"intro"]Begin.[/Option]
       [/Prompt]
@@ -1233,7 +1236,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Play again.
         [/Option]
 
-        [Option onSelect:`window.location = '../articles/bias-in-ml' `]
+        [Option onSelect:`window.location = '/issue-01/particle-physics-a-brief-primer/' `]
           Read the next article.
         [/Option]
       [/Prompt]
