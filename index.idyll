@@ -17,7 +17,8 @@
   fullWidth:true
   authors:`[{
     name: "James McGirk",
-    role: 'Author'
+    role: 'Author',
+    url: 'http://jamesmcgirk.com'
   }]`
   doi:""
   archive:`'https://parametric-press-archives.s3.amazonaws.com/issue-01/' + parametricSlug + '.warc.gz'`
@@ -82,7 +83,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Option nextTag:"intro"]Begin.[/Option]
       [/Prompt]
       [Prompt tag:"intro" nextTag:"chair-leaves"]
-        Your chair walks in and hands you an announcement: “The Bacone School is closing its Art program at the end of the semester.” End of an era, he says. Seventy years of history coming to an end with me. Turn, turn, turn. They’re sending an art appraiser to see if they can’t squeeze some quick cash out of all this old art.
+        Your chair walks in and hands you an announcement: “The Creek College is closing its Art program at the end of the semester.” End of an era, he says. Seventy years of history coming to an end with me. Turn, turn, turn. They’re sending an art appraiser to see if they can’t squeeze some quick cash out of all this old art.
 
         [Option]Thank him.[/Option]
         [Option nextTag:"first-class"]Leave in disgust.[/Option]
@@ -668,7 +669,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           [Prompt]
             Fresh asphalt parking lot. Lusty cries ringing out from teams of men and women playing sports. Not quite as run-down as the rest of the place.
 
-            A coach jogs up. He’s your age. Roughly. Wearing red shorts and a Bacone t-shirt. "Hey, you’re one of the professors. I appreciate you keeping those GPAs up with those easy As. Jeez. You must think this place is a shithole, don’t you?"
+            A coach jogs up. He’s your age. Roughly. Wearing red shorts and a Creek t-shirt. "Hey, you’re one of the professors. I appreciate you keeping those GPAs up with those easy As. Jeez. You must think this place is a shithole, don’t you?"
 
             [Option onSelect:`set('selfActualization', selfActualization - 5)`]
               "What do you think of this place?"
@@ -776,7 +777,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Dormitories.
 
           [Prompt]
-            The Bacone School expanded its boundaries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Bacone student center sign. The dorms themselves clearly used to be a motel.
+            The Creek College expanded its boundaries into a nearby strip mall. You can just make out the outline of an old department store chain logo beneath the Creek student center sign. The dorms themselves clearly used to be a motel.
 
             Your student calls out. He's been waiting for you. Do you follow him in?
 
@@ -963,7 +964,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               Go to the administrative offices in the back.
 
               [Prompt]
-                The president's office is upstairs. The secretary must be watching the service because her desk is unattended. Suddenly the door opens and a dapper man with a mustache emerges. Johnson Sodesko, president of the Bacone School.
+                The president's office is upstairs. The secretary must be watching the service because her desk is unattended. Suddenly the door opens and a dapper man with a mustache emerges. Johnson Sodesko, president of the Creek College.
 
                 [Option]
                   Greet him.
@@ -1249,7 +1250,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
 
 [AuthorBio]
-**James McGirk** is the author of A GRAND THEORY OF EVERYTHING (2015). For more information please visit [jamesmcgirk.com](http://jamesmcgirk.com).
+[b][a href:"http://jamesmcgirk.com"]James McGirk[/a][/b] is the author of A GRAND THEORY OF EVERYTHING (2015)..
 
 Code by Matthew Conlen.
 [/AuthorBio]
