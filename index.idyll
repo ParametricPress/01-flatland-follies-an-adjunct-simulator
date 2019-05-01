@@ -20,8 +20,8 @@
     role: 'Author'
   }]`
   doi:""
-  archive:""
-  source:""
+  archive:`'https://parametric-press-archives.s3.amazonaws.com/issue-01/' + parametricSlug + '.warc.gz'`
+  source:`"https://github.com/ParametricPress/01-" + parametricSlug `
 /]
 
 Terrible colleges are sprinkled all over the United States. Some of the worst are a toxic slurry of student loans, college athletics, hardline religious faith, and idle corruption. Given low pay and terrible standards, these schools need a constant flow of adjunct instructors. You play a freshly minted Fine Art adjunct from an upper middle class background who's just accepted a position at an Oklahoma college in bad decline. Can you scrabble a living teaching and hoist yourself out of one of the poorest states in the country?
@@ -191,13 +191,13 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         “Oh my god, Johnny!” Kandy’s voice splits the concentrated silence of a ten-minute contour-drawing session.
         “What happened to your neck?”
-        Johnny’s from Anadarko. He’s a older than everyone else, has twin daughters with his high school sweetheart that he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring.
+        Johnny’s from Anadarko. He’s a older than everyone else, has twin daughters with his high school sweetheart, who he loves showing Kandy pictures of, wears muddy boots and a sun-baked ten gallon hat and loves speaking very slowly about his iffy old Ford truck that he’s restoring.
         Today there’s a brace around his neck.
 
         [Option]Ask what happened.
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10)`]
-            I got bucked! Flung me off and a calf stepped on my back. It’s nothing. Come to our next rodeo! Take some pictures!
+            "I got bucked! Flung me off and a calf stepped on my back. It’s nothing. Come to our next rodeo! Take some pictures!"
 
             You get an idea for a photo essay.
           [/Prompt]
@@ -217,7 +217,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [Prompt id:"kelton" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:0.05 onShow:`sportsArea = true `]
 
-        The class laughs when Kelton can’t remember what happened last week. He growls some weird stuff back at them: pushing his thumb in eye goo, spilling blood, aggressive sexual stuff. He’s been having trouble concentrating or even holding his paintbrush. Strange because he’s normally a smart kid—he is QB of the football team after all.
+        The class laughs when Kelton can’t remember what happened last week. He growls some weird stuff back at them: pushing his thumb in eye goo, spilling blood, aggressive sexual stuff. He’s been having trouble concentrating or even holding his paintbrush. Strange because he’s normally a smart kid—he is QB of the football team, after all.
 
         He starts trying to say something when Johnny, an older Chickasaw student, says "K, hey, hey, hey, siddown mush for brains, don't scare everyone."
 
@@ -272,7 +272,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Option]Comfort her.
 
           [Prompt onShow:`set('selfActualization', selfActualization + 10);`]
-            "If I don’t go back to the game they’ll send me home. But I’m hurt. I love this art class and the opportunity to come here. She grabs your palm. I don’t even like this game so much. I want to become an actuary. Could you please talk to them for me?"
+            "If I don’t go back to the game they’ll send me home. But I’m hurt. I love this art class and the opportunity to come here." She grabs your palm. "I don’t even like this game so much. I want to become an actuary. Could you please talk to them for me?"
           [/Prompt]
         [/Option]
 
@@ -331,7 +331,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
       [Prompt id:"claire" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:0.0625 onShow:`diningArea = true `]
 
-        Claire is your best student. She’s talented painter who’s gone to the sources you’ve recommended and attempted to incorporate it into her work. She usually shows up to class. After class she approaches you.
+        Claire is your best student. She’s talented painter who’s gone to the sources you’ve recommended and attempted to incorporate them into her work. She usually shows up to class. After class she approaches you.
 
         "Professor, I want to go outside with my easel and do a real plein air painting of the prairie. Would it be okay if you dropped by and just checked up on me? I want to make sure I’m doing it the way Monet did. I’ll be by the dining halls."
 
@@ -431,7 +431,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Yes, please.
 
           [Prompt onShow:`churchAdminArea = true; set('selfActualization', selfActualization + 10);` ]
-            It’s a disturbing story. Yet you feel better about the school you’re working at. Myat tells you he was smuggled out of the country by missionaries, taken across the border with Thailand in a car trunk. The church organized the paper work and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay though.
+            It’s a disturbing story. Yet you feel better about the school. Myat tells you he was smuggled out of the country by missionaries, taken across the Thai border the trunk of a car. The church organized the paperwork and shipped them into the states for college. He’s on a full soccer scholarship. You feel a bit mixed up. It gives you an idea for a photo essay, though.
           [/Prompt]
         [/Option]
         [Option]No, thanks.
@@ -459,7 +459,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
       [/Prompt]
 
       [Prompt id:"stan" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` onShow:`churchAdminArea = true `]
-        Stan, one of your less attentive yet more vocal students, describes why he's been absent for the last three weeks: he was caught driving 105MPH and couldn't afford bail. Who knew a 1999 Camero could go that fast? You excuse him.
+        Stan, one of your less attentive yet more vocal students, describes why he's been absent for the last three weeks: he was caught driving 105MPH and couldn't afford bail. Who knew a 1999 Camaro could go that fast? You excuse him.
       [/Prompt]
 
       [Prompt id:"religion" once:true heading:"Student Encounter." tag:"student-encounter" nextTag:"after-class" likelihood:`0.1 / 6` ]
@@ -557,27 +557,27 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
           Art building.
 
           [Prompt]
-            There are three other rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysteriously none of the silver or copperwork remains. Could people be taking it?
+            There are three other rooms in the Art building. One is little more than a closet, filled with dusty art made by students over the ages. Seniors are required to leave their best work. Mysteriously none of the silver or copper work remains. Could people be taking it?
 
             [Option]
               Rummage in the closet.
 
               [Prompt]
 
-                Someone has been hoarding. Plenty of paintings but few are salvageable; you remove one that seems as if it has been flattened on the page—it's sleek and modern looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
+                Someone has been hoarding. Plenty of paintings but few are salvageable; you remove one that seems as if it has been flattened on the page—it's sleek and modern-looking yet manages to capture something of the local work. You like it a lot. But is it too cartoonish?
 
                 There are others too: a portrait of what you can an only assume is a Cherokee princess, feathers, tall cheekbones and lipsticked pout. Then there's a horse galloping across the prairie and finally what looks like a picture of the governor herself. The dust is beginning to bite you. You'd better grab something...
 
                 [Option once:true onSelect:`set('money', money + 30); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
                   Take a flat style painting.
                   [Prompt]
-                    The canvas is nicely made. The details are finely rendered and for all its cartoonishness there's a real grace to the work. You feel a bit like you're defiling something holy by taking it though.
+                    The canvas is nicely made. The details are finely rendered and for all its cartoonishness there's a real grace to the work. You feel a bit like you're defiling something holy by taking it, though.
                   [/Prompt]
                 [/Option]
                 [Option once:true onSelect:`set('money', money + 10); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
                   Take a native portrait.
                   [Prompt]
-                    A closer look reveals it's been traced from a magazine—in fact, it's a Darryl Hannah rendered as an Native American brunette. Not a classy choice.
+                    A closer look reveals it's been traced from a magazine—in fact, it's a Daryl Hannah rendered as an Native American brunette. Not a classy choice.
                   [/Prompt]
                 [/Option]
                 [Option once:true onSelect:`set('money', money + 20); set('selfActualization', selfActualization - 20); hasTakenArt = true;`]
@@ -1153,7 +1153,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
         [Prompt tag:"high-money" nextTag:"game-over"]
           You've managed to accumulate quite a bit of cash for an adjunct professor at a bankrupt school. That little tingle of anxiety you feel suddenly becomes an approaching siren. There's a firm knock on the door. It's the police.
 
-          Sure there's a self-dealing administration at work here, but they were slow and calculating with their corruption while yours was crude and greedy. And there's nothing a small town DA tired of the sad crimes of poverty finds more refreshing than some privileged twit who got his or her beak wet. You my friend are fucked.
+          Sure there's a self-dealing administration at work here, but they were slow and calculating with their corruption while yours was crude and greedy. And there's nothing a small town DA tired of the sad crimes of poverty finds more refreshing than some privileged twit who got his or her beak wet. You, my friend, are fucked.
         [/Prompt]
 
       // [/Ending]
@@ -1224,7 +1224,7 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
 
         They don't gloat as much as you thought they would. They're concerned and nudge you toward taking the LSAT. You could go to law school in Austin or Houston, get into the oil industry, make something of yourself.
 
-        Get a Rolex. Buy a Porsche 911. Yeah you're giving up on art, but you aren't giving up on life. Right? Right?
+        Get a Rolex. Buy a Porsche 911. Yeah you're giving up on art, but you aren't giving up on life. Right?
       [/Prompt]
 
       // [/Ending]
