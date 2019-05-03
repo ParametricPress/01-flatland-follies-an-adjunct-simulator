@@ -531,24 +531,24 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
               She buries her head in her hands. "I can't believe how much is lost."
 
               [Option onSelect:`set('selfActualization', selfActualization + 5) `]
-                Soothe her
+                Soothe her.
 
                 [Prompt]
                   "They never cataloged a thing! And it's all exposed to the elements. If you find a Flatstyle painting, grab it; it's the only thing worth saving."
                 [/Prompt]
               [/Option]
               [Option onSelect:`set('selfActualization', selfActualization + 10)`]
-                Tell her about the art closet
+                Tell her about the art closet.
 
                 [Prompt]
                   You tell her about the paintings you found hoarded in the back. So trusting.
                 [/Prompt]
               [/Option]
               [Option onSelect:`set('selfActualization', selfActualization - 10) `]
-                Talk about the weather
+                Talk about the weather.
 
                 [Prompt]
-                  Do you know what we use for a weather sock around here? A brick on a chain. hehe. She leaves.
+                  "Do you know what we use for a weather sock around here? A brick on a chain. Hehe." She leaves.
                 [/Prompt]
               [/Option]
             [/Prompt]
