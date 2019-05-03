@@ -1004,6 +1004,10 @@ Terrible colleges are sprinkled all over the United States. Some of the worst ar
                       [/Prompt]
                     [/Option]
 
+                    [Option]
+                      Leave and go home.
+                    [/Option]
+
                   [/Prompt]
                 [/Option]
                 [Option onSelect:`set('selfActualization', selfActualization + 10);`]
