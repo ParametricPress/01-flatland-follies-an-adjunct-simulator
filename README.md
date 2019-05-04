@@ -1,5 +1,5 @@
-# 01-bacone-school
-Bacone school article
+# 01-flatland-follies-an-adjunct-simulator
+Flatland Follies article
 
 
 ## Running locally
@@ -17,12 +17,10 @@ Once `npm` is installed, install `idyll` by running `npm install -g idyll`. Note
 To download the project from github, run the following command in the terminal:
 
 ```
-git clone https://github.com/ParametricPress/01-bacone-school.git
+git clone https://github.com/ParametricPress/01-flatland-follies-an-adjunct-simulator.git
 ```
 
-Since this is a private repo, this will ask you for your username/password. The code will then be downloaded into a folder locally. 
-
-Navigate into the new folder by running `cd 01-bacone-school`. Now, if you run `ls` in the terminal it should show a list of the files that corresponds to the ones you've seen on Github.com. 
+Navigate into the new folder by running `cd 01-flatland-follies-an-adjunct-simulator`. Now, if you run `ls` in the terminal it should show a list of the files that corresponds to the ones you've seen on Github.com. 
 
 ### Setting up the project
 
@@ -30,6 +28,6 @@ Once you've navigated into the project run `npm install` to get any local depend
 
 ### Running the idyll server
 
-To run idyll, simply run `idyll` in the terminal, and the project should open in your browser.
+To start, run `idyll --template _local.html` in the terminal, and the project should open in your browser.
 
 You can edit the `index.idyll` file in the text editor of your choice, and the page will refresh in the browser as you make updates.
